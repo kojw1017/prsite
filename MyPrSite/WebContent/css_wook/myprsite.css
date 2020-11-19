@@ -1,0 +1,138 @@
+		/**남욱**/
+		
+		div.content{width:1300px;margin:auto;/*화면 가운데 나오게**//* border:1px solid red */}
+		section.section1{/* border:1px solid purple; */overflow:auto;width:100%;
+		background-color:#f8f8f8;}
+
+		section.section1  div.m1{/* border:1px solid green; */float:left;}
+		section.section1  div.m2{
+		/* background-color:purple; */
+		/* position:fixed; */
+		/* border:1px solid blue; */margin:85px 5px 50px 16px;overflow:hidden;
+		display:inline-block;width:850px;}
+		
+		section.section1  div.m2>div{
+			/* border:1px solid red; */clear:both;
+		display:inline-block;width:860px;margin-right:10px;
+		}
+		section.section1 aside.my_aside{
+		   /*  position: relative; */
+   			float: left;  
+    		margin-right: 20px;
+    		width: 380px;
+    		background-color: #f8f8f8; 
+    		/* border:1px solid rgb(163,163,194); border-radius:55px; */
+    		
+		}
+		section.section1 aside.my_aside div.info{ width:100%;float:left;/* border:1px solid green; */}
+		section.section1>div.m1>aside.my_aside>div.info>ul{text-align:center;}
+		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(1){
+			/* border:1px solid purple; */ /* background-color:rgb(79,123,240); */
+		}
+		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(2),
+		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(3){
+			text-align:center;
+		}
+		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(2) div,
+		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(3) div{
+			display:inline-block; width: 100px;border:1px solid gray ; border-radius:2px;padding:5px;margin:1px;
+			color: rgb(79,123,240);
+		}
+		section.section1>div.m1>aside.my_aside>div.info>ul>li span.thum{
+			display:inline-block;width:98px;height:98px;border-radius:50%;border:1px solid #f8f8f8;
+			overflow:hidden; background-color:#f8f8f8;
+			background-image: url("http://localhost:9000/MyWook/images/my_people_100x100.png");
+			margin:60px 0 ;
+		}
+		section.section1>div.m1>div.prf{
+		clear:both;width:380px;margin-right: 20px;text-align:center;
+		padding:15px 0; font-size:15px;font-weight:500;background-color:#f8f8f8;
+		
+		/* border-radius:5px;border:1px solid gray; */
+		}
+		section.section1>div.m1>div.prf a{
+			color:color:rgb(22,27,42); text-decoration:underline;
+		}
+		section.section1>div.m1>div.prf a:hover{
+			 color:rgb(79,123,240);
+		}
+		
+		/**************aside 부분 여기까지*************/
+		
+		
+		section.section1>div.m2>div>ul{
+			list-style-type:none;
+			margin-left:5px;
+			text-align:center;
+		}
+		section.section1>div.m2>div>ul li{display:inline-block; margin:30px 70px;}
+		section.section1>div.m2>div>ul li span{
+		display:inline-block;width:125px;height:125px;border-radius:50%;border:1px solid rgb(79,123,240);
+		overflow:auto; background-color:rgb(79,123,240); color:white; }
+		/********************section1 끝남************************/
+		
+		section.section2{
+			margin-top:50px;
+		}
+		section.section2>div.mypage_bar{
+			margin-bottom:60px;
+		}
+		section.section2>div.mypage_bar>ul{
+			text-align:center;
+			/* border:1px solid red; */
+			list-style-type:none;
+			
+		}
+		section.section2>div.mypage_bar>ul>li{
+			width:20%;
+			/* border:1px solid black; */
+			margin:0px -1px;
+			text-align:center;
+			padding:30px 85px;
+			display:inline-block;
+			background-color:rgb(236,241,253);
+			
+		}
+		section.section2>div.mypage_bar>ul>li div{
+			 color:rgb(79,123,240); font-size:20px;font-weight:800;
+		
+		}
+		section.section2>div.mypage_bar>ul>li:first-child{
+			/* argin-left:13px; */
+		}
+		section.section2>div.j1>ul>li>div{
+		color:rgb(79,123,240);}
+		section.section2>div.mypage_content_introduce div.bar,
+		section.section2>div.mypage_content_portfolio div.bar,
+		section.section2>div.mypage_content_evaluation div.bar{
+			font-size:18px;color:rgb(79,123,240);font-weight:500;
+			margin:30px 0;
+		}
+
+		.section2>div.mypage_content_portfolio>div.p_select{
+			text-align:right; margin:0 10px 5px 0;
+		}
+		.section2>div.mypage_content_portfolio>div.p_select>select.p_select_bar{
+			 display:inline-block; width:250px; height:30px;background-color:rgb(241,243,244);
+			  border-radius:5px; border:1px solid rgb(79,123,240);
+		}
+
+		.section2>div.mypage_content_portfolio_content{
+			background-color:rgb(241,243,244);
+			border:1px solid rgb(79,123,240); border-radius:15px;padding:150px 0;
+			text-align:center; display:inline-block;width:100%;color:rgb(79,123,240);
+		}
+		.section2>div.mypage_content_portfolio_content>ul>li{
+			list-style-type:none; color:rgb(79,123,240);
+		}
+		.section2>div.mypage_content_portfolio_content>ul>li img{
+			display:inline-block;
+			width:180px;height:100px; 
+		
+		}
+		.section2>div.star{
+			text-align:center; border:1px solid rgb(79,123,240); border-radius:15px;
+			background-color:rgb(241,243,244);color:rgb(79,123,240);
+			padding:100px 0;margin:10px 0 50px 0;font-size:50px;font-weight:500;
+		}
+		
