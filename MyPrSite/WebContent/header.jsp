@@ -78,8 +78,8 @@
 						 	<li><a href="#">빅데이터</a></li>
 						</ul>
 						<ul class="my">
-						 	<li><a href="#">로그인 </a></li>
-						 	<li><a href="#">회원가입 </a></li>
+						 	<li><a href="http://localhost:9000/MyPrSite/login/login.jsp">로그인 </a></li>
+						 	<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp">회원가입 </a></li>
 						 	<li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">마이페이지 </a></li>
 						 	<li><a href="#">마이포토폴리오</a></li>
 						</ul>
