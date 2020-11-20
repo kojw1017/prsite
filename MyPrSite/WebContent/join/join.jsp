@@ -146,7 +146,8 @@
 					<input type="text" name="c_number" placeholder="인증번호를 입력하세요" class="c_number" disabled>
 				</li>
 				<li>
-					<button type="button" class="btn_style">가입하기</button>
+					<!-- <button type="button" class="btn_style">가입하기</button> -->
+					<a href="http://localhost:9000/MyPrSite/index.jsp"><button type="button" class="btn_style">가입하기</button></a>
 				</li>
 			</ul>
 		</form>
