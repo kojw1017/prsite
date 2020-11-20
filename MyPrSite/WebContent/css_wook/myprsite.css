@@ -262,7 +262,7 @@
         }
         
     /*
-		join1 : 회원가입 화면
+		join1 : 회원가입 화면(지혜)
 	*/
 	
 	body.join { background-color:rgb(245,245,245); 
@@ -320,7 +320,7 @@
 	section.join1>form>ul>li:last-child {margin:50px 50px; }
 	
 	/*
-		join_intro1 : 회원가입 동의 화면
+		join_intro1 : 회원가입 동의 화면(지혜)
 	*/
 	section.join_intro1>div.logo {padding-left:30%;}
 	section.join_intro1>div.logo img { width:400px; height:120px; margin-left:10%;}
