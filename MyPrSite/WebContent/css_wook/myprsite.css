@@ -136,3 +136,129 @@
 			padding:100px 0;margin:10px 0 50px 0;font-size:50px;font-weight:500;
 		}
 		
+		
+		/**** 정욱 ****/
+		
+		/** 팝업실행버튼 **/
+        .gogo_login{display: block; width: 100px; height: 50px; text-decoration: none; 
+        text-align: center; line-height: 50px; background-color:#FAE780;
+        font-size: 14px; color: #303441; border-radius: 30px;}
+
+		/** 팝업창 **/
+        .login_popup{width: 1000px; height: 600px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius:15px; box-sizing: border-box;
+        position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+        background-color: #ffffff; opacity: 0; transition: all 0.5s;z-index: 2;}
+
+		/** 팝업x버튼 **/
+        .login_popup .x_btn{position: absolute;right:20px; top: 10px; gray; text-decoration: none; color: gray;}
+        /** 팝업실행버튼눌렀을때 **/
+        .login_popup:target{opacity: 1;}
+        .login_popup:target + .dim{opacity: 1;z-index: 1;}
+        /** 팝업눌렀을때뒷배경흐리게 **/
+        .dim{position: absolute; left: 0; top: 0; background-color: rgba(0, 0, 0, 0.3);
+            width: 100%; height: 100%; opacity: 0; z-index: -1;transition: all 0.5s;}
+        /** 이미지+로그인레이아웃**/
+        .login_form{
+            width: 100%; height: 100%;
+            border-radius:15px ;
+            display: flex;
+        }
+        /** 이미지폼 **/
+        .image_form{
+            background-image:url(../images/login_img.jpg);
+            flex: 2;
+            border-radius:15px 0 0 15px ;
+            background-size: cover;
+        }
+        /** 로그인폼 **/
+        .input_login_form{
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 10px 20px 10px;
+        }
+        .input_login_form ul{
+            list-style: none;
+        }
+        .input_login_form li{
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+        .input_login_form a {
+            text-decoration: none;
+        }
+        .input_login_form .h3_login h3 {
+            font-size: 24px;
+            color: #303441;
+            line-height: 28px;
+        }
+        /** 아이디비밀번호사이즈 **/
+        .input_login_form .id_input input,
+        .input_login_form .pw_input input {
+            border-radius: 6px;
+            width: 250px;
+            height: 43px;
+            border: 1px solid  #cdcdcd;
+            text-indent: 10px;
+            font-size: 14px;
+        }
+       	/** 로그인버튼**/
+        .input_login_form .lohin_btn a{
+            display: inline-block;
+            width: 257px;
+            height: 49px;
+            background-color: #116ad4;
+            border-radius: 4px;
+            font-size: 17px;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+		/** 체크박스 아이디비밀번호찾기 **/
+        .input_login_form .ch_login,
+        .input_login_form .find_id{
+            display: inline-block;
+        }
+        .input_login_form .ch_login input{
+            margin-right: 8px;
+        }
+        .input_login_form .find_id{
+            margin-left: 41px;
+        }
+        .input_login_form .ch_login label,
+        .input_login_form .find_id a{
+            font-size: 13px;
+            color: #4d4d4d;
+        }
+        /** 실선 **/
+        .input_login_form li:nth-child(7) div{
+            margin-top: 30px;
+            width: 90%;
+            height: 1px;
+            background: #c2b7b7;
+        } 
+        /** 사람온에오신것을환영합니다 **/
+        .input_login_form .login_text{
+            width: 90%;
+            height: 100px;
+        } 
+        .input_login_form .login_text p{
+            color: #304441;
+            font-size: 14px;
+        }
+        /** 회원가입 **/
+        .input_login_form .login_account{
+            border: 1px solid #116ad4;
+            border-radius: 4px;
+            width: 90%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .input_login_form .login_account a{
+            color: #116ad4;
+        }
+		
+		
