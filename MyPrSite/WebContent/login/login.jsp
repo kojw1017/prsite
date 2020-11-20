@@ -32,7 +32,7 @@
                     <li class="find_id"><a href="#">아이디 • 비밀번호 찾기</a></li>
                     <li><div></div></li>
                     <li class="login_text"><p>사람온의 회원이 되어주실것을 환영합니다</p></li>
-                    <li class="login_account"><a href="#">사람온 회원가입 하기</a></li>
+                    <li class="login_account"><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp">사람온 회원가입 하기</a></li>
                 </ul>
             </div>
         </div>
