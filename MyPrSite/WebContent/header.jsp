@@ -4,90 +4,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>남욱헤더연습</title>
-	<style>
-		a{color:black;}
-		*{
-			margin:0px;padding:0px; /*margin은 오브젝트와의 거리 padding 은 오브젝트 안 거리*/
-			font-family:"나눔바른고딕";
-			text-decoration:none;
-		}
-		header{
-			background-color:white;
-		}
-		
-		body>header>div{
-		width:1500px; margin:auto; background-color:white;
-		}
-		body>header>div>div{
-		width:100%;
-		margin:0px;
-		padding:0px;
-		}
-		ul.menu, ul.my {color:black;}
-		ul.menu{
-			text-align:center;
-			display:inline-block;
-			width:70%;
-			margin:0px;
-			padding-top:0px;
-			padding-right:0px;
-			padding-left:0px;
-		}
-		ul.my{
-			text-align:center;
-			display:inline-block;
-			width:29.7%;
-			margin:0px;
-			padding-top:0px;
-			padding-right:0px;
-			padding-left:0px;
-		}
-		ul.menu>li{
-			display:inline-block;
-			width:18%;
-			padding-top:10px;
-			padding-bottom:10px;
-			font-size:22px;
-		}
-		ul.my>li{
-			display:inline-block;
-			width:24%;
-			font-size:13px;
-		}
-		header>div>div>nav>div>ul.menu>li.a>a>img{width:100px;height:25px;padding-top:15px;border:1px solid red;}
-		header>div>div>nav>div>ul.menu>li.b>a>img{width:26px;height:25px;border:1px solid red;padding-top:15px;color:red;}
-		
-	.ccc{color:red;}
-	</style>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css-jung/myprsite.css">
 </head>
-<body>
-	<header>
-		<div class="ccc"><i class="fa fa-bars-5x"></i></div> 
-		<div>
-			<div>
-				<nav>
-					<div>
-						<ul class="menu">
-						<li class="a"><a href=""> <img src="http://localhost:9000/MyPrSite/images/saramin_bi_blue_english.png"></a></li>
-						<li class="b"><a href=""> <img src="http://localhost:9000/MyPrSite/images/sd.png"></a></li>
-						 	<li><a href="#">포토폴리오 </a></li>
-						 	<li><a href="#">웹퍼블리서</a></li>
-						 	<li><a href="#">웹개발 </a></li>
-						 	<li><a href="#">빅데이터</a></li>
-						</ul>
-						<ul class="my">
-						 	<li><a href="http://localhost:9000/MyPrSite/login/login.jsp">로그인 </a></li>
-						 	<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp">회원가입 </a></li>
-						 	<li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">마이페이지 </a></li>
-						 	<li><a href="#">마이포토폴리오</a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</header>
+<body>              
+<header>
+     <div class="up">
+       <a href="http://localhost:9000/MyPrSite/index.jsp">
+  		<img src="http://localhost:9000/MyPrSite/images/logo.png" class="logo"></a>
+           </div>
+           <div class="top">     
+            <ul>
+			   <li><!--  <input type="search" name="sea" placeholder="검색어를 입력하세요"> --></li>
+               <li><a href="http://localhost:9000/MyPrSite/login/login.jsp">로그인</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">MyPR</a><div></div></li>
+               <li><a href="#">게시판</a><div></div></li>	
+ 				<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp"><button type="button" class="free">무료회원가입</button></a></li>
+            </ul>
+         </div>
+          <div class="bottom">
+           <nav>
+            <ul>
+               <li><a href="#">디자인</a><div></div></li>
+               <li><a href="#">IT·프로그래밍</a><div></div></li>
+               <li><a href="#"> 영상·사진·음향 </a><div></div></li>
+               <li><a href="#"> 마케팅 </a><div></div></li>
+               <li><a href="#">번역·통역  </a><div></div></li>
+		  </ul>
+            </nav>
+        </div>
 
+   </header>
 </body>
 </html>
