@@ -25,12 +25,19 @@
           </div>       
         
         <div class="main_btn_page">
-          <div class="main_btn_icon">
-            <a href=""><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_design_3.png"></a>
-            <a href=""><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_it_3.png"></a>
-            <a href=""><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_content_3.png"></a>
-            <a href=""><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_translation_3.png"></a>
-            <a href=""><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_papers_3.png"></a>
+         <div class="main_btn_icon">
+            <a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp"><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_design_3.png"></a>
+            <a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp"><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_it_3.png"></a>
+            <a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp"><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_content_3.png"></a>
+            <a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp"><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_translation_3.png"></a>
+            <a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp"><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_papers_3.png"></a>
+            <div class="main_btn_text">
+	            <a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp"><span>디자인</span></a>
+	            <a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp"><span>IT·프로그래밍</span></a>
+	            <a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp"><span>영상·사진·음향</span></a>
+	            <a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp"><span>마케팅</span></a>
+	            <a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp"><span>번역·통역</span></a>
+            </div>
           </div>
         </div>
         </div>

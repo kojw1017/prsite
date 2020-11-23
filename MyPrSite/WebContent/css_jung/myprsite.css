@@ -73,8 +73,10 @@
 	header div.bottom{
 	text-align:center;
 	width:100%;	
-  margin:45px 0 0 15px;
+ 	 margin:45px 0 0 15px;
 	}
+	
+	header div.bottom>nav>ul>li>a {margin:0 70px; }
 	
 	
 	header div.bottom a{
@@ -88,7 +90,8 @@
 	/**
 	footer
 	*/
-		footer ul>li{
+	
+	footer ul>li{
 		display:inline-block;
 	}
 	footer div.info>div>img{
@@ -96,12 +99,14 @@
 	float:left;
 	}
 	footer div.top>img{
-	width:100%; height:300px; margin:auto;
+	margin-top:150px;
+	width:100%; height:300px; 
 	opacity:0.5;
 		
 	}
 	footer div.info{
 		text-align:center;
+		margin-bottom:30px;
 	}
 	footer nav>ul {
 	text-align:center;
@@ -111,6 +116,7 @@
 	/* border:1px solid black; */
 	width:45%;
 	margin:auto;
+	
 	}
 	
 	footer nav>ul>li>a{
