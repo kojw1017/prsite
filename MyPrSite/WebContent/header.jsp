@@ -25,11 +25,11 @@
           <div class="bottom">
            <nav>
             <ul>
-               <li><a href="#">디자인</a><div></div></li>
-               <li><a href="#">IT·프로그래밍</a><div></div></li>
-               <li><a href="#"> 영상·사진·음향 </a><div></div></li>
-               <li><a href="#"> 마케팅 </a><div></div></li>
-               <li><a href="#">번역·통역  </a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp">디자인</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp">IT·프로그래밍</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp"> 영상·사진·음향 </a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp"> 마케팅 </a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp">번역·통역  </a><div></div></li>
 		  </ul>
             </nav>
         </div>

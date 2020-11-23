@@ -42,8 +42,9 @@ body {
  
 div.search span{
   font-weight:bold;
-  color:#626262;
-}
+  /* color:#626262; */ 
+  color:white;
+	}
 
 div.search a{
   text-decoration:none;
@@ -109,7 +110,9 @@ div.search a{
   padding:20px;
   height:100px;
 }
- 
+
+
+.section1 div.main_btn_page>ul img,
 .section1 div.main_btn_icon img{
   padding:0 5%;
   width:60px;
@@ -121,6 +124,30 @@ div.search a{
   height:60px;
   transition:0.1s;
   transform:translateY(-20px);  
+}
+
+.section1 div.main_btn_icon>div.main_btn_text>a{
+		text-decoration:none;
+}
+
+.section1 div.main_btn_icon>div.main_btn_text>a>span {
+ 	 padding:10px 5%;
+ 	 width:50px;
+ 	 margin-left:0px;
+ 	 font-size:14px;
+ 	 font-weight:600;
+ 	 color:#333;
+}
+
+.section1 div.main_btn_icon>a:nth-child(2) img,
+.section1 div.main_btn_icon>a:nth-child(3) img,
+.section1 div.main_btn_icon>a:nth-child(4) img{
+	margin-left:15px;
+}
+
+.section1 div.main_btn_icon>a:first-child img,
+.section1 div.main_btn_icon>a:nth-child(5) img{
+	margin-left:-10px;
 }
 
 .section1 div.main_btn_icon>a:nth-child(1)>img:hover{
@@ -154,7 +181,7 @@ div.search a{
   margin:auto;
   width:1100px;
   padding-top:50px;
-  height:1000px;
+  height:500px;
 }
 
 
@@ -225,9 +252,6 @@ div.search a{
   transition:0.1s;
   transform:translateY(-20px);
 }
-
-
-
 
 
 
