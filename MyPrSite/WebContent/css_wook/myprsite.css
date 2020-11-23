@@ -8,12 +8,12 @@
 		section.section1  div.m2{
 		/* background-color:purple; */
 		/* position:fixed; */
-		/* border:1px solid blue; */margin:85px 5px 50px 16px;overflow:hidden;
-		display:inline-block;width:850px;}
+		margin:85px 5px 50px 16px;overflow:hidden;
+		display:inline-block;/* width:850px; */ width:850px;}
 		
 		section.section1  div.m2>div{
 			/* border:1px solid red; */clear:both;
-		display:inline-block;width:860px;margin-right:10px;
+		display:inline-block;width:880px;margin-right:10px;
 		}
 		section.section1 aside.my_aside{
 		   /*  position: relative; */
@@ -26,6 +26,10 @@
 		}
 		section.section1 aside.my_aside div.info{ width:100%;float:left;/* border:1px solid green; */}
 		section.section1>div.m1>aside.my_aside>div.info>ul{text-align:center;}
+		section.section1>div.m1>aside.my_aside>div.info>ul li{
+			list-style-type:none;
+		
+		}
 		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(1){
 			/* border:1px solid purple; */ /* background-color:rgb(79,123,240); */
 		}
@@ -44,21 +48,20 @@
 			background-image: url("http://localhost:9000/MyWook/images/my_people_100x100.png");
 			margin:60px 0 ;
 		}
-		section.section1>div.m1>div.prf{
-		clear:both;width:380px;margin-right: 20px;text-align:center;
-		padding:15px 0; font-size:15px;font-weight:500;background-color:#f8f8f8;
+		section.section1>div.m1>aside.my_aside>div.info>ul>li>div.prf{
+		width:180px;display:inline-block;text-align:center;margin-top:10px;
+		font-size:15px;font-weight:500;background-color:#f8f8f8;
 		
-		/* border-radius:5px;border:1px solid gray; */
+		
 		}
-		section.section1>div.m1>div.prf a{
+		section.section1>div.m1>aside.my_aside>div.info>ul>li div.prf a{
 			color:color:rgb(22,27,42); text-decoration:underline;
 		}
-		section.section1>div.m1>div.prf a:hover{
+		section.section1>div.m1>aside.my_aside>div.info>ul>li div.prf a:hover{
 			 color:rgb(79,123,240);
 		}
 		
 		/**************aside 부분 여기까지*************/
-		
 		
 		section.section1>div.m2>div>ul{
 			list-style-type:none;
@@ -68,7 +71,7 @@
 		section.section1>div.m2>div>ul li{display:inline-block; margin:30px 70px;}
 		section.section1>div.m2>div>ul li span{
 		display:inline-block;width:125px;height:125px;border-radius:50%;border:1px solid rgb(79,123,240);
-		overflow:auto; background-color:rgb(79,123,240); color:white; }
+		/* overflow:auto; */ background-color:rgb(79,123,240); color:white; }
 		/********************section1 끝남************************/
 		
 		section.section2{
