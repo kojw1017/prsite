@@ -11,9 +11,9 @@
 	header ul>li{
 		display:inline-block;
 	}
-		header div.up>nav>ul {
+		/* header div.up>nav>ul {
 		text-align:right;			
-	}
+	} */
 	
 	header img.logo{
 		width:200px; float:left;
@@ -27,7 +27,6 @@
 		font-size:16px; color:#B5B2FF;
 		font-weight:bold;
 		margin-top:4px;
-	
 	} 
 	
 	header div.top>ul>li{
@@ -36,6 +35,10 @@
 	
 	header div.top{
 		text-align:right;
+		/* border:1px solid red; */
+		width:1520px;
+		height:40px;
+		margin:auto;
 	}
 	
 	header div.top>nav>ul>li>a{
@@ -72,8 +75,9 @@
 	}
 	header div.bottom{
 	text-align:center;
-	width:100%;	
- 	 margin:45px 0 0 15px;
+	width:1500px;	
+  margin:auto;
+  margin-top:40px;
 	}
 	
 	header div.bottom>nav>ul>li>a {margin:0 70px; }
@@ -105,6 +109,8 @@
 		
 	}
 	footer div.info{
+	 width:1520px;
+	 margin:auto;
 		text-align:center;
 		margin-bottom:30px;
 	}
