@@ -18,7 +18,7 @@
           <!-- <a href="http://localhost:9000/Saram/index.jsp"><img src="http://localhost:9000/Saram/images/logo.png" class="logo_img"></a> -->
           <div class="search">
               <span>175만건의 포트폴리오, 98.4%의 만족도</span>
-              <h1>나의 PR 공유 <a href=""> 사람온</a></h1>
+              <h1>나의 PR 공유 <a href=""> 사람온테스트</a></h1>
               <div class="search_bar">
                 <input type="text" placeholder="검색....."><button><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_search.png"></button>
               </div>
