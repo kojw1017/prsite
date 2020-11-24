@@ -11,52 +11,54 @@
 	<!-- header -->
   	<jsp:include page="../header.jsp" />
   	
-  	<!-- aside -->
-  	<aside>
-  		<h1>IT·프로그래밍</h1>
-		<hr>
-  		<nav>
-  			<ul>
-  				<li><a href="">웹사이트 개발</a></li>
-  				<li><a href="">모바일 개발</a></li>
-  				<li><a href="">데이터베이스</a></li>
-  			</ul>
-  		</nav>
-  	</aside>
-  	
-  	<!-- content -->
-  	<ul class="cat_content">
-  		<li>
-  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
-  			<a href="#"><div class="con_name">홍길동</div></a>
-  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
-  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-  		</li>
-  		<li>
-  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
-  			<a href="#"><div class="con_name">홍길동</div></a>
-  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
-  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-  		</li>
-  		<li>
-  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
-  			<a href="#"><div class="con_name">홍길동</div></a>
-  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
-  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-  		</li>
-  		<li>
-  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
-  			<a href="#"><div class="con_name">홍길동</div></a>
-  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
-  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-  		</li>
-  		<li>
-  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
-  			<a href="#"><div class="con_name">홍길동</div></a>
-  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
-  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-  		</li>
-  	</ul>
+  	<div class="cat_body">
+  		<!-- aside -->
+	  	<aside>
+	  		<h1>IT·프로그래밍</h1>
+			<hr>
+	  		<nav>
+	  			<ul>
+	  				<li><a href="">웹사이트 개발</a></li>
+	  				<li><a href="">모바일 개발</a></li>
+	  				<li><a href="">데이터베이스</a></li>
+	  			</ul>
+	  		</nav>
+	  	</aside>
+	  	
+	  	<!-- content -->
+	  	<ul class="cat_content">
+	  		<li>
+	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
+	  			<a href="#"><div class="con_name">홍길동</div></a>
+	  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
+	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
+	  		</li>
+	  		<li>
+	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
+	  			<a href="#"><div class="con_name">홍길동</div></a>
+	  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
+	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
+	  		</li>
+	  		<li>
+	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
+	  			<a href="#"><div class="con_name">홍길동</div></a>
+	  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
+	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
+	  		</li>
+	  		<li>
+	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
+	  			<a href="#"><div class="con_name">홍길동</div></a>
+	  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
+	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
+	  		</li>
+	  		<li>
+	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/TCW0B1594196647.jpg" class="pr_img"></a>
+	  			<a href="#"><div class="con_name">홍길동</div></a>
+	  			<a href="#"><div class="con_title">개발자 입니다.</div></a>
+	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
+	  		</li>
+	  	</ul>
+  	</div>
   	
 	<!-- footer -->
   	<jsp:include page="../footer.jsp" />  	
