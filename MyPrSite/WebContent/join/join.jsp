@@ -5,6 +5,52 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	function formCheck(){
+		var id = document.getElementById("id");
+		var pass = document.getElementById("pass");
+		var cpass = document.getElementById("cpass");
+		var name = document.getElementById("name");
+		var year = document.getElementById("year");
+		var month = document.getElementById("month");
+		var day = document.getElementById("day");
+		var gender = document.getElementById("gender");
+		var hp = document.getElementById("hp");
+		
+		if(id.value==""){
+			alert("아이디를 입력해주세요 :)");
+			id.focus();
+			return false;
+		}else if(pass.value==""){
+			alert("비밀번호를 입력해주세요 :)");
+			pass.focus();
+			return false;
+		}else if(cpass.value==""){
+			alert("비밀번호를 확인을 해주세요 :)");
+			cpass.focus();
+			return false;
+		}else if(name.value==""){
+			alert("이름을 입력해주세요 :)");
+			name.focus();
+			return false;
+		}else if(year.value=="" || month.value=="월" || day.value=="일"){
+			alert("생년월일을 입력해주세요 :)");
+			year.focus();
+			return false;
+		}else if(gender.value=="성별"){
+			alert("성별을 선택해주세요 :)");
+			gender.focus();
+			return false;
+		}else if(hp.value==""){
+			alert("핸드폰번호를 입력해주세요 :)");
+			hp.focus();
+			return false;
+		}else {
+			join1.submit();
+			location.href="http://localhost:9000/MyPrSite/index.jsp"
+		}
+	}
+</script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_wook/myprsite.css">
 </head>
 <body class="join">
@@ -16,24 +62,24 @@
 			<ul>
 				<li>
 					<div><label><span class="red">*</span>아이디</label></div>
-					<input type="text" name="id" placeholder="아이디 입력" class="id">
+					<input type="text" name="id" placeholder="아이디 입력" class="id" id="id">
 				</li>
 				<li>
 					<div><label><span class="red">*</span>비밀번호</label></div>
-					<input type="password" name="pass" placeholder="비밀번호 입력" class="pass">
+					<input type="password" name="pass" placeholder="비밀번호 입력" class="pass" id="pass">
 				</li>
 				<li>
 					<div><label><span class="red">*</span>비밀번호 재확인</label></div>
-					<input type="password" name="cpass" placeholder="비밀번호 확인" class="cpass">
+					<input type="password" name="cpass" placeholder="비밀번호 확인" class="cpass" id="cpass">
 				</li>
 				<li>
 					<div><label><span class="red">*</span>성명</label></div>
-					<input type="text" name="name" placeholder="성명 입력" class="name">
+					<input type="text" name="name" placeholder="성명 입력" class="name" id="name">
 				</li>
 				<li>
 					<div><label><span class="red">*</span>생년월일</label></div>
-					<input type="text" name="year" placeholder="년(4자)" class="year">
-					<select name="month" class="month">
+					<input type="text" name="year" placeholder="년(4자)" class="year" id="year">
+					<select name="month" class="month" id="month">
 						<option>월</option>
 						<option>1</option>
 						<option>2</option>
@@ -48,7 +94,7 @@
 						<option>11</option>
 						<option>12</option>
 					</select>
-					<select name="day" class="day">
+					<select name="day" class="day" id="day">
 						<option>일</option>
 						<option>1</option>
 						<option>2</option>
@@ -85,16 +131,15 @@
 				</li>
 				<li>
 					<div><label><span class="red">*</span>성별</label></div>
-					<select name="gender" class="gender">
+					<select name="gender" class="gender" id="gender">
 						<option>성별</option>
 						<option>여자</option>
 						<option>남자</option>
-						<option>선택 안함</option>
 					</select>
 				</li>
 				<li>
 					<div><label>본인 확인 이메일<span class="opt1">(선택)</span></label></div>
-					<input type="text" name="email" placeholder="선택입력" class="email">
+					<input type="text" name="email" placeholder="선택입력" class="email" id="email">
 				</li>
 				<li>
 					<div><label><span class="red">*</span>휴대전화</label></div>
@@ -141,13 +186,13 @@
 						<option>뉴질랜드 +64</option>
 						<option>에콰도르 +593</option>
 					</select><br>
-					<input type="text" name="hp" placeholder="전화번호 입력" class="hp">
+					<input type="text" name="hp" placeholder="전화번호 입력" class="hp" id="hp">
 					<button type="button" class="con_number">인증번호 받기</button><br>
 					<input type="text" name="c_number" placeholder="인증번호를 입력하세요" class="c_number" disabled>
 				</li>
 				<li>
-					<!-- <button type="button" class="btn_style">가입하기</button> -->
-					<a href="http://localhost:9000/MyPrSite/index.jsp"><button type="button" class="btn_style">가입하기</button></a>
+					<button type="button" class="btn_style" onclick="formCheck()">가입하기</button> 
+					<!-- <a href="http://localhost:9000/MyPrSite/index.jsp"><button type="button" class="btn_style" onclick="formCheck()">가입하기</button></a> -->
 				</li>
 			</ul>
 		</form>

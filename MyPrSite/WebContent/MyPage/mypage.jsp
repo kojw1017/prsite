@@ -28,7 +28,7 @@
 									<div>웹프로그래머</div>
 							   	</li>
 							   	<li>
-							   		<div class="prf"><a href="#">프로필등록/수정</a></div>
+							   		<div class="prf"><a href="http://localhost:9000/MyPrSite/MyPage/profile.jsp">프로필등록/수정</a></div>
 							   	</li>
 							</ul>
 						</div>
