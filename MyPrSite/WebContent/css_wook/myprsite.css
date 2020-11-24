@@ -1,6 +1,6 @@
 		/**남욱**/
 		
-		div.content{width:1300px;margin:auto;/*화면 가운데 나오게**//* border:1px solid red */}
+		div.content{width:1300px;margin:auto;/*화면 가운데 나오게**/ /* border:1px solid red; */ }
 		section.section1{/* border:1px solid purple; */overflow:auto;width:100%;
 		background-color:#f8f8f8;}
 
@@ -349,12 +349,21 @@
 	/*
 		cat폴더(지혜)
 	*/	
+	div.cat_body {
+		width:1300px;
+		margin:auto;
+		/* border:1px solid red; */ 
+	}
+	
 	aside {
 		height:500px;
-		width:200px;
+		width:180px;
 		/* background-color:rgb(79,123,240); */	
 		float:left;
-	}
+ 		/* border:1px solid purple; */
+ 	}
+	
+	body ul.cat_content {/* border:1px solid purple; */ width:1000px; margin-left:-40px;}
 	
 	aside>nav>ul>li {
 		list-style-type:none;
@@ -377,7 +386,7 @@
 	ul.cat_content>li {list-style-type:none; float:left; margin:0px; padding:0px;}
 	
 	ul.cat_content>li img.pr_img {width:230px; height:160px; border-radius:6px; 
-				margin:25px 25px 3px 25px;}
+				margin:25px 10px 3px 10px;}
 				
 	ul.cat_content>li>div {text-align:right; font-weight:550; margin-right:25px; margin-top:-10px;}
 	
@@ -386,10 +395,10 @@
 	ul.cat_content>li>a {text-decoration:none;}			
 	
 	ul.cat_content>li div.con_name {
-		font-size:13px; color:gray; font-weight:600;  padding-left:50px; 
+		font-size:13px; color:gray; font-weight:600; padding-left:15px;  
 	}
 	
-	ul.cat_content>li div.con_title {font-size:16px; color:#333; padding:5px 0 0 0; padding-left:50px; font-weight:600}
+	ul.cat_content>li div.con_title {font-size:16px; color:#333; padding:5px 0 0 0; padding-left:15px; font-weight:600}
 	
 	ul.cat_content img.pr_img:hover { opacity:0.3; }
 	
