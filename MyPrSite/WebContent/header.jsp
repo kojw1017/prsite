@@ -10,10 +10,10 @@
 <body>              
 <header>
      <div class="up">
-       <a href="http://localhost:9000/MyPrSite/index.jsp">
-  		<img src="http://localhost:9000/MyPrSite/images/logo.png" class="logo"></a>
            </div>
-           <div class="top">     
+           <div class="top">    
+       <a href="http://localhost:9000/MyPrSite/index.jsp">
+  		<img src="http://localhost:9000/MyPrSite/images/logo.png" class="logo"></a> 
             <ul>
 			   <li><!--  <input type="search" name="sea" placeholder="검색어를 입력하세요"> --></li>
                <li><a href="http://localhost:9000/MyPrSite/login/login.jsp">로그인</a><div></div></li>
