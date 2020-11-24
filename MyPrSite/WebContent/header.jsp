@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css-jung/myprsite.css">
+<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jung/myprsite.css">
 </head>
 <body>              
 <header>
