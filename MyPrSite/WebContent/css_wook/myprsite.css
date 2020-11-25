@@ -148,6 +148,7 @@
 			float:left; border:1px solid purple;width:480px;
 		
 		}
+
 		.section1>div>aside.my_aside_profile>label span.thum_insert{
 			display:inline-block;width:64px;height:65px;border-radius:50%;/* border:1px solid #f8f8f8; */
 			overflow:hidden; 
@@ -284,6 +285,7 @@
         .input_login_form .login_account a{
             color: #116ad4;
         }
+
         
     /*
 		join1 : 회원가입 화면(지혜)
