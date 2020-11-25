@@ -79,23 +79,23 @@
       var lb_pw = document.querySelector(".lb_pw");
 
       var warningFunction = () => {
-        if (id.value == "") {
-          lb_id.classList.add("warning");
-        } else if (pw.value == "") {
-          lb_pw.classList.add("warning");
-        } else {
-          lb_id.classList.remove("warning");
-          lb_pw.classList.remove("warning");
-        }
-      };
-      var openForm = () => {
-        login_form.classList.remove("hidden");
-        fixScroll.classList.add("overflo");
-      };
-      var closeForm = () => {
-        login_form.classList.add("hidden");
-        fixScroll.classList.remove("overflo");
-      };
+          if (id.value == "") {
+            lb_id.classList.add("warning");
+          } else if (pw.value == "") {
+            lb_pw.classList.add("warning");
+          } else {
+            lb_id.classList.remove("warning");
+            lb_pw.classList.remove("warning");
+          }
+        };
+        var openForm = () => {
+          login_form.classList.remove("hidden");
+          fixScroll.classList.add("overflo");
+        };
+        var closeForm = () => {
+          login_form.classList.add("hidden");
+          fixScroll.classList.remove("overflo");
+        };
       login_btn.addEventListener("click", warningFunction);
       login_overlay.addEventListener("click", closeForm);
       closeBtn.addEventListener("click", closeForm);
