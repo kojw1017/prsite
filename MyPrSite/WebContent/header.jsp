@@ -43,12 +43,12 @@
       <div class="login_content">
         <button class="x_btn">x</button>
         <div class="image_form">
-          <img src="images/login_main.svg" />
+          <img src="http://localhost:9000/MyPrSite/images/login_main.svg" />
         </div>
         <form class="input_login_form" id="login_Form">
           <ul>
             <li class="h3_login">
-              <img src="images/login_avatar.svg" />
+              <img src="http://localhost:9000/MyPrSite/images/login_avatar.svg" />
               <h2 class="title">Welcome</h2>
             </li>
             <li class="input_area">
