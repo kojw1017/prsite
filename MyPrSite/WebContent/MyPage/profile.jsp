@@ -16,6 +16,10 @@
 			<div>
 				<aside class="my_aside_profile">
 					<span class="thum" id="myhome_profile_photo"></span>
+					<label for="file"><span class="thum_insert" id="myhome_profile_photo_insert"></span></label>
+					<input type="file" id="file">
+					<div class="pf_update_name"><label>김남욱</label></div>
+					<div class="pf_update_job"><label><input type="text" value="웹프로그래머"></label></div>
 				</aside>
 			</div>
 		
