@@ -19,7 +19,7 @@
 	}
 	
 </script>
-<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_wook/myprsite.css">
+<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
 </head>
 <body class="join">
 	<section class="join_intro1">
