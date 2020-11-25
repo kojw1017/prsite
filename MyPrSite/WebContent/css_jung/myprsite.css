@@ -78,10 +78,10 @@
 	width:1500px;	
     text-align:center;
 	margin-top:40px;
-	margin-left:-30px;
+	margin:auto;
 	}
 	
-	header div.bottom>nav>ul>li>a {margin:0 75px; }
+	header div.bottom>nav>ul>li>a {margin:0 80px; }
 	
 	
 	header div.bottom a{
