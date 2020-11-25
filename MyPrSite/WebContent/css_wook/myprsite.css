@@ -234,7 +234,7 @@
 		catÆú´õ(ÁöÇý)
 	*/	
 	div.cat_body {
-		width:1300px;
+		width:1250px;
 		margin:auto;
 		/* border:1px solid red; */ 
 	}
@@ -242,9 +242,9 @@
 	aside {
 		height:500px;
 		width:180px;
-		/* background-color:rgb(79,123,240); */	
 		float:left;
- 		/* border:1px solid purple; */
+ 		/* border:1px solid purple; */ 
+ 		padding-top:15px;
  	}
 	
 	body ul.cat_content {/* border:1px solid purple; */ width:1000px; margin-left:-40px;}

@@ -75,14 +75,12 @@
 		
 	}
 	header div.bottom{
-	text-align:center;
-	width:1500px;	
-    text-align:center;
-	margin-top:40px;
-	margin:auto;
+		width:1500px;	
+	    text-align:left;
+		margin:auto; 
 	}
 	
-	header div.bottom>nav>ul>li>a {margin:0 80px; }
+	header div.bottom>nav>ul>li>a {padding-right:30px;}
 	
 	
 	header div.bottom a{
