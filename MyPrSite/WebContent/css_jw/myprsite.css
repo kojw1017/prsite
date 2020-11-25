@@ -1,0 +1,208 @@
+ @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap");
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      /* 로그인 폼 */
+      .login_form {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* 로그인 오버레이 */
+      .login_overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      /* 로그인 영역 */
+      .login_content {
+        width: 1000px;
+        height: 600px;
+        background-color: #ffffff;
+        position: relative;
+        display: flex;
+        top: 0px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+      /* 닫기 버튼 */
+      .login_content .x_btn {
+        all: unset;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        text-decoration: none;
+        color: gray;
+        cursor: pointer;
+      }
+      /* 이미지 영역 */
+      .image_form {
+        flex: 2;
+      }
+      .image_form > img {
+        padding-top: 120px;
+        padding-left: 60px;
+        width: 550px;
+        height: 400px;
+      }
+      /* 로그인 영역 */
+      .input_login_form {
+        flex: 1.5;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 10px 20px 10px;
+      }
+      .input_login_form ul {
+        list-style: none;
+      }
+      .input_login_form li {
+        padding-bottom: 10px;
+      }
+      .input_login_form a {
+        text-decoration: none;
+      }
+      .input_login_form .h3_login h3 {
+        font-size: 24px;
+        color: #303441;
+        line-height: 28px;
+      }
+      /** 아이디비밀번호사이즈 **/
+      .input_area {
+        width: 250px;
+
+        position: relative;
+      }
+      /* 아이디 비밀번호 인풋*/
+      .input_area input {
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #999;
+        font-size: 15px;
+        color: black;
+        outline: none;
+      }
+      /* 아이디 비밀번호 라벨*/
+      .input_area label {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        font-size: 18px;
+        color: dodgerblue;
+        transition: all 0.5s ease;
+      }
+      .warning {
+        color: red !important;
+        animation: warning 0.3s ease;
+        animation-iteration-count: 3;
+      }
+      @keyframes warning {
+        0% {
+          transform: translateX(-3px);
+        }
+        25% {
+          transform: translateX(3px);
+        }
+      }
+      .input_area input:focus + label,
+      .input_area input:valid + label {
+        top: 0;
+        font-size: 12px;
+        color: #999;
+      }
+      /** 로그인버튼**/
+      .input_login_form .login_btn #btn_login {
+        font-weight: bold;
+        width: 265px;
+        height: 50px;
+        background: linear-gradient(
+          to right,
+          rgba(105, 163, 255, 1),
+          rgba(43, 125, 254, 1),
+          rgba(43, 125, 254, 1)
+        );
+        background-size: 200%;
+        border-radius: 10px;
+        font-size: 17px;
+        color: white;
+        padding-top: 2px;
+        transition: 0.5s;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+      .input_login_form .login_btn #btn_login:hover {
+        background-position: right;
+      }
+      /** 체크박스 아이디비밀번호찾기 **/
+      .input_login_form .ch_login,
+      .input_login_form .find_id {
+        display: inline-block;
+      }
+      .input_login_form .ch_login input {
+        margin-right: 8px;
+      }
+      .input_login_form .find_id {
+        margin-left: 41px;
+      }
+      .input_login_form .ch_login label,
+      .input_login_form .find_id a {
+        font-size: 13px;
+        color: #222121;
+      }
+      /** 실선 **/
+      .input_login_form li:nth-child(7) div {
+        margin-top: 20px;
+        width: 80%;
+        height: 1px;
+        background: #8a8686;
+      }
+      /** 사람온에오신것을환영합니다 **/
+      .input_login_form .login_text {
+        width: 90%;
+        height: 60px;
+      }
+      .input_login_form .login_text p {
+        color: #303441;
+        font-size: 14px;
+      }
+      /** 회원가입 **/
+      .input_login_form .login_account {
+        display: block;
+        border: 1px solid #116ad4;
+        border-radius: 4px;
+        width: 257px;
+        height: 40px;
+        text-align: center;
+        line-height: 50px;
+      }
+      .input_login_form .login_account a {
+        color: #116ad4;
+      }
+      .hidden {
+        display: none;
+      }
+      .overflo {
+        overflow: hidden;
+      }
+      .h3_login img {
+        height: 80px;
+        padding-left: 90px;
+      }
+      .h3_login h2 {
+        margin: 2px 0;
+        color: #333;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        padding-left: 30px;
+      }
