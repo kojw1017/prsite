@@ -13,7 +13,6 @@
   <div class="content">
     <div>
       <section class="section1">    
-       
         <div class="main_img_page">  
           <!-- <a href="http://localhost:9000/Saram/index.jsp"><img src="http://localhost:9000/Saram/images/logo.png" class="logo_img"></a> -->
           <div class="search">
