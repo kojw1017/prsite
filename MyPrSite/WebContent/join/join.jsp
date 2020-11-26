@@ -5,110 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
-	function passCheck(){
-		var pass = document.getElementById("pass");
-		var cpass = document.getElementById("cpass");
-		var name = document.getElementById("name");
-		var pass_msg = document.getElementById("pass_msg");
-		
-		if(pass.value == cpass.value){
-			pass_msg.innerHTML = "비밀번호가 일치합니다";
-			pass_msg.style.color = "blue";
-			name.focus();
-			return true;
-		}else {
-			pass_msg.innerHTML = "비밀번호가 일치하지 않습니다.";
-			pass_msg.style.color = "red";
-			/* pass.value = "";
-			cpass.value = ""; */
-			pass.focus();
-			return false;
-		}
-	}
-	
-	function birthCheck(){
-		var year = document.getElementById("year");
-		var month = document.getElementById("month");
-		if(year.value != ""){
-			if(year.value>=1000 && year.value<=9999){
-				month.focus();
-			}else {
-				alert("년도(4자리)를 입력하세요");
-				year.value = "";
-				year.focus();
-				return false;
-			}
-		}
-	}
-	
-	/* function genderCheck(){
-		var gender = document.getElementById("gender");
-		var hp = document.getElementById("hp");
-		
-		if(gender.value != "성별"){
-			hp.focus();
-			return true;
-		}
-	} */
-
-	function formCheck(){
-		var id = document.getElementById("id");
-		var pass = document.getElementById("pass");
-		var cpass = document.getElementById("cpass");
-		var name = document.getElementById("name");
-		var year = document.getElementById("year");
-		var month = document.getElementById("month");
-		var day = document.getElementById("day");
-		var gender = document.getElementById("gender");
-		var hp = document.getElementById("hp");
-		
-		if(id.value==""){
-			alert("아이디를 입력해주세요 :)");
-			id.focus();
-			return false;
-		}else if(pass.value==""){
-			alert("비밀번호를 입력해주세요 :)");
-			pass.focus();
-			return false;
-		}else if(cpass.value==""){
-			alert("비밀번호를 확인을 해주세요 :)");
-			cpass.focus();
-			return false;
-		}else if(name.value==""){
-			alert("이름을 입력해주세요 :)");
-			name.focus();
-			return false;
-		}else if(year.value==""){
-			alert("년도를 입력해주세요 :)");
-			year.focus();
-			return false;
-		}else if(month.value=="월"){
-			alert("월을 입력해주세요 :)");
-			month.focus();
-			return false;
-		}else if(day.value=="일"){
-			alert("일을 입력해주세요 :)");
-			day.focus();
-			return false;
-		}else if(gender.value=="성별"){
-			gender.value = "선택 안함";
-			email.focus();
-			return true;
-			/* alert("성별을 선택해주세요 :)");
-			gender.focus();
-			return false; */
-		}else if(hp.value==""){
-			alert("핸드폰번호를 입력해주세요 :)");
-			hp.focus();
-			return false;
-		}else {
-			join1.submit();
-			location.href="http://localhost:9000/MyPrSite/index.jsp"
-		}
-	}
-</script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
+<script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
 </head>
 <body class="join">
 	<section class="join1">
@@ -119,16 +17,18 @@
 			<ul>
 				<li>
 					<div><label><span class="red">*</span>아이디</label></div>
-					<input type="text" name="id" placeholder="아이디 입력" class="id" id="id">
+					<input type="text" name="id" placeholder="아이디 입력" class="id" id="id" onblur="idCheck()">
+					<div id="id_msg"></div>
 				</li>
 				<li>
 					<div><label><span class="red">*</span>비밀번호</label></div>
-					<input type="password" name="pass" placeholder="비밀번호 입력" class="pass" id="pass">
+					<input type="password" name="pass" placeholder="비밀번호 입력" class="pass" id="pass" onblur="passCheck()">
+					<div id="pass_msg"></div>
 				</li>
 				<li>
 					<div><label><span class="red">*</span>비밀번호 재확인</label></div>
-					<input type="password" name="cpass" placeholder="비밀번호 확인" class="cpass" id="cpass" onblur="passCheck()">
-					<div id="pass_msg"></div>
+					<input type="password" name="cpass" placeholder="비밀번호 확인" class="cpass" id="cpass" onblur="cpassCheck()">
+					<div id="cpass_msg"></div>
 				</li>
 				<li>
 					<div><label><span class="red">*</span>성명</label></div>
@@ -188,7 +88,7 @@
 					</select>
 				</li>
 				<li>
-					<div><label><span class="red">*</span>성별</label></div>
+					<div><label>성별<span class="opt1">(선택)</span></label></div>
 					<select name="gender" class="gender" id="gender">
 						<option value="성별">성별</option>
 						<option value="여자">여자</option>
@@ -198,7 +98,8 @@
 				</li>
 				<li>
 					<div><label>본인 확인 이메일<span class="opt1">(선택)</span></label></div>
-					<input type="text" name="email" placeholder="선택입력" class="email" id="email">
+					<input type="text" name="email" placeholder="선택입력" class="email" id="email" onblur="emailCheck()">
+					<div id="email_msg"></div>
 				</li>
 				<li>
 					<div><label><span class="red">*</span>휴대전화</label></div>
