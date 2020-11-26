@@ -53,10 +53,11 @@
 	section.join1>form>ul>li>button,section.join1>form>ul>li:last-child a>button {
 		background-color:rgb(79,123,240); 
 		border:none; width:190px; height:50px; color:white;
-		font-weight:700; font-size:15px;}
+		font-weight:700; font-size:15px; border-radius:7px;
+}
 	section.join1>form>ul>li button.con_number {width:120px; height:33px; margin:10px; 
 		background-color:rgb(127,178,240); }
-	section.join1>form>ul>li>button:hover {background-color:#035FB2;}
+	section.join1>form>ul>li>button:hover {background-color:#035FB2; background:#035FB2;}
 	section.join1>form>ul>li:last-child {margin:50px 50px; }
 /* 	section.join1>form>ul>li:last-child a>button{background-color:red;} */
 	
@@ -86,15 +87,15 @@
 	section.join_intro1>form>ul>li>div {margin-bottom:10px;}
 	section.join_intro1>form>ul>li input[type="checkbox"] {margin-right:10px; }
 	section.join_intro1>form>ul>li>p {font-size:10px; color:gray; width:60%; display:inline-block;}
-	section.join_intro1>form>ul>li>button, section.join_intro1>form>ul>li>a>button {
+	section.join_intro1>form>ul>li>button {
 			background-color:rgb(127,178,240); border:none; width:190px; height:50px; color:white;
-			font-weight:700; font-size:15px;
+			font-weight:700; font-size:15px; border-radius:7px;
 	}
+	section.join_intro1>form>ul>li>button.confirm {background-color:rgb(79,123,240);}
 	section.join_intro1>form>ul>li>button:hover, 
 	section.join_intro1>form>ul>li>a>button:hover {
 		background-color:#035FB2;
 	}
-	section.join_intro1>form>ul>li>a>button {background-color:rgb(79,123,240);}
 		
 	/*
 		catÆú´õ(ÁöÇı)
