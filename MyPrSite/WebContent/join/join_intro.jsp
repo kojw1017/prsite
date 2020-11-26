@@ -5,20 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
-	function formCheck(){
-		var chk1 = document.getElementById("chk1");
-		var chk2 = document.getElementById("chk2");
-		
-		if(chk1.checked == false || chk2.checked == false){
-			alert("필수항목에 체크해 주세요 :)");
-			return false;
-		}else {
-			location.href = "join.jsp";
-		}
-	}
-	
-</script>
+<script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
 </head>
 <body class="join">
@@ -112,7 +99,7 @@ NAVER 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정�
 				</li>
 				<li>
 					<button type="button">취소</button>	
-					<button type="button" onclick="formCheck()">확인</button>	
+					<button type="button" onclick="introCheck()">확인</button>	
 				</li>
 			</ul>
 		</form>
