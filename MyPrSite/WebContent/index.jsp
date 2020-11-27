@@ -95,8 +95,8 @@
 				"사진", "음향", "마케팅", "번역", "통역",
 				"프론트", "백엔드", "반응형", "Java", "JavaScript",
 				"CSS", "홍길동", "Window", "Python", "Ruby",
-				"Scala", "Scheme"
-			];
+				"Scala", "Scheme" 
+			]; 
 		
 			$( "#saram" ).autocomplete({
 				source: languages
