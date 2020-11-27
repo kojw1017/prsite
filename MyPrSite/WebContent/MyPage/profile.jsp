@@ -39,8 +39,8 @@
 					<!-- <div class="pf_update_job"><label><input type="text" value="웹프로그래머"></label></div> -->
 				</aside>
 				<div class ="pf_text">
-					<textarea rows="15" cols="100" name="bcontent">재밌어요~^^ 
-								이제훈 잘 생겼어요~~
+					<textarea rows="15" cols="100" name="bcontent">ㅁㄴㅇㅁㅇㅁㅇㅁㄴㅁㄴㅇㅁㄴㅇㅁㄴㅇ
+					
 					</textarea>
 				</div>
 			</div>

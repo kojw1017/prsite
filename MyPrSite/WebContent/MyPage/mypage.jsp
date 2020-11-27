@@ -29,6 +29,14 @@
 							   	</li>
 							   	<li>
 							   		<div class="prf"><a href="http://localhost:9000/MyPrSite/MyPage/profile.jsp">프로필등록/수정</a></div>
+							   		<input type="checkbox" id="popup">
+							   		<label for="popup"></label>
+							   		<div>
+							   			<div>
+							   				<label for="popup"></label>
+							   			</div>
+							   			<label for="popup"></label>
+							   		</div>
 							   	</li>
 							</ul>
 						</div>
