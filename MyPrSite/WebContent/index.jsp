@@ -5,6 +5,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_gun/myprsite.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
   <!-- header -->
@@ -19,7 +22,7 @@
               <span>175만건의 포트폴리오, 98.4%의 만족도</span>
               <h1>나의 PR 공유 <a href=""> 사람온테스트</a></h1>
               <div class="search_bar">
-                <input type="text" placeholder="검색....."><button><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_search.png"></button>
+                <input id='saram' type="text" placeholder="검색....." autocomplete='on'><div><button><img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_search.png"></button></div>
               </div>
           </div>       
         
@@ -85,5 +88,20 @@
   </div>
   <!-- footer -->
   <jsp:include page="footer.jsp" /> 
+  <script>
+		$(function() {
+			var languages = [
+				"사람온", "디자인", "IT","프로그래밍", "영상",
+				"사진", "음향", "마케팅", "번역", "통역",
+				"프론트", "백엔드", "반응형", "Java", "JavaScript",
+				"CSS", "홍길동", "Window", "Python", "Ruby",
+				"Scala", "Scheme" 
+			]; 
+		
+			$( "#saram" ).autocomplete({
+				source: languages
+			});
+		});
+</script>
 </body>
 </html>

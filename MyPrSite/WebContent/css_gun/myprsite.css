@@ -19,6 +19,7 @@ body {
 
 }
 
+
 .section1>div.main_img_page div.search{
   margin:auto;
   width:60%;
@@ -61,38 +62,51 @@ div.search a{
 }
 
 .section1 div.search_bar{
-  display:inline-block;
+  /* display:inline-block; */
   border:1px solid white;
   width:680px;
   height:90px;
   margin:auto;
   background-color:white;
   border-radius:40px;
-  overflow:hidden;
 }
 
 .section1 div.search_bar button:hover{
   opacity:0.5;
   outline:none;
 }
-.section1 div.search_bar button{
-  padding-top:20px;
+.section1 div.search_bar>div button{
   background:none;
   border:none;
   outline:none;
+  float:right;
+  padding:18px 18px 0 0;
 }
 
 .section1 div.main_img_page input[type="text"]{
   border:1px solid white;
   border-radius:40px;
   width:600px;
-  height:70px;
+  height:50px;
   text-indent:40px;
   font-size:40px;
   outline:none;
+  float:left;
+  padding-top:20px;
+  
+  
  /*  background-image: url(https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_search.png);
   background-position: 670px center;
   background-repeat: no-repeat; */
+}
+body ul{
+	border-radius:20px;
+}
+
+#ui-id-1 li{ 
+	width: 650px;
+	border:1px solid white;
+	border-radius:20px;
 }
 
 .section1 div.main_btn_page{
