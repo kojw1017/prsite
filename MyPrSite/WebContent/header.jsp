@@ -77,7 +77,8 @@
             <li class="ch_login">
               <input type="checkbox" checked /><label>로그인 유지</label>
             </li>
-            <li class="find_id"><a href="#">아이디 • 비밀번호 찾기</a></li>
+            <li class="find_id"><a href="http://localhost:9000/MyPrSite/find_id_pw/find_id_pw.jsp"
+                >아이디 • 비밀번호 찾기</a></li>
             <li>
               <div></div>
             </li>
