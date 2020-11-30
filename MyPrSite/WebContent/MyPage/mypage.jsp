@@ -7,8 +7,19 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_wook/myprsite.css">
+<script>
+	function pr_updateForm_open(){
+		var up = document.getElementById("pr_update").getAttribute("id");
+		if(up=="pr_update"){
+			document.getElementById("main_body").style.overflow ="hidden";
+			
+		}
+	}
+
+</script>
+
 </head>
-<body>
+<body id ="main_body">
 	<!-- header -->
 	<jsp:include page="../header.jsp" />
 	<div class="content">
@@ -28,14 +39,16 @@
 									<div>웹프로그래머</div>
 							   	</li>
 							   	<li>
-							   		<div class="prf"><a href="http://localhost:9000/MyPrSite/MyPage/profile.jsp">프로필등록/수정</a></div>
-							   		<input type="checkbox" id="popup">
-							   		<label for="popup"></label>
-							   		<div>
+							   		<!-- <div class="prf"><a href="http://localhost:9000/MyPrSite/MyPage/profile.jsp">프로필등록/수정</a></div> -->
+							   		<input type="checkbox" id="popup" >
+							   		<label for="popup" id="pr_update" onclick="pr_updateForm_open()" >등록/수정</label>
+							   		<div>   
 							   			<div>
-							   				<label for="popup"></label>
+							   				<label for="popup">x</label>
+							   				<h2>ss</h2>
 							   			</div>
-							   			<label for="popup"></label>
+							   			<label ></label> 
+
 							   		</div>
 							   	</li>
 							</ul>
