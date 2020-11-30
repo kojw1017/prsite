@@ -72,7 +72,7 @@
 			display:inline-block;
 			padding:20px;
 			background:yellow;
-			color:white;
+			color:black;
 		}
 		input[id*="popup"] + label +div {
 			position:fixed;
@@ -87,22 +87,28 @@
 			top:50%;
 			left:50%;
 			transform:translate(-50%,-50%);
-			width:500px;
-			height:300px;
+			width:1000px;
+			height:650px;
+			border-radius:10px;
 			background:#fff;
 			z-index:2;
+			
 		}
-		input[id*="popup"] + label +div > div >label{
+		/**x 버튼 **/
+		input[id*="popup"] + label +div > div >label{ 
 			position:absolute;
-			top:0%;
-			left:0%;
+			top:1%;
+			right:1%;
 			transform:translate(40%,-40%);
-			padding:20px;
-			background:#dd5347;
-			border-radius:100%;
+			/* padding:10px; */
+			font-size:25px;
+			color:gray;
+			/* background:#dd5347; */
+			/* border-radius:100%; */
 			z-index:1;
 		
 		}
+		/** 뒷배경 **/
 		input[id*="popup"] + label +div > label{
 			position:absolute;
 			top:0;
@@ -112,14 +118,16 @@
 			
 			background:rgba(0,0,0,.6);
 			/* border-radius:100%; */
-			z-index:1;
+			 z-index:1; 
+			 overflow:hidden;
 		}
 		input[id*="popup"] + label +div{
 			opacity:0;visibility:hidden;transition:all 1s;
 		}
 		input[id*="popup"]:checked + label +div{
-			opacity:1; visibility:visible;
-		}
+			opacity:1;  visibility:visible; 
+		} 
+		
  		/**************aside 부분 여기까지*************/
 		
 		section.section1>div.m2>div>ul{
