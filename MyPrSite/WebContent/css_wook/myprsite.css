@@ -64,7 +64,7 @@
 		section.section1>div.m1>aside.my_aside>div.info>ul>li div.prf a:hover{
 			 color:rgb(79,123,240);
 		}
-		/********팝업창*************/
+/* 		*******팝업창************
 		input[id*="popup"]{
 			display:none;
 		}
@@ -94,21 +94,21 @@
 			z-index:2;
 			
 		}
-		/**x 버튼 **/
+		*x 버튼 *
 		input[id*="popup"] + label +div > div >label{ 
 			position:absolute;
 			top:1%;
 			right:1%;
 			transform:translate(40%,-40%);
-			/* padding:10px; */
+			padding:10px;
 			font-size:25px;
 			color:gray;
-			/* background:#dd5347; */
-			/* border-radius:100%; */
+			background:#dd5347;
+			border-radius:100%;
 			z-index:1;
 		
 		}
-		/** 뒷배경 **/
+		* 뒷배경 *
 		input[id*="popup"] + label +div > label{
 			position:absolute;
 			top:0;
@@ -117,7 +117,7 @@
 			height:100%;
 			
 			background:rgba(0,0,0,.6);
-			/* border-radius:100%; */
+			border-radius:100%;
 			 z-index:1; 
 			 overflow:hidden;
 		}
@@ -126,7 +126,7 @@
 		}
 		input[id*="popup"]:checked + label +div{
 			opacity:1;  visibility:visible; 
-		} 
+		}  */
 		
  		/**************aside 부분 여기까지*************/
 		
@@ -246,9 +246,49 @@
 		.section1>div>div.pf_text{
 			width:60%;height:500px;  
 			display:inline-block;
-			border:1px solid red;text-align:center;
+			/* border:1px solid red; */
+			text-align:center;
+			position:relative;
 		}
-		.section1>div>div.pf_text>textarea{margin: 185px 0 0 0; width:700px; height:300px;resize:none; border:1px solid gray;border-radius:5px;}
+		.section1>div>div.pf_text>span{
+			
+			position:absolute;
+			top:25%;
+			right:8%;
+			transform:translate(10%,50%);
+			font-size :25px;
+			color:rgb(79,123,240);
+		}
+		.section1>div>div.pf_text>span.counter{
+			
+			position:absolute;
+			top:97%;
+			right:6%;
+			transform:translate(10%,50%);
+			font-size :15px;
+			color: rgb(202,222,228);
+		}
+
+		.section1>div>div.pf_text>textarea{
+		margin: 185px 0 0 0; 
+		width:700px; height:300px; resize:none;
+		border:0.1px solid gray;border-radius:5px; font-size:25px;
+		}
+		textarea:focus {
+    		outline: none;
+		}
+		select:focus{
+			outline: none;
+		}
+		/*********section 1 부분끝남***********/
+		
+		
+		
+		
+		/*********section 2 시작***********/
+
+		.section2>div.content_name{color: rgb(79,123,240); font-size:26px;margin-bottom:10px;}
+		.section2>div.pf_area2{width:100%;height:150px;background-color:#f8f8f8;}
 		footer{clear:both;}
 		
 		
