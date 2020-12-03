@@ -238,8 +238,8 @@
 		.section1>div>aside.my_aside_profile>div.pf_update_name>ul>li:nth-child(2){
 			background-color:white;padding:10px 0; color:gray;
 		}
-		.section1>div>aside.my_aside_profile>div.pf_update_name>ul>li:nth-child(3)>select.job_select{
-			border-radius:10px; padding:5px 15px;margin-left:10px;
+		.section1>div>aside.my_aside_profile>div.pf_update_name>ul>li:nth-child(3)>select.area_select{
+			border-radius:10px; padding:5px 55px;margin-left:10px;
 		}
 		.section1>div>aside.my_aside_profile>div.pf_update_job>label>input{color:rgb(79,123,240);text-align:center;width:220px;}
 		
@@ -288,7 +288,31 @@
 		/*********section 2 ½ÃÀÛ***********/
 
 		.section2>div.content_name{color: rgb(79,123,240); font-size:26px;margin-bottom:10px;}
-		.section2>div.pf_area2{width:100%;height:150px;background-color:#f8f8f8;}
+		.section2>div.pf_area2{width:100%;height:150px;background-color:#f8f8f8;  position:relative; padding-top:1px;}
+		.section2>div.pf_area2>div.pf_job{
+			margin:10px 0;
+		}
+		.section2>div.pf_area2>div.pf_job>select.job_select{
+			border-radius:10px; padding:20px 250px;margin-left:28px;
+			  text-align:right;
+		}
+		.section2>div.pf_area2>div.pf_job>select.job_select_2{
+			border-radius:10px; padding:20px 250px;margin-left:10px;
+			text-align:right;
+		}
+
+		.section2>div.pf_area2>div.pf_job_select_area{
+			 width:96%;height:70px;  border-radius:10px; border:1px solid blue; background-color:white;
+			position:absolute; margin-top:30px;
+			top:10%;
+			right:50%;
+			transform:translate(50%,50%);
+		}
+		
+		
+		
+		
+		
 		footer{clear:both;}
 		
 		
