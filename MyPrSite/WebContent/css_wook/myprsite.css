@@ -288,30 +288,41 @@
 		/*********section 2 ½ÃÀÛ***********/
 
 		.section2>div.content_name{color: rgb(79,123,240); font-size:26px;margin-bottom:10px;}
-		.section2>div.pf_area2{width:100%;height:150px;background-color:#f8f8f8;  position:relative; padding-top:1px;}
+		.section2>div.pf_area2{width:100%;height:190px;background-color:#f8f8f8;  /* position:relative; */ padding-top:1px;}
 		.section2>div.pf_area2>div.pf_job{
-			margin:10px 0;
+			margin:10px 0 4px 0;  text-align:center;
 		}
-		.section2>div.pf_area2>div.pf_job>select.job_select{
-			border-radius:10px; padding:20px 250px;margin-left:28px;
-			  text-align:right;
-		}
+		.section2>div.pf_area2>div.pf_job>select.job_select,
 		.section2>div.pf_area2>div.pf_job>select.job_select_2{
-			border-radius:10px; padding:20px 250px;margin-left:10px;
-			text-align:right;
+			border-radius:10px; width:580px ;height:30px; text-align:right;
+
+		}
+		.section2>div.pf_area2>div.pf_job>select.job_select,
+		.section2>div.pf_area2>div.pf_job>select.job_select_2{
+			padding-left:240px;
 		}
 
-		.section2>div.pf_area2>div.pf_job_select_area{
-			 width:96%;height:70px;  border-radius:10px; border:1px solid blue; background-color:white;
-			position:absolute; margin-top:30px;
-			top:10%;
-			right:50%;
-			transform:translate(50%,50%);
+		.section2>div.pf_area2>div.pf_job_select{ text-align:center;}
+		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area{
+		width:1160px; height:90px; overflow:auto;
+			 border-radius:10px; background-color:white;
+			 display:inline-block; border:1px solid red;
 		}
-		
-		
-		
-		
+		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul{
+			list-style-type:none; display:inline-block;
+		}
+		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul>li.job_select_content{
+			display:inline-block;
+			color:rgb(79,123,240);
+			background-color:rgb(236,241,253);
+			/* width:230px; */
+			padding:3px;
+			border-radius:10px;
+			margin:0 5px 5px 0;
+		}
+		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul>li.job_select_content>span{
+			color:gray; margin:10px 5px 8px 8px;
+		}
 		
 		footer{clear:both;}
 		

@@ -64,12 +64,11 @@
 	    });
 	    var exists = false;
 	    $('.job_select , .job_select_2 ').change(function(){
-	    //	if($(".job_select  option:selected") $(".job_select_2  option:selected") )
-	    //	alert($(".job_select  option:selected"));
-
- 	    	 if($(".job_select option:selected").val() =="마케팅" && $(".job_select_2 option:selected").val() =="SNS마케팅"){
+ 	    	 if($(".job_select option:selected").val() !="전문분야" && $(".job_select_2 option:selected").val() !="상세분야" ){
+ 	    		 var sel1=$(".job_select option:selected").val();
+ 	    		 var sel2=$(".job_select_2 option:selected").val();
+	    			$(".pf_job_select_area ul").append("<li class='job_select_content'>"+ sel1 +":&nbsp&nbsp"+sel2+"<span>x</span></li>");
 	    		
-	    		alert("s");
 	    	}  
 	    	
 	    });
@@ -149,7 +148,7 @@
 							<option value="일러스트·캐리커처">일러스트·캐리커처</option>
 							</select>
 				</div>
-				<div class="pf_job_select_area"></div>
+				<div class="pf_job_select"><div class="pf_job_select_area"><ul></ul></div></div>
 			</div>
 		
 		</section>
