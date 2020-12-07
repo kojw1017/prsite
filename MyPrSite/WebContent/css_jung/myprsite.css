@@ -23,7 +23,7 @@
 		width:200px; float:left;
 	}
 
-
+	header div.top {padding-bottom : 40px;}
 	 header div.top>ul>li>a{
 		text-decoration:none;
 		/*padding-top:5px;*/
@@ -75,13 +75,13 @@
 		text-decoration:none;
 		display:inline-block;
 		text-align:left;
-		margin-right:120px;		
+		margin: 0 70px;		
 		position:static;
 		
 	}
 	header div.bottom{
 		width:1500px;	
-	    text-align:left;
+	    text-align:center;
 		margin:auto; 
 	}
 	

@@ -36,7 +36,7 @@
 	section.join1>form>ul>li>div {margin-bottom:10px;}
 	section.join1>form>ul>li>div#id_msg, section.join1>form>ul>li>div#pass_msg,
 	section.join1>form>ul>li>div#cpass_msg, section.join1>form>ul>li>div#email_msg {
-		font-weight:bold; text-indent:7px; font-size:13.5px;}
+		font-weight:bold; text-indent:7px; font-size:14px;}
 	section.join1>form>ul>li>div>label {font-weight:550;}
 	section.join1>form>ul>li>input, section.join1>form>ul>li>select {text-indent:10px; }
 	section.join1>form>ul>li>input[type="text"],

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="http://localhost:9000/MyWeb/js/jquery-3.5.1.min.js"></script>
 <script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
 </head>
@@ -16,10 +17,10 @@
 		<form name="join_intro1" action="#" method="get">
 			<ul>
 				<li>
-					<input type="checkbox" name="join_check1">사람온 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 정보 수신(선택)에 모두 동의합니다.
+					<input type="checkbox" name="join_check" id="chk">사람온 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 정보 수신(선택)에 모두 동의합니다.
 				</li>
 				<li>
-					<div><input type="checkbox" name="join_check2"  id="chk1">사람온 이용약관 동의<span class="opt">(필수)</span></div>
+					<div><input type="checkbox" name="join_check"  id="chk1">사람온 이용약관 동의<span class="opt">(필수)</span></div>
 					<textarea>여러분을 환영합니다.
 사람온 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 사람온 서비스의 이용과 관련하여 사람온 서비스를 제공하는 사람온 주식회사(이하 ‘사람온’)와 이를 이용하는 사람온 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 사람온 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
 
@@ -44,7 +45,7 @@
 					</textarea>
 				</li>
 				<li>
-					<div><input type="checkbox" name="join_check2"  id="chk2">개인정보 수집 및 이용 동의<span class="opt">(필수)</span></div>
+					<div><input type="checkbox" name="join_check"  id="chk2">개인정보 수집 및 이용 동의<span class="opt">(필수)</span></div>
 					<textarea>개인정보보호법에 따라 사람온에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.
 
 1. 수집하는 개인정보
@@ -65,7 +66,7 @@ NAVER 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정�
 					</textarea>
 				</li>
 				<li>
-					<div><input type="checkbox" name="join_check2" >위치정보 이용약관 동의<span class="opt1">(선택)</span></div>
+					<div><input type="checkbox" name="join_check" >위치정보 이용약관 동의<span class="opt1">(선택)</span></div>
 					<textarea>위치정보 이용약관에 동의하시면, 위치를 활용한 광고 정보 수신 등을 포함하는 사람온 위치기반 서비스를 이용할 수 있습니다.
 
 
@@ -90,7 +91,7 @@ NAVER 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정�
 					</textarea>
 				</li>
 				<li>
-					<input type="checkbox" name="join_check2">프로모션 정보 수신 동의<span class="opt">(선택)</span>
+					<input type="checkbox" name="join_check">프로모션 정보 수신 동의<span class="opt">(선택)</span>
 				</li>
 				<li>
 					<p>사람온에서 제공하는 이벤트/혜택 등 다양한 정보를 휴대전화(사람온앱 알림 또는 문자), 이메일로 받아보실 수 있습니다. 
@@ -98,8 +99,8 @@ NAVER 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정�
 					이때에도 수신 동의에 대해 별도로 안내하고 동의를 받습니다.</p>
 				</li>
 				<li>
-					<button type="button">취소</button>	
-					<button type="button" onclick="introCheck()" class="confirm">확인</button>	
+					<button type="reset">취소</button>	
+					<button type="button" class="confirm">확인</button>	
 				</li>
 			</ul>
 		</form>

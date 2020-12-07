@@ -5,8 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
+<script src="http://localhost:9000/MyWeb/js/jquery-3.5.1.min.js"></script>
 <script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
+<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
 </head>
 <body class="join">
 	<section class="join1">
@@ -17,17 +18,17 @@
 			<ul>
 				<li>
 					<div><label><span class="red">*</span>아이디</label></div>
-					<input type="text" name="id" placeholder="아이디 입력" class="id" id="id" onblur="idCheck()">
+					<input type="text" name="id" placeholder="아이디 입력" class="id" id="id">
 					<div id="id_msg"></div>
 				</li>
 				<li>
 					<div><label><span class="red">*</span>비밀번호</label></div>
-					<input type="password" name="pass" placeholder="비밀번호 입력" class="pass" id="pass" onblur="passCheck()">
+					<input type="password" name="pass" placeholder="비밀번호 입력" class="pass" id="pass">
 					<div id="pass_msg"></div>
 				</li>
 				<li>
 					<div><label><span class="red">*</span>비밀번호 재확인</label></div>
-					<input type="password" name="cpass" placeholder="비밀번호 확인" class="cpass" id="cpass" onblur="cpassCheck()">
+					<input type="password" name="cpass" placeholder="비밀번호 확인" class="cpass" id="cpass">
 					<div id="cpass_msg"></div>
 				</li>
 				<li>
@@ -36,7 +37,7 @@
 				</li>
 				<li>
 					<div><label><span class="red">*</span>생년월일</label></div>
-					<input type="text" name="year" placeholder="년(4자)" class="year" id="year" onblur="birthCheck()">
+					<input type="text" name="year" placeholder="년(4자)" class="year" id="year">
 					<select name="month" class="month" id="month">
 						<option value="월">월</option>
 						<option value="1">1</option>
@@ -98,7 +99,7 @@
 				</li>
 				<li>
 					<div><label>본인 확인 이메일<span class="opt1">(선택)</span></label></div>
-					<input type="text" name="email" placeholder="선택입력" class="email" id="email" onblur="emailCheck()">
+					<input type="text" name="email" placeholder="선택입력" class="email" id="email">
 					<div id="email_msg"></div>
 				</li>
 				<li>
@@ -151,8 +152,7 @@
 					<input type="text" name="c_number" placeholder="인증번호를 입력하세요" class="c_number" disabled>
 				</li>
 				<li>
-					<button type="button" class="btn_style" onclick="formCheck()">가입하기</button> 
-					<!-- <a href="http://localhost:9000/MyPrSite/index.jsp"><button type="button" class="btn_style" onclick="formCheck()">가입하기</button></a> -->
+					<button type="button" class="btn_style" id="register">가입하기</button> 
 				</li>
 			</ul>
 		</form>
