@@ -23,7 +23,7 @@
 	        	
 		        $('.counter').html("("+content.length+" / 최대 255자)");    //글자수 실시간 카운팅
 	        }
-	    });
+	    }); //keyup
 	    
 	    
 	    
@@ -61,7 +61,7 @@
 	    	
 	    	}
 	
-	    });
+	    });//jobselect
 	    var count=0;
 	    var arr = new Array();
 	    $('.job_select , .job_select_2 ').change(function(){
@@ -93,11 +93,47 @@
  	    		
 	    	}
 
-	    });
+	    });//'.job_select , .job_select_2 '
 
+	    $(".category-tech1-select").click(function(){
+	    	//alert($(this).attr("id"));
+	    	if($(this).text()=="디자인"){
+
+	    		$(".category-tech2").append(
+	    				"<div>Adobe Photoshop</div>",
+	    				"<div>Adobe Illustrator</div>",
+	    				"<div>Adobe Dreamweaver</div>",
+	    				"<div>Adobe Flash</div>",
+	    				"<div>Adobe XD</div>",
+	    				"<div>Indesign</div>",
+	    				"<div>MicroSoft PowerPoint</div>",
+	    				"<div>Paint tool sai</div>",
+	    				"<div>sketch up</div>",
+	    				"<div>Corel Painter</div>",
+	    				"<div>Sketch3</div>",
+	    				"<div>Zeplin</div>",
+	    				"<div>HTML & CSS</div>",
+	    				"<div>Keyshot</div>",
+	    				"<div>3D MAX</div>",
+	    				"<div>Rhino3D</div>",
+	    				"<div>CATIA</div>",
+	    				"<div>3D CAD</div>",
+	    				"<div>PRO-E</div>",
+	    				"<div>Fusion360</div>",
+	    				"<div>MAYA</div>",
+	    				"<div>Zbrush</div>",
+	    				"<div>Cinema4d</div>",
+	    				"<div>Redshift</div>",
+	    				"<div>Arnold</div>",
+	    				"<div>Substance Painter</div>",
+	    				"<div>CAD</div>",
+	    				"<div>v-ray</div>"
+	    		);
+	    	}
+	    });
 	    
     });
-
+    
 
     </script>
 <body>
@@ -177,7 +213,19 @@
 		</section>
 		<section class="section3">
 			<div class = "content_name">보유기술</div> 
-			
+			<div class ="pf_area3">
+						<div class="category-tech1">
+				          <div class="category-tech1-select"  id="tech1-design">디자인</div>
+                          <div class="category-tech1-select"  id="tech1-it">IT·프로그래밍</div>
+                          <div class="category-tech1-select"  id="tech1-viedo">영상·사진·음향</div>
+                          <div class="category-tech1-select"  id="tech1-marketing">마케팅</div>
+                          <div class="category-tech1-select"  id="tech1-tranlation">번역·통역</div>                    
+						</div>
+						<div class="category-tech2">
+							 
+                 
+						</div>
+			</div>
 		</section>
 			
 	</div>
