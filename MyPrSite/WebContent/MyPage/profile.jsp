@@ -62,17 +62,39 @@
 	    	}
 	
 	    });
-	    var exists = false;
+	    var count=0;
+	    var arr = new Array();
 	    $('.job_select , .job_select_2 ').change(function(){
- 	    	 if($(".job_select option:selected").val() !="전문분야" && $(".job_select_2 option:selected").val() !="상세분야" ){
- 	    		 var sel1=$(".job_select option:selected").val();
- 	    		 var sel2=$(".job_select_2 option:selected").val();
-	    			$(".pf_job_select_area ul").append("<li class='job_select_content'>"+ sel1 +":&nbsp&nbsp"+sel2+"<span>x</span></li>");
-	    		
-	    	}  
-	    	
+	    	if(count<5){
+	 	    	 if($(".job_select option:selected").val() !="전문분야" && $(".job_select_2 option:selected").val() !="상세분야" ){
+	  	    		 var sel1=$(".job_select option:selected").val();
+	  	    		 var sel2=$(".job_select_2 option:selected").val();
+	 	    		 if(arr.includes(sel1+","+sel2)){
+	 	    			 alert("중복되는 값이 있습니다.")
+	 	    		 }else{
+		 	 	    	count++;
+		  	    		//alert(count);
+		 	    		$(".pf_job_select_area ul").append("<li class='job_select_content'>"+ sel1 +":&nbsp&nbsp"+sel2+"<button type='button'id='x_btn'>x</button></li>");
+		 	    		$(".job_select option:eq(0)").prop("selected",true);
+		 	    		$(".job_select_2 option:eq(0)").prop("selected",true);
+		 	    		arr.push(sel1+","+sel2);
+		 	    		//alert(arr.includes(sel1+","+sel2));
+	 	    		 }
+	 	    		
+
+	 	    	$(".job_select_content>button").click(function(){
+	 	    		$(this).parent().remove();			
+	 			   }); 
+	 	    	}
+	    	}else{
+	    		alert("최대 5개 선택 가능합니다");
+	    		$(".job_select option:eq(0)").prop("selected",true);
+ 	    		$(".job_select_2 option:eq(0)").prop("selected",true);
+ 	    		
+	    	}
+
 	    });
-	    
+
 	    
     });
 
@@ -90,8 +112,9 @@
 					<label for="file"><span class="thum_insert" id="myhome_profile_photo_insert"></span></label>
 					<input type="file" id="file">
 					<!-- <div class="pf_update_name"><label class="name_header">이름 : </label><label class="name_content">김남욱</label></div> -->
-					<div class="pf_update_name"> 
+					<div class="pf_update_name">  
 						<ul>
+						
 							<li>이름</li>
 							<li>김남욱</li>
 							<li><label>지역</label>
@@ -151,6 +174,10 @@
 				<div class="pf_job_select"><div class="pf_job_select_area"><ul></ul></div></div>
 			</div>
 		
+		</section>
+		<section class="section3">
+			<div class = "content_name">보유기술</div> 
+			
 		</section>
 			
 	</div>
