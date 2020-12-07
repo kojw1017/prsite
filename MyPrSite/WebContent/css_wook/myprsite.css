@@ -306,7 +306,7 @@
 		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area{
 		width:1160px; height:90px; overflow:auto;
 			 border-radius:10px; background-color:white;
-			 display:inline-block; border:1px solid red;
+			 display:inline-block; /* border:1px solid red; */ margin-top:20px;
 		}
 		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul{
 			list-style-type:none; display:inline-block;
@@ -320,10 +320,12 @@
 			border-radius:10px;
 			margin:0 5px 5px 0;
 		}
-		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul>li.job_select_content>span{
-			color:gray; margin:10px 5px 8px 8px;
+		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul>li.job_select_content>button#x_btn{
+			color:gray; margin:10px 1px 8px 8px; border:none;outline: none; background-color:rgb(236,241,253);
 		}
-		
+		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul>li.job_select_content>button#x_btn:hover{
+			 text-decoration:underline; 
+		}
 		footer{clear:both;}
 		
 		
