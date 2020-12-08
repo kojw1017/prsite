@@ -326,8 +326,8 @@
 			color:gray; margin:10px 1px 8px 8px; border:none;outline: none; background-color:rgb(236,241,253);
 		}
 		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul>li.job_select_content>button#x_btn:hover{
-			 text-decoration:underline; 
-		}
+			 text-decoration:underline; }
+	
 		footer{clear:both;}
 		
 		
@@ -358,7 +358,7 @@
 			background-color:rgb(236,241,253);
 		}
 		.section3>div.pf_area3>div.category-tech2>div{
-			 margin:15px 0; 
+			 margin:15px 0; color:red;
 		}
 		.section3>div.pf_area3>div.category-tech2>div:hover{
 			color:rgb(79,123,240); text-decoration:underline;
