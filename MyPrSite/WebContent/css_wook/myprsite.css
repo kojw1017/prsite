@@ -280,14 +280,15 @@
 		select:focus{
 			outline: none;
 		}
-		/*********section 1 부분끝남***********/
+		/*********프로필 section 1 부분끝남***********/
 		
 		
 		
 		
-		/*********section 2 시작***********/
+		/*********프로필 section 2 시작***********/
 
-		.section2>div.content_name{color: rgb(79,123,240); font-size:26px;margin-bottom:10px;}
+		.section2>div.content_name,
+		.section3>div.content_name{color: rgb(79,123,240); font-size:26px;margin-bottom:10px;}
 		.section2>div.pf_area2{width:100%;height:190px;background-color:#f8f8f8;  /* position:relative; */ padding-top:1px;}
 		.section2>div.pf_area2>div.pf_job{
 			margin:10px 0 4px 0;  text-align:center;
@@ -299,13 +300,14 @@
 		}
 		.section2>div.pf_area2>div.pf_job>select.job_select,
 		.section2>div.pf_area2>div.pf_job>select.job_select_2{
-			padding-left:240px;
+			padding-left:240px;border:1px solid rgba(105,105,150,.12);
 		}
 
 		.section2>div.pf_area2>div.pf_job_select{ text-align:center;}
 		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area{
 		width:1160px; height:90px; overflow:auto;
 			 border-radius:10px; background-color:white;
+			 border:1px solid rgba(105,105,150,.12);
 			 display:inline-block; /* border:1px solid red; */ margin-top:20px;
 		}
 		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul{
@@ -329,4 +331,38 @@
 		footer{clear:both;}
 		
 		
-		
+		/*********프로필 section3 시작*********/
+		.section3>div.content_name{margin-top:35px;}
+		.section3>div.pf_area3{
+			width:100%;height:350px;
+			background-color:#f8f8f8;  
+			 padding-top:1px;
+			 
+		}
+		.section3>div.pf_area3>div.category-tech1,
+		.section3>div.pf_area3>div.category-tech2{
+			margin-left:20px;
+			margin-top:20px;
+			border:1px solid rgba(105,105,150,.12);
+			display:inline-block;
+			width:350px;
+			height:300px;
+			text-align:center;
+			overflow:auto;
+			background-color:white;
+		}
+		.section3>div.pf_area3>div.category-tech1>div.category-tech1-select{
+			border:1px solid rgba(0,0,0,..12);padding:20px 0;background-color:white;
+		}
+		.section3>div.pf_area3>div.category-tech1>div.category-tech1-select:hover{
+			background-color:rgb(236,241,253);
+		}
+		.section3>div.pf_area3>div.category-tech2>div{
+			 margin:15px 0; 
+		}
+		.section3>div.pf_area3>div.category-tech2>div:hover{
+			color:rgb(79,123,240); text-decoration:underline;
+		}
+		.section3>div.pf_area3>div.category-tech2>div:click{
+			color:red;
+		}
