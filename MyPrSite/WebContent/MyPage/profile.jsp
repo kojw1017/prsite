@@ -63,6 +63,7 @@
 	
 	    });//jobselect
 	    var count=0;
+	    var radomvalue=0;
 	    var arr = new Array();
 	    $('.job_select , .job_select_2 ').change(function(){
 	    	if(count<5){
@@ -73,8 +74,9 @@
 	 	    			 alert("중복되는 값이 있습니다.")
 	 	    		 }else{
 		 	 	    	count++;
+		 	 	    	radomvalue++;
 		  	    		//alert(count);
-		 	    		$(".pf_job_select_area ul").append("<li class='job_select_content'>"+ sel1 +":&nbsp&nbsp"+sel2+"<button type='button'id='x_btn'>x</button></li>");
+		 	    		$(".pf_job_select_area ul").append("<li class='job_select_content'>"+ sel1 +":&nbsp&nbsp"+sel2+"<button type='button'id='x_btn' name='"+radomvalue+"'>x</button></li>");
 		 	    		$(".job_select option:eq(0)").prop("selected",true);
 		 	    		$(".job_select_2 option:eq(0)").prop("selected",true);
 		 	    		arr.push(sel1+","+sel2);
@@ -82,8 +84,13 @@
 	 	    		 }
 	 	    		
 
-	 	    	$(".job_select_content>button").click(function(){
-	 	    		$(this).parent().remove();			
+	 	    	$(".job_select_content>button[name='"+radomvalue+"']").click(function(){
+	 	    		$(this).parent().remove();	
+ 	 	    		var find =arr.indexOf(sel1+","+sel2); 
+	 	    		arr.splice(find,1);
+		 	    	
+			 	    alert(arr);
+			 	    count--;
 	 			   }); 
 	 	    	}
 	    	}else{
@@ -94,11 +101,14 @@
 	    	}
 
 	    });//'.job_select , .job_select_2 '
-
+	    
+	    var arr2=new Array();
+		var category_count =0;
 	    $(".category-tech1-select").click(function(){
 	    	//alert($(this).attr("id"));
+	    		//$(this).css("color","rgb(79,123,240)");
 	    	if($(this).text()=="디자인"){
-
+	    		$(".category-tech2 *").remove();
 	    		$(".category-tech2").append(
 	    				"<div>Adobe Photoshop</div>",
 	    				"<div>Adobe Illustrator</div>",
@@ -129,8 +139,162 @@
 	    				"<div>CAD</div>",
 	    				"<div>v-ray</div>"
 	    		);
+	    	}else if($(this).text()=="IT·프로그래밍"){
+	    		$(".category-tech2 *").remove();
+	    		$(".category-tech2").append(
+	    				"<div>워드프레스</div>",
+	    				"<div>HTML·CSS</div>",
+	    				"<div>JavaScript</div>",
+	    				"<div>Java</div>",
+	    				"<div>Python</div>",
+	    				"<div>PHP</div>",
+	    				"<div>C#</div>",
+	    				"<div>Ruby·RoR</div>",
+	    				"<div>TypeScript</div>",
+	    				"<div>React</div>",
+	    				"<div>ASP.NET</div>",
+	    				"<div>Bootstrap</div>",
+	    				"<div>JSP</div>",
+	    				"<div>Vue.js</div>",
+	    				"<div>ASP</div>",
+	    				"<div>Node.js</div>",
+	    				"<div>Object-C</div>",
+	    				"<div>Android Studio</div>",
+	    				"<div>C#·.NET</div>",
+	    				"<div>C&C++</div>",
+	    				"<div>Visual Basic</div>",
+	    				"<div>Lua</div>",
+	    				"<div>Arduino</div>",
+	    				"<div>SQL</div>",
+	    				"<div>jQuery</div>",
+	    				"<div>node.js</div>",
+	    				"<div>Kudan</div>",
+	    				"<div>Visual Studio</div>"
+	    		);
+	    	}else if($(this).text()=="영상·사진·음향"){
+	    		$(".category-tech2 *").remove();
+	    		$(".category-tech2").append(
+	    				"<div>촬영</div>",
+	    				"<div>편집</div>",
+	    				"<div>후보정</div>",
+	    				"<div>제작총괄</div>",
+	    				"<div>인물</div>",
+	    				"<div>제품</div>",
+	    				"<div>프로필</div>",
+	    				"<div>음식</div>",
+	    				"<div>남자 성우</div>",
+	    				"<div>여자 성우</div>",
+	    				"<div>캐릭터 연기</div>",
+	    				"<div>ARS 녹음</div>",
+	    				"<div>내레이션</div>",
+	    				"<div>채보/사보</div>",
+	    				"<div>편곡</div>",
+	    				"<div>작곡</div>",
+	    				"<div>마스터링</div>",
+	    				"<div>음원편집</div>",
+	    				"<div>MC</div>",
+	    				"<div>모델</div>",
+	    				"<div>공연</div>"
+	    		);		
+	    	}else if($(this).text()=="마케팅"){
+	    		$(".category-tech2 *").remove();
+	    		$(".category-tech2").append(
+	    				"<div>SNS 마케팅</div>",
+	    				"<div>콘텐츠 제작</div>",
+	    				"<div>키워드 광고</div>",
+	    				"<div>블로그 마케팅</div>",
+	    				"<div>카페 마케팅</div>",
+	    				"<div>쇼핑몰 마케팅</div>",
+	    				"<div>해외 마케팅</div>",
+	    				"<div>언론 홍보 마케팅</div>",
+	    				"<div>블로그체험단</div>",
+	    				"<div>유튜브체험단</div>",
+	    				"<div>밴드 마케팅</div>",
+	    				"<div>카카오 마케팅</div>",
+	    				"<div>트위터 마케팅</div>",
+	    				"<div>옥외 광고 마케팅</div>",
+	    				"<div>광고콘텐츠 제작</div>",
+	    				"<div>TV·영상 광고 마케팅</div>"
+	    		);			
+	    	}else if($(this).text()=="번역·통역"){
+	    		$(".category-tech2 *").remove();
+	    		$(".category-tech2").append(
+	    				"<div>영어 번역</div>",
+	    				"<div>중국어 번역</div>",
+	    				"<div>일본어 번역</div>",
+	    				"<div>독일어 번역</div>",
+	    				"<div>러시아어 번역</div>",
+	    				"<div>베트남어 번역</div>",
+	    				"<div>스페인어 번역</div>",
+	    				"<div>이탈리아어 번역</div>",
+	    				"<div>포르투갈어 번역</div>",
+	    				"<div>프랑스어 번역</div>",
+	    				"<div>영어 통역</div>",
+	    				"<div>중국어 통역</div>",
+	    				"<div>일본어 통역</div>",
+	    				"<div>독일어 통역</div>",
+	    				"<div>러시아어 통역</div>",
+	    				"<div>베트남어 통역</div>",
+	    				"<div>스페인어 통역</div>",
+	    				"<div>이탈리아어 통역</div>",
+	    				"<div>포르투갈어 통역</div>",
+	    				"<div>프랑스어 통역</div>"
+	    		);		
+
 	    	}
+	    var obj_name = $(this).text();
+	    var random =0;
+	    $(".category-tech2>div").click(function(){
+	    	var name_check = obj_name+":  "+$(this).text();
+	    	if(arr2.includes(name_check)){
+	    		alert("중복되는 값이 존재");
+	    	}else{
+	    		category_count++;
+	    		random++;
+	    		alert(category_count);
+	    		arr2.push(name_check);
+		    	$(".category-tech-select").append("<div>"+obj_name+":  "+$(this).text()+"<button type='button'id='x_btn' name ='"+random+"'>x</button></div>");
+		    	alert(arr2);
+		    	check(random);
+		    	function check(random){
+			    	 $(".category-tech-select>div>button[name='"+random+"']").click(function(){
+		 	    		$(this).parent().remove();	
+		 	    		category_count--;
+		 	    		alert(category_count);
+		 	    		//$(this).parent().text().pop();
+		 	 
+		 	    		var find =arr2.indexOf($(this).parent().text().slice(0,-1));
+				 	    arr2.splice(find,1);
+				 	    	
+				 	    alert(arr2);
+		
+		 	    		
+		 			 });  
+		    		
+		    	}
+		    	
+		    	 
+	    	}
+
+	    	
+	    })//
+
+	    });//.category-tech1-select").click
+	    $(".attendance_status").change(function(){
+	    	 $(".attendance_status").css("color","black");
 	    });
+	    $("#certificate_file").change(function(){
+	    	if($(this).val().length == 0){
+	        } else {
+	          var fileName = $(this).val().split('/').pop().split('\\').pop();
+	          $("#file_name").append(fileName+" ");
+	        //  $(this).parent('div').find('input:text').val(fileName);
+	        }
+	    	
+	    });
+
+	    
+	    
 	    
     });
     
@@ -222,10 +386,73 @@
                           <div class="category-tech1-select"  id="tech1-tranlation">번역·통역</div>                    
 						</div>
 						<div class="category-tech2">
-							 
-                 
+						</div>
+						<div class="category-tech-select">
 						</div>
 			</div>
+		</section>
+		<section class="section4">
+		<div class = "content_name">학력·전공</div> 
+			<div class ="pf_area4">
+					<div class="university_major_area"><h4>학력 전공을 작성해주세요</h4></div>	
+					<div class="university_major_area_input">
+						<input type="text" class="univercity_input" placeholder="학교명(ex 사람온대학교)">
+						<input type="text" class="univercity_major_input" placeholder="전공(ex 컴퓨터공학과)">
+						<select name="attendance_status" class="attendance_status" id="attendance_status">
+							<option value="" selected disabled hidden>상태</option>
+							<option value="재학">재학</option>
+							<option value="휴학">휴학</option>
+							<option value="이수">이수</option>
+							<option value="졸업">졸업</option>
+						</select>
+					</div>
+					<h4 class="h4_certificate">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
+					<div class="university_certificate">
+						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
+						<input type="file" id="certificate_file">
+						<span id="file_name"></span>
+						<div>
+							<p>
+							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
+								
+								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
+								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 재학증명서, 졸업증명서 또는 성적증명서<br>
+								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
+							</p>
+						</div>
+					</div>
+					
+			</div>
+		
+		</section>
+		<section class="section5">
+		<div class = "content_name">자격증</div> 
+			<div class ="pf_area5">
+					<div class="h4_certificate_area"><h4>보유한 자격증을 작성해주세요</h4></div>	
+					<div class="certificate_area">
+						<input type="text" class="certificate_area_input1" placeholder="자격증명">
+						<input type="text" class="certificate_area_input2" placeholder="발급일">
+						<input type="text" class="certificate_area_input3" placeholder="발급기간">
+						
+					</div>
+					<h4 class="h4_certificate">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
+					<div class="university_certificate">
+						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
+						<input type="file" id="certificate_file">
+						<span id="file_name"></span>
+						<div>
+							<p>
+							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
+								
+								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
+								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 재학증명서, 졸업증명서 또는 성적증명서<br>
+								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
+							</p>
+						</div>
+					</div>
+					
+			</div>
+		
 		</section>
 			
 	</div>
