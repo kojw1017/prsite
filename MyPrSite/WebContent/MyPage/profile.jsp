@@ -283,6 +283,12 @@
 	    $(".attendance_status").change(function(){
 	    	 $(".attendance_status").css("color","black");
 	    });
+	    $(".career_year").change(function(){
+	    	 $(".career_year").css("color","black");		
+	    });
+	    $(".career_month").change(function(){
+	    	 $(".career_month").css("color","black");		
+	    });
 	    $("#certificate_file").change(function(){
 	    	if($(this).val().length == 0){
 	        } else {
@@ -292,8 +298,26 @@
 	        }
 	    	
 	    });
-
-	    
+	    $("#certificate_area_file").change(function(){
+	    	if($(this).val().length == 0){
+	        } else {
+	          var fileName = $(this).val().split('/').pop().split('\\').pop();
+	          $("#certificate_file_name").append(fileName+" ");
+	        //  $(this).parent('div').find('input:text').val(fileName);
+	        }
+	    	
+	    });
+	    $("#certificate_career_area_file").change(function(){
+	    	if($(this).val().length == 0){
+	        } else {
+	          var fileName = $(this).val().split('/').pop().split('\\').pop();
+	          $("#certificate_career_file_name").append(fileName+" ");
+	        //  $(this).parent('div').find('input:text').val(fileName);
+	        }
+	    	
+	    });
+	   
+	     
 	    
 	    
     });
@@ -435,17 +459,17 @@
 						<input type="text" class="certificate_area_input3" placeholder="발급기간">
 						
 					</div>
-					<h4 class="h4_certificate">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
-					<div class="university_certificate">
+					<h4 class="h4_certificate_area_input">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
+					<div class="certificate_area_input">
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
-						<input type="file" id="certificate_file">
-						<span id="file_name"></span>
+						<input type="file" id="certificate_area_file">
+						<span id="certificate_file_name"></span>
 						<div>
 							<p>
 							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
 								
 								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
-								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 재학증명서, 졸업증명서 또는 성적증명서<br>
+								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 자격증 사본<br>
 								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
 							</p>
 						</div>
@@ -453,6 +477,70 @@
 					
 			</div>
 		
+		</section>
+		
+		<section class="section6">
+		<div class = "content_name">경력 사항</div> 
+			<div class ="pf_area6">
+					<div class="h4_career_area"><h4>경력사항을 작성해주세요</h4></div>	
+					<div class="career_area">
+						<input type="text" class="career_area_input1" placeholder="회사명">
+						<input type="text" class="career_area_input2" placeholder="근무부서">
+						<input type="text" class="career_area_input3" placeholder="직위">
+						<select name="career_year" class="career_year" id="career_year">
+							<option value="" selected disabled hidden>년</option>
+							<option value="1년">1년</option>
+							<option value="2년">2년</option>
+							<option value="3년">3년</option>
+							<option value="4년">4년</option>
+							<option value="5년">5년</option>
+							<option value="6년">3년</option>
+							<option value="7년">7년</option>
+							<option value="8년">8년</option>
+							<option value="9년">9년</option>
+							<option value="10년">10년</option>
+							<option value="11년이상">11년이상</option>
+							
+						</select>
+						<select name="career_month" class="career_month" id="career_month">
+							<option value="" selected disabled hidden>개월</option>
+							<option value="1개월">1개월</option>
+							<option value="2개월">2개월</option>
+							<option value="3개월">3개월</option>
+							<option value="4개월">4개월</option>
+							<option value="5개월">5개월</option>
+							<option value="6개월">6개월</option>
+							<option value="7개월">7개월</option>
+							<option value="8개월">8개월</option>
+							<option value="9개월">9개월</option>
+							<option value="10개월">10개월</option>
+							<option value="11개월">11개월</option>
+							
+							
+						</select>
+	
+					</div>
+		
+					<h4 class="h4_certificate_area_input">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
+					<div class="certificate_area_input">
+						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
+						<input type="file" id="certificate_career_area_file">
+						<span id="certificate_career_file_name"></span>
+						<div>
+							<p>
+							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
+								
+								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
+								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 국민연금 가입증명서, 재직/경력증명서<br>
+								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
+							</p>
+						</div>
+					</div>
+					
+			</div>
+			<div class="save_area">
+				<button type="button" class="save" id="save">프로필 저장</button>
+			</div>
 		</section>
 			
 	</div>
