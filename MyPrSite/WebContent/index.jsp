@@ -6,8 +6,21 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_gun/myprsite.css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/redmond/jquery-ui.min.css"/>
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+$(function(){
+    $('.design_img').tooltip({
+       items:'[data-photo]',
+        content:function(){
+            var photo = $(this).data('photo');
+            var info = $(this).data('info');
+            return '<img src="'+photo+'.png"/>' +info;
+        }
+    });
+});
+</script>
 </head>
 <body>
   <!-- header -->
@@ -37,10 +50,10 @@
 	            <a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp"><span>디자인</span></a>
 	            <a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp"><span>IT·프로그래밍</span></a>
 	            <a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp"><span>영상·사진·음향</span></a>
-	            <a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp"><span>마케팅</span></a>
+	            <a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp"><span>외국어</span></a>
 	            <a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp"><span>번역·통역</span></a>
             </div>
-          </div>
+            </div>         
         </div>
         </div>
       </section>
@@ -53,11 +66,20 @@
             <button type="button"><</button>
             <div class="design_img">
             
-              <a href =""><div class="design_one"></div></a>
-              <a href =""><div class="design_two"></div></a>
-              <a href =""><div class="design_three"></div></a>
-              <a href =""><div class="design_four"></div></a>
-              <a href =""><div class="design_five"></div></a>
+              <a href =""><div class="design_one" data-photo="https://media.vlpt.us/post-images/leejh3224/346b08f0-e5d7-11e9-a7c9-f7e46d949a35/css"
+              									data-info="<span>CSS 전문가</span></br><span>CSS 교육과정 이수</span>"></div></a>
+              									
+              <a href =""><div class="design_two" data-photo="https://arsfutura-production.s3.amazonaws.com/jobs/icons/000/000/009/original/91de50e59c"
+              									data-info="<span>JS 전문가</span></br><span>JS 교육과정 이수</span>"></div></a>
+              									
+              <a href =""><div class="design_three" data-photo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg"
+              									data-info="<span>HTML 전문가</span></br><span>HTML 교육과정 이수</span>"></div></a>
+              									
+              <a href =""><div class="design_four" data-photo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg"
+              									data-info="<span>포토샵 전문가</span></br><span>포토샵 교육과정 이수</span>"></div></a>
+              									
+              <a href =""><div class="design_five" data-photo="https://cdn.inflearn.com/wp-content/uploads/ai-icon"
+              									data-info="<span>일러스트 전문가</span></br><span>일러스트 교육과정 이수</span>"></div></a>
             </div>  
           </div>
           <div class="software_pr">
@@ -72,7 +94,7 @@
             <button type="button"><</button>
           </div>
           <div class="computer_pr">
-            <span>번역 카테고리에서 인기있어요!</span >
+            <span>번역 카테고리에서 인기있어요!</span>
             <button type="button">></button>
             <button type="button"><</button>
           </div>
