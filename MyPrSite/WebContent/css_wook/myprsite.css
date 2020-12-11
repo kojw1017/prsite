@@ -290,7 +290,8 @@
 		.section2>div.content_name,
 		.section3>div.content_name,
 		.section4>div.content_name,
-		.section5>div.content_name{color: rgb(79,123,240); font-size:26px;margin-bottom:10px;}
+		.section5>div.content_name,
+		.section6>div.content_name{color: rgb(79,123,240); font-size:26px;margin-bottom:10px;}
 		.section2>div.pf_area2{width:100%;height:190px;background-color:#f8f8f8;  /* position:relative; */ padding-top:1px;}
 		.section2>div.pf_area2>div.pf_job{
 			margin:10px 0 4px 0;  text-align:center;
@@ -335,7 +336,7 @@
 		
 		/*********프로필 section3 시작*********/
 		.section3>div.content_name,.section4>div.content_name,
-		.section5>div.content_name{margin-top:35px;}
+		.section5>div.content_name,.section6>div.content_name{margin-top:35px;}
 		.section3>div.pf_area3{
 			width:100%;height:350px;
 			background-color:#f8f8f8;  
@@ -406,31 +407,47 @@
 		.section4>div.pf_area4>div.university_major_area_input>input.univercity_input::placeholder {font-weight:500; color:gray;}
  		.section4>div.pf_area4>div.university_major_area_input>input.univercity_major_input{  width:350px; margin-left:10px;}
 		.section4>div.pf_area4>div.university_major_area_input>select.attendance_status{ font-weight:500; color:gray; width:150px; height:53px;margin-left:10px;}
-		.section4>div.pf_area4>h4.h4_certificate{
+		.section4>div.pf_area4>h4.h4_certificate,
+		.section5>div.pf_area5>h4.h4_certificate_area_input,
+		.section6>div.pf_area6>h4.h4_certificate_area_input{
 			font-weight:450;margin-left:40px;margin-top:20px;
 		}
-		.section4>div.pf_area4>h4.h4_certificate>span{
+		.section4>div.pf_area4>h4.h4_certificate>span,
+		.section5>div.pf_area5>h4.h4_certificate_area_input>span,
+		.section6>div.pf_area6>h4.h4_certificate_area_input>span{
 		font-weight:400;font-size:13px;color:rgb(79,123,240);
 		}
-		.section4>div.pf_area4>div.university_certificate>label>span{
+		.section4>div.pf_area4>div.university_certificate>label>span,
+		.section5>div.pf_area5>div.certificate_area_input>label>span,
+		.section6>div.pf_area6>div.certificate_area_input>label>span{
 		border-radius:10px;color:rgb(79,123,240);margin-left:40px;padding:20px;
 		width:200px;display:inline-block;text-align:center;
 		background-color:rgba(165,190,175,.12);
 		}
-		.section4>div.pf_area4>div.university_certificate>input#certificate_file{
+		.section4>div.pf_area4>div.university_certificate>input#certificate_file,
+		.section5>div.pf_area5>div.certificate_area_input>input#certificate_area_file,
+		.section6>div.pf_area6>div.certificate_area_input>input#certificate_career_area_file{
 		 margin-left:-250px; padding:20px 0; opacity:0;
 		 }
-		.section4>div.pf_area4>div.university_certificate>span#file_name{
+		.section4>div.pf_area4>div.university_certificate>span#file_name,
+		.section5>div.pf_area5>div.certificate_area_input>span#certificate_file_name,
+		.section6>div.pf_area6>div.certificate_area_input>span#certificate_career_file_name{
 		color:gray;font-size:12px;
 		}
-		.section4>div.pf_area4>div.university_certificate>div{
+		.section4>div.pf_area4>div.university_certificate>div,
+		.section5>div.pf_area5>div.certificate_area_input>div,
+		.section6>div.pf_area6>div.certificate_area_input>div{
 		margin-left:40px;
 		}
-		.section4>div.pf_area4>div.university_certificate>div>p{
+		.section4>div.pf_area4>div.university_certificate>div>p,
+		.section5>div.pf_area5>div.certificate_area_input>div>p,
+		.section6>div.pf_area6>div.certificate_area_input>div>p{
 		background-color:rgb(236,241,253);border-radius:10px;
 		display:inline-block;width:1200px;height:110px;
 		}
-		.section4>div.pf_area4>div.university_certificate>div>p>span{
+		.section4>div.pf_area4>div.university_certificate>div>p>span,
+		.section5>div.pf_area5>div.certificate_area_input>div>p>span,
+		.section6>div.pf_area6>div.certificate_area_input>div>p>span{
 		color:rgb(79,123,240);
 		}
 		/***section5 자격증 입력부분 ***/
@@ -440,15 +457,22 @@
 			 padding-top:1px;
 			 
 		}
-		.section5>div.pf_area5>h4_div.certificate_area{ 
-		text-align:none; height:40px;
+		.section5>div.pf_area5>h4_div.certificate_area,
+		.section5>div.pf_area5>h4_div.career_area{ 
+			text-align:none; height:40px;
 		}
-		.section5>div.pf_area5>div.h4_certificate_area>h4{ 
+		.section5>div.pf_area5>div.h4_certificate_area>h4,
+		.section6>div.pf_area6>div.h4_career_area>h4{ 
 		font-weight:450;margin-left:40px;margin-top:20px;
 		}
 		.section5>div.pf_area5>div.certificate_area>input.certificate_area_input1,
 		.section5>div.pf_area5>div.certificate_area>input.certificate_area_input2,
-		.section5>div.pf_area5>div.certificate_area>input.certificate_area_input3{
+		.section5>div.pf_area5>div.certificate_area>input.certificate_area_input3,
+		.section6>div.pf_area6>div.career_area>input.career_area_input1,
+		.section6>div.pf_area6>div.career_area>input.career_area_input2,
+		.section6>div.pf_area6>div.career_area>input.career_area_input3,
+		.section6>div.pf_area6>div.career_area>select.career_year,
+		.section6>div.pf_area6>div.career_area>select.career_month{
 		border:1px solid rgba(60,16,150,.1);height:50px;margin-top:-8px;padding-left:20px;outline: none;border-radius:10px;
 		}
 		.section5>div.pf_area5>div.certificate_area>input.certificate_area_input1{
@@ -459,4 +483,34 @@
 		}
 		.section5>div.pf_area5>div.certificate_area>input.certificate_area_input3{
 			width:300px;margin-left:10px;
+		}
+		/****section6 경력 입력부분****/
+		.section6>div.pf_area6{
+			width:100%;height:390px;
+			background-color:#f8f8f8;  
+			 padding-top:1px;
+			 
+		}
+		.section6>div.pf_area6>div.career_area>input.career_area_input1{
+			width:300px;margin-left:40px;
+		}
+		.section6>div.pf_area6>div.career_area>input.career_area_input2{
+			width:250px;margin-left:5px;
+		}
+		.section6>div.pf_area6>div.career_area>input.career_area_input3
+		{
+			width:200px;margin-left:5px;
+		}
+		.section6>div.pf_area6>div.career_area>select.career_year,
+		.section6>div.pf_area6>div.career_area>select.career_month{
+			width:150px;margin-left:5px;
+			font-weight:500; color:gray; width:150px; height:54px;margin-left:5px;
+		}
+		.section6>div.save_area{text-align:right;margin-top:15px;}
+		.section6>div.save_area>.save{
+			display:inline-block;width:200px; height:70px;border:1px solid rgb(79,123,240);border-radius:10px;
+		background-color:rgb(79,123,240);color:rgb(236,241,253);outline: none;
+		}
+		.section6>div.save_area>.save:hover{
+			background-color:rgb(236,241,253);color:rgb(79,123,240);border:1px solid rgb(79,123,240);border-radius:10px;
 		}
