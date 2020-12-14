@@ -46,7 +46,7 @@
         <div class="image_form">
           <img src="http://localhost:9000/MyPrSite/images/login_main.svg" />
         </div>
-        <form action="#" method="post" name="input_login_form" class="input_login_form" id="login_Form">
+        <form action="http://localhost:9000/MyPrSite/login/loginAction.jsp" method="post" name="input_login_form" class="input_login_form" id="login_Form">
           <ul>
             <li class="h3_login">
               <img src="http://localhost:9000/MyPrSite/images/login_avatar.svg" />
@@ -55,7 +55,7 @@
             <li class="input_area">
               <input
                 type="text"
-                name="id"
+                name="userID"
                 id="id"
                 autocomplete="off"
                 required
@@ -67,7 +67,7 @@
             <li class="input_area">
               <input
                 type="password"
-                name="pw"
+                name="userPassword"
                 id="pw"
                 autocomplete="off"
                 required
