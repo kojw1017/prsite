@@ -112,6 +112,12 @@
 		  25% {
 		    transform: translateX(3px);
 		  }
+		  50% {
+		    transform: translateX(-3px);
+		  }
+		  75% {
+		    transform: translateX(3px);
+		  }
 		}
 		.input_area input:focus + label,
 		.input_area input:valid + label {
@@ -234,7 +240,7 @@
 		  height: 800px;
 		}
 		div.idpw_content h2 {
-		  margin-top: 30px;
+		  margin-top: 50px;
 		  margin-bottom: 30px;
 		}
 		div.idpw {
