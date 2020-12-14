@@ -7,8 +7,38 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_wook/myprsite.css">
+<script src="http://localhost:9000/MyPrSite/jquery-3.5.1.min.js"></script>
 <script>
-
+$(document).ready(function(){
+	
+	$("#mypage_bar_introduce").click(function (e) {
+	
+		  e.preventDefault();
+		  var scrollPosition =  $("#mypage_content_introduce").offset().top;
+		  $("html, body").stop().animate({
+		        scrollTop: scrollPosition
+		  }, 700);
+		  
+		});
+	$("#mypage_bar_portfolio").click(function (e) {
+		
+		  e.preventDefault();
+		  var scrollPosition =  $("#mypage_content_portfolio").offset().top;
+		  $("html, body").stop().animate({
+		        scrollTop: scrollPosition
+		  }, 700);
+		  
+		});
+	$("#mypage_bar_evaluation").click(function (e) {
+		
+		  e.preventDefault();
+		  var scrollPosition =  $("#mypage_content_evaluation").offset().top;
+		  $("html, body").stop().animate({
+		        scrollTop: scrollPosition
+		  }, 700);
+		  
+		});
+});
 
 
 </script>
@@ -67,23 +97,26 @@
 		<section class="section2">
 			<div class="mypage_bar">
 				<ul>
-					<li><div>소개</div></li>
-					<li><div>포토폴리오</div></li>
-					<li><div>받은평가</div></li>
+					<li id="mypage_bar_introduce"><div>소개</div></li>
+					<li id="mypage_bar_portfolio"><div>포토폴리오</div></li>
+					<li id="mypage_bar_evaluation"><div>받은평가</div></li>
 				</ul>
 			</div>
-			<div class="mypage_content_introduce">
+			<div class="mypage_content_introduce" id="mypage_content_introduce">
 				<div class="bar">소개</div>
 				<div><p> 안녕하세요 김남욱 입니다. 잘 부탁드립니다.</p></div>
 			</div>
-			<div class="mypage_content_portfolio">
+			<div class="mypage_content_portfolio" id="mypage_content_portfolio">
 				<div class="bar">포토폴리오</div>
 				<div class="p_select">
 					<select name="portfolio_select" class="p_select_bar">
+
 						<option value="선택">전체</option>
-						<option value="웹">Web</option>
-						<option value="안드로이드">Android</option>
-						<option value="마케팅">Marketing</option>
+						<option value="디자인">디자인</option>
+						<option value="IT·프로그래밍">IT·프로그래밍</option>
+						<option value="영상·사진·음향">영상·사진·음향</option>
+						<option value="마케팅">마케팅</option>
+						<option value="번역·통역">번역·통역</option>
 					</select>
 				</div>
 			</div>
@@ -99,7 +132,7 @@
 				</ul>
 				
 			</div>
-			<div class="mypage_content_evaluation">
+			<div class="mypage_content_evaluation" id="mypage_content_evaluation">
 				<div class="bar">받은평가</div>
 			</div>
 			<div class="star">0.0</div>

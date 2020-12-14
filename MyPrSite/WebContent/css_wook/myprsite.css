@@ -24,7 +24,7 @@
     		/* border:1px solid rgb(163,163,194); border-radius:55px; */
     		
 		}
-		section.section1 aside.my_aside div.info{ width:100%;float:left;/* border:1px solid green; */}
+		section.section1 aside.my_aside div.info{ width:100%;float:left;  }
 		section.section1>div.m1>aside.my_aside>div.info>ul{text-align:center;}
 		section.section1>div.m1>aside.my_aside>div.info>ul li{
 			list-style-type:none;
@@ -51,6 +51,7 @@
 		}
 		.section1>div>aside.my_aside_profile>span.thum{
 			margin:50px 5px 10px 110px; 
+			background-size:contain;
 		}
 		section.section1>div.m1>aside.my_aside>div.info>ul>li>div.prf{
 		width:180px;display:inline-block;text-align:center;margin-top:10px;
