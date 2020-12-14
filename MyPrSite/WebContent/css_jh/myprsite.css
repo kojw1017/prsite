@@ -59,7 +59,6 @@
 		background-color:rgb(127,178,240); }
 	section.join1>form>ul>li>button:hover {background-color:#035FB2; background:#035FB2;}
 	section.join1>form>ul>li:last-child {margin:50px 50px; }
-/* 	section.join1>form>ul>li:last-child a>button{background-color:red;} */
 	
 	.warning {
         animation: warning 0.3s ease;
@@ -153,3 +152,29 @@
 	
 	ul.cat_content img.pr_img:hover { opacity:0.3; }
 	
+	/*
+		°Ô½ÃÆÇ(board_list)
+	*/
+	.board table {width:600px; margin:auto; margin-top:100px; height:350px;}
+	.board table, .board th, .board td {border-collapse:collapse;}
+	.board table {text-align:center;}
+	.board tr:first-child td {text-align:right;}
+	#board_list tr:nth-child(2) td {text-align:left;}
+	.board table td>a {text-decoration:none; }
+	.board table tr:last-child td{padding-top:8px;}
+	.board tr, .board table {border:lightgray;}
+	.btn_style {border-radius:4px; border:none; background-color:rgb(79,123,240); padding:5px 15px; color:white; margin:0px 5px;}
+	
+	/* board_content */
+	#board_content table {height:800px;}
+	.board table td#content {height:50%;}
+	#board_content tr:last-child {height:30%;}
+	.board table textarea {width:450px; height:100px; }
+	#board_content #user_img {width:50px; height:50px; float:left; margin-left:30px;}
+	
+	/* board_delete */
+	#board_delete table td #delete_img {width:200px; height:210px; }
+	
+	/* board_write, board_update */
+	#board_write tr input[type='text'], #board_update tr input[type='text'] {width:450px; height:23px;}
+	#board_write tr:nth-child(3) td, #board_update tr:nth-child(3) td {text-align:left; text-indent:70px;}

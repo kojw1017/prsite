@@ -1,5 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="com.myprsite.vo.*" %>
+<% 
+	JoinVO vo = new JoinVO();
+	request.setCharacterEncoding("utf-8");
+	vo.setChk1(request.getParameter("join_check1"));
+	vo.setChk2(request.getParameter("join_check2"));
+	vo.setChk3(request.getParameter("join_check3"));
+	vo.setChk4(request.getParameter("join_check4"));
+	
+	System.out.println(vo.getChk1());
+	System.out.println(vo.getChk2());
+	System.out.println(vo.getChk3());
+	System.out.println(vo.getChk4());
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +27,7 @@
 		<div class="logo">
 			<a href="http://localhost:9000/MyPrSite/index.jsp"><img src="http://localhost:9000/MyPrSite/images/saram.png" class="logo"></a>
 		</div>
-		<form name="join1" action="#" method="get">
+		<form name="join1" action="joinProc.jsp" method="post">
 			<ul>
 				<li>
 					<div><label><span class="red">*</span>아이디</label></div>
@@ -105,17 +118,17 @@
 				<li>
 					<div><label><span class="red">*</span>휴대전화</label></div>
 					<select name="number" class="number">
-						<option value="">대한민국 +82</option>
-						<option value="">가나 +233</option>
-						<option value="">시리아 +963</option>
-						<option value="">가봉 +241</option>
-						<option value="">시에라리온 +232</option>
-						<option value="">가이아나 +592</option>
-						<option value="">싱가포르 +65</option>
-						<option value="">과테말라 +502  </option>
-						<option value="">아랍에미리트 +971</option>
-						<option value="">괌 +1671 </option>
-						<option value="">아르메니아 +374</option>
+						<option value="82">대한민국 +82</option>
+						<option value="233">가나 +233</option>
+						<option value="963">시리아 +963</option>
+						<option value="241">가봉 +241</option>
+						<option value="232">시에라리온 +232</option>
+						<option value="592">가이아나 +592</option>
+						<option value="65">싱가포르 +65</option>
+						<option value="502">과테말라 +502  </option>
+						<option value="971">아랍에미리트 +971</option>
+						<option value="1671">괌 +1671 </option>
+						<option value="374">아르메니아 +374</option>
 						<option value="">그레나다 +1473</option>
 						<option value="">아르헨티나 +54</option>
 						<option value="">그리스 +30</option>
