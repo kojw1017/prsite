@@ -51,7 +51,8 @@
 		}
 		.section1>div>aside.my_aside_profile>span.thum{
 			margin:50px 5px 10px 110px; 
-			background-size:contain;
+			background-size:100% 100%;
+			
 		}
 		section.section1>div.m1>aside.my_aside>div.info>ul>li>div.prf{
 		width:180px;display:inline-block;text-align:center;margin-top:10px;
