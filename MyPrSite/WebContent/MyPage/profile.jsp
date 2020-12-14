@@ -62,6 +62,8 @@
 	    	}
 	
 	    });//jobselect
+	    
+	    
 	    var count=0;
 	    var radomvalue=0;
 	    var arr = new Array();
@@ -101,6 +103,8 @@
 	    	}
 
 	    });//'.job_select , .job_select_2 '
+	    
+	    
 	    
 	    var arr2=new Array();
 		var category_count =0;
@@ -251,22 +255,22 @@
 	    	}else{
 	    		category_count++;
 	    		random++;
-	    		alert(category_count);
+	    		/* alert(category_count); */
 	    		arr2.push(name_check);
 		    	$(".category-tech-select").append("<div>"+obj_name+":  "+$(this).text()+"<button type='button'id='x_btn' name ='"+random+"'>x</button></div>");
-		    	alert(arr2);
+		    	/* alert(arr2); */
 		    	check(random);
 		    	function check(random){
 			    	 $(".category-tech-select>div>button[name='"+random+"']").click(function(){
 		 	    		$(this).parent().remove();	
 		 	    		category_count--;
-		 	    		alert(category_count);
+		 	    		/* alert(category_count); */
 		 	    		//$(this).parent().text().pop();
 		 	 
 		 	    		var find =arr2.indexOf($(this).parent().text().slice(0,-1));
 				 	    arr2.splice(find,1);
 				 	    	
-				 	    alert(arr2);
+				 	   /*  alert(arr2); */
 		
 		 	    		
 		 			 });  
@@ -280,6 +284,9 @@
 	    })//
 
 	    });//.category-tech1-select").click
+	    
+	    
+	    
 	    $(".attendance_status").change(function(){
 	    	 $(".attendance_status").css("color","black");
 	    });
@@ -316,7 +323,23 @@
 	        }
 	    	
 	    });
-	   
+	    
+	    $("#file").change(function(){
+	    	 readURL(this);
+	    })
+	    
+	   function readURL(input) {
+            if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+/*                     $('#myhome_profile_photo').attr('src', e.target.result); */
+                    $('#myhome_profile_photo').css("background-image","url("+e.target.result)+")";
+                }
+
+              reader.readAsDataURL(input.files[0]);
+            }
+        }
 	     
 	    
 	    
@@ -334,7 +357,7 @@
 				<aside class="my_aside_profile">
 					<span class="thum" id="myhome_profile_photo"></span>
 					<label for="file"><span class="thum_insert" id="myhome_profile_photo_insert"></span></label>
-					<input type="file" id="file">
+					<input type="file" id="file" accept=".jpg, .png">
 					<!-- <div class="pf_update_name"><label class="name_header">이름 : </label><label class="name_content">김남욱</label></div> -->
 					<div class="pf_update_name">  
 						<ul>
@@ -433,7 +456,7 @@
 					<h4 class="h4_certificate">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
 					<div class="university_certificate">
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
-						<input type="file" id="certificate_file">
+						<input type="file" id="certificate_file" accept=".jpg, .png">
 						<span id="file_name"></span>
 						<div>
 							<p>
@@ -441,6 +464,7 @@
 								
 								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 재학증명서, 졸업증명서 또는 성적증명서<br>
+								&nbsp&nbsp&nbsp&nbsp	• 1mb이하, jpg/png 파일만 등록 가능합니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
 							</p>
 						</div>
@@ -462,7 +486,7 @@
 					<h4 class="h4_certificate_area_input">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
 					<div class="certificate_area_input">
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
-						<input type="file" id="certificate_area_file">
+						<input type="file" id="certificate_area_file" accept=".jpg, .png">
 						<span id="certificate_file_name"></span>
 						<div>
 							<p>
@@ -470,6 +494,7 @@
 								
 								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 자격증 사본<br>
+								&nbsp&nbsp&nbsp&nbsp	• 1mb이하, jpg/png 파일만 등록 가능합니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
 							</p>
 						</div>
@@ -524,7 +549,7 @@
 					<h4 class="h4_certificate_area_input">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
 					<div class="certificate_area_input">
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
-						<input type="file" id="certificate_career_area_file">
+						<input type="file" id="certificate_career_area_file" accept=".jpg, .png">
 						<span id="certificate_career_file_name"></span>
 						<div>
 							<p>
@@ -532,6 +557,7 @@
 								
 								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 국민연금 가입증명서, 재직/경력증명서<br>
+								&nbsp&nbsp&nbsp&nbsp	• 1mb이하, jpg/png 파일만 등록 가능합니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
 							</p>
 						</div>
