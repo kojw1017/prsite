@@ -2,8 +2,7 @@ package user;
 import java.sql.ResultSet;
 
 public class UserDAO extends DBconn{
-
-	private ResultSet rs;
+	ResultSet rs;
 	
 	public int login(String userID,String userPassword) {
 		String SQL ="SELECT userPassword FROM USER_TABLE WHERE userID=?";
