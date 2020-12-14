@@ -15,14 +15,8 @@
 	<section class="board" id="board_list">
 		<table border=1>
 			<tr>
-				<td colspan="5">
-					<a href="board_write.jsp"><button type="button" id="btn_write" class="btn_style">글쓰기</button></a>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="5">
-					<span id="list_count">게시글 5개</span>
-				</td>
+				<td colspan="2"><span id="list_count">게시글 5개</span></td>
+				<td colspan="3"><a href="board_write.jsp"><button type="button" id="btn_write" class="btn_style">글쓰기</button></a></td>
 			</tr>
 			<tr>
 				<th>번호</th>

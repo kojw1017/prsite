@@ -34,6 +34,7 @@
 				<td colspan="3">
 					<img src="http://localhost:9000/MyPrSite/images/circle.png" id="user_img">
 					<textarea placeholder="댓글을 남겨주세요.(200자)"></textarea>
+					<button type="button" id="btn_send" class="btn_style">작성</button>
 				</td>
 			</tr>
 		</table>
