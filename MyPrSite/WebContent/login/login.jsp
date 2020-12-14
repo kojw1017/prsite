@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="//code.jquery.com/jquery.min.js"></script>
 <script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jw/myprsite.css">
   </head>

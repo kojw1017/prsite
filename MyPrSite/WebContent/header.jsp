@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jung/myprsite.css">
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jw/myprsite.css">
 </head>
@@ -102,7 +102,6 @@
           $(".login_form").removeClass("hidden");
           $("body").addClass("overflo");
         });
-
         $(".x_btn,.login_overlay").click(function closeForm() {
           $("div.login_form").addClass("hidden");
           $("body").removeClass("overflo");
