@@ -1,17 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.myprsite.vo.*" %>
+    pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
+<jsp:useBean id="user" class="com.myprsite.vo.JoinVO" />
+<jsp:setProperty name="user" property="*" />
 <% 
-	JoinVO vo = new JoinVO();
-	request.setCharacterEncoding("utf-8");
-	vo.setChk1(request.getParameter("join_check1"));
-	vo.setChk2(request.getParameter("join_check2"));
-	vo.setChk3(request.getParameter("join_check3"));
-	vo.setChk4(request.getParameter("join_check4"));
+	System.out.println(user.getChk1());
+	System.out.println(user.getChk2());
+	System.out.println(user.getChk3());
+	System.out.println(user.getChk4());
 	
-	System.out.println(vo.getChk1());
-	System.out.println(vo.getChk2());
-	System.out.println(vo.getChk3());
-	System.out.println(vo.getChk4());
 %>
 <!DOCTYPE html>
 <html>

@@ -1,35 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.myprsite.vo.*" %>
+    pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
+<% request.setCharacterEncoding("utf-8"); %>
+<jsp:useBean id="user" class="com.myprsite.vo.JoinVO"></jsp:useBean>
+<jsp:setProperty name="user" property="*" />
+
 <%
-	JoinVO vo = new JoinVO();
-	request.setCharacterEncoding("utf-8");
-	String id = request.getParameter("id");
-	String pass = request.getParameter("pass");
-	String name = request.getParameter("name");
-	String year = request.getParameter("year");
-	String month = request.getParameter("month");
-	String day = request.getParameter("day");
-	String gender = request.getParameter("gender");
-	String email = request.getParameter("email");
-	String number = request.getParameter("number");
-	String hp = request.getParameter("hp");
+	System.out.println(user.getChk2());
+	System.out.println(user.getChk2());
+	System.out.println(user.getId());
+	System.out.println(user.getPass());
+	System.out.println(user.getName());
+	System.out.println(user.getBirth());
+	System.out.println(user.getGender());
+	System.out.println(user.getEmail());
+	System.out.println(user.getHp());
 	
-	String birth = year+"-"+month+"-"+day;
-	
-	vo.setId(id);
-	vo.setPass(pass);
-	vo.setName(name);
-	vo.setName(birth);
-	vo.setGender(gender);
-	vo.setEmail(email);
-	vo.setPhone(hp);
-	
-	System.out.println("/n시작");
-	System.out.println(vo.getId());
-	System.out.println(vo.getPass());
-	System.out.println(vo.getName());
-	System.out.println(vo.getBirth());
-	System.out.println(vo.getGender());
-	System.out.println(vo.getEmail());
-	System.out.println(vo.getPhone());
+	//DB연결
+	UserDAO dao = new UserDAO();
+	dao.join2(user);
 %>

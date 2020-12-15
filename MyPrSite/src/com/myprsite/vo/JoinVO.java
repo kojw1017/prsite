@@ -2,7 +2,25 @@ package com.myprsite.vo;
 
 public class JoinVO {
 	String chk1, chk2, chk3, chk4;
-	String id, pass, name, birth, gender, email, phone;
+	String id, pass, name, year, month, day, birth, gender, email, hp;
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
+	}
+	public String getMonth() {
+		return month;
+	}
+	public void setMonth(String month) {
+		this.month = month;
+	}
+	public String getDay() {
+		return day;
+	}
+	public void setDay(String day) {
+		this.day = day;
+	}
 	public String getChk1() {
 		return chk1;
 	}
@@ -46,7 +64,11 @@ public class JoinVO {
 		this.name = name;
 	}
 	public String getBirth() {
-		return birth;
+		if(birth == null) {
+			return year + "-" + month + "-" + day;
+		}else {
+			return birth;
+		}
 	}
 	public void setBirth(String birth) {
 		this.birth = birth;
@@ -63,11 +85,11 @@ public class JoinVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhone() {
-		return phone;
+	public String getHp() {
+		return hp;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setHp(String hp) {
+		this.hp = hp;
 	}
 	
 	
