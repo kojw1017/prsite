@@ -4,9 +4,9 @@
 		 */
 		$("#chk").click(function(){
 			if($("#chk").is(":checked")){
-				$("input[name='join_check']").prop("checked", true);
+				$(".join_check").prop("checked", true);
 			}else{
-				$("input[name='join_check']").prop("checked", false);
+				$(".join_check").prop("checked", false);
 			}
 		});
 		
@@ -15,8 +15,7 @@
 				alert("필수항목을 체크해 주세요(●'◡'●)");
 				return false;
 			}else{
-				/*join_intro1.submit();*/
-				location.href = "join.jsp";
+				join_intro1.submit();
 			}
 		});
 		
@@ -62,7 +61,7 @@
 		         return false;
 		      }else {
 		         join1.submit();
-		         location.href="http://localhost:9000/MyPrSite/index.jsp"
+		         /*location.href="http://localhost:9000/MyPrSite/index.jsp";*/
 		      }
 		});
 		

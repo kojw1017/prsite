@@ -20,7 +20,7 @@
 			   <li><!--  <input type="search" name="sea" placeholder="검색어를 입력하세요"> --></li>
                <li><a id="btn_open" href="#">로그인</a><div></div></li>
                <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">MyPR</a><div></div></li>
-               <li><a href="#">게시판</a><div></div></li>	
+               <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
  				<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp"><button type="button" class="free">무료회원가입</button></a></li>
             </ul>
          </div>
