@@ -31,7 +31,7 @@
 					<td>
 						<a href="board_list.jsp"><button type="button" class="btn_style">이전으로</button></a>
 						<a href="board_list.jsp"><button type="button" class="btn_style">등록</button></a>
-						<a href="board_list.jsp"><button type="button" class="btn_style">임시저장</button></a>
+						<a href="board_list.jsp"><button type="button" class="btn_style">임시 저장</button></a>
 					</td>
 				</tr>
 			</table>
