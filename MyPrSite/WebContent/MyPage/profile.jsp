@@ -18,8 +18,10 @@
 	        if (content.length > 255){
 	            alert("최대 255자까지 입력 가능합니다.");
 	            $(this).val(content.substring(0, 255));
-	            $('#counter').html("(255 / 최대 255자)");
+	            $('.counter').html("(255 / 최대 255자)");
+	            $('.counter').css("color","red");
 	        }else{
+	        	$('.counter').css("color","rgb(202,222,228)");
 	        	
 		        $('.counter').html("("+content.length+" / 최대 255자)");    //글자수 실시간 카운팅
 	        }
@@ -91,7 +93,7 @@
  	 	    		var find =arr.indexOf(sel1+","+sel2); 
 	 	    		arr.splice(find,1);
 		 	    	
-			 	    alert(arr);
+			 	    /* alert(arr); */
 			 	    count--;
 	 			   }); 
 	 	    	}
