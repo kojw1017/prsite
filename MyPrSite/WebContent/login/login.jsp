@@ -18,7 +18,7 @@
         <div class="image_form">
           <img src="http://localhost:9000/MyPrSite/images/login_main.svg" />
         </div>
-        <form action="#" method="post" name="input_login_form" class="input_login_form" id="login_Form">
+        <form action="loginAction.jsp" method="post" name="input_login_form" class="input_login_form" id="login_Form">
           <ul>
             <li class="h3_login">
               <img src="http://localhost:9000/MyPrSite/images/login_avatar.svg" />

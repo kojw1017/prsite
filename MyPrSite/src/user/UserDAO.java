@@ -1,11 +1,14 @@
 package user;
+
 import java.sql.ResultSet;
+
 
 public class UserDAO extends DBconn{
 	ResultSet rs;
 	
 	public int login(String userID,String userPassword) {
-		String SQL ="SELECT userPassword FROM USER_TABLE WHERE userID=?";
+		String SQL ="SELECT pass FROM USER_TABLE WHERE id=?";
+		
 		try {
 			getPreparedStatement(SQL);
 			pstmt.setString(1,userID);

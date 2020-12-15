@@ -59,7 +59,6 @@
 		background-color:rgb(127,178,240); }
 	section.join1>form>ul>li>button:hover {background-color:#035FB2; background:#035FB2;}
 	section.join1>form>ul>li:last-child {margin:50px 50px; }
-/* 	section.join1>form>ul>li:last-child a>button{background-color:red;} */
 	
 	.warning {
         animation: warning 0.3s ease;
@@ -152,4 +151,38 @@
 	ul.cat_content>li div.con_title {font-size:16px; color:#333; padding:5px 0 0 0; padding-left:15px; font-weight:600}
 	
 	ul.cat_content img.pr_img:hover { opacity:0.3; }
+	
+	/*
+		°Ô½ÃÆÇ(board_list)
+	*/
+	.board table {width:700px; margin:auto; margin-top:60px; height:350px;}
+	.board table, .board th, .board td {border-collapse:collapse;}
+	.board table {text-align:center;}
+	.board tr:first-child td:first-child {text-align:left; padding-top:10px; text-indent:5px;}
+	.board tr:first-child td:last-child {text-align:right;}
+	.board table td>a {text-decoration:none; }
+	.board table tr:last-child td{padding:8px;}
+	.board tr, .board table {border:lightgray;}
+	#board_list table tr:first-child, #board_list table tr:last-child {border:1px solid white;}
+	#board_list table tr:nth-child(1) {border-bottom:1px solid lightgray;}
+	#board_list table tr:last-child {border-top:1px solid lightgray;}
+	.btn_style {border-radius:4px; border:none; background-color:rgb(79,123,240); padding:5px 15px; color:white; margin:0px 5px;}
+	
+	/* board_content */
+	#board_content table {height:800px;}
+	#board_content table td#content {height:50%;}
+	#board_content tr:last-child {height:30%;}
+	.board table textarea { width:500px; height:200px; border-radius:4px;}
+	#board_content table textarea {height:100px; float:left;}
+	#board_content #user_img {width:50px; height:50px; float:left; margin-left:30px; margin-right:10px;}
+	
+	/* board_delete */
+	#board_delete table td #delete_img {width:200px; height:210px; }
+	
+	/* board_write, board_update */
+	#board_write table tr *, #board_update table tr * {margin:10px 5px;}
+	#board_write, #board_udpate {text-align:center;}
+	#board_write tr input[type='text'], #board_update tr input[type='text'] {width:500px; height:23px; border-radius:4px;}
+	#board_write tr:nth-child(3) td, #board_update tr:nth-child(3) td {text-align:left; text-indent:95px;}
+	
 	
