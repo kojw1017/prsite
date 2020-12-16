@@ -14,7 +14,7 @@
 		<div class="logo">
 			<a href="http://localhost:9000/MyPrSite/index.jsp"><img src="http://localhost:9000/MyPrSite/images/saram.png" class="logo"></a>
 		</div>
-		<form name="join_intro1" action="join.jsp" method="get">
+		<form name="join_intro1" action="join.jsp" method="post">
 			<ul>
 				<li>
 					<input type="checkbox" name="join_check" id="chk">사람온 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 정보 수신(선택)에 모두 동의합니다.
