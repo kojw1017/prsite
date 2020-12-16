@@ -268,7 +268,7 @@
 			right:6%;
 			transform:translate(10%,50%);
 			font-size :15px;
-			color: rgb(202,222,228);
+			color: gray;
 		}
 
 		.section1>div>div.pf_text>textarea{
@@ -333,6 +333,9 @@
 		.section2>div.pf_area2>div.pf_job_select>div.pf_job_select_area>ul>li.job_select_content>button#x_btn:hover{
 			 text-decoration:underline; }
 	
+		.section2>div.pf_area2>span.job_count_area{
+			display:block;width:150px;margin:-5px 0 0 1145px;color:gray;
+		}
 		footer{clear:both;}
 		
 		
@@ -388,7 +391,10 @@
 		}
 		.section3>div.pf_area3>div.category-tech-select>div>button#x_btn:hover{
 			 text-decoration:underline; }
-			 
+		
+		.section3>div.pf_area3>span.tech_count_area{
+			display:block;width:150px;margin:-5px 0 0 1120px;color:gray;
+		}
 	   /*********section4 대학 전공 입력부분**************/
 
 	   .section4>div.pf_area4{
