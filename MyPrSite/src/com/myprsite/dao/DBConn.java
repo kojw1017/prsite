@@ -11,7 +11,7 @@ public class DBConn {
 		String url = "jdbc:oracle:thin:@localhost:1521";
 		String user = "scott";
 		String pass = "tiger";
-		
+	
 		Connection conn;
 		Statement stmt;
 		PreparedStatement pstmt;
