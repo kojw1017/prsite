@@ -95,6 +95,14 @@
 	section.join_intro1>form>ul>li>a>button:hover {
 		background-color:#035FB2;
 	}
+	
+	/* joinSuccess */
+	.joinSuccess, .error {margin-top:100px; text-align:center;}
+	.joinSuccess div>ul, .error>div>ul {list-style-type:none;}	 
+	.joinSuccess div>ul>li, .error>div>ul>li {padding:20px;}
+	.joinSuccess div>ul>li>div, .error>div>ul>li>div {font-size:25px; color:#626262; font-weight:550; font-family:Arial;} 
+	.joinSuccess div>ul>li>img, .error>div>ul>li>img { width:200px; height:200px; margin-top:30px;} 
+	.joinSuccess div>ul>li>a>button, .error>div>ul>li>a>button {width:100px; height:40px; font-size:15px; margin:0 15px;}
 		
 	/*
 		catÆú´õ(ÁöÇý)
@@ -184,5 +192,17 @@
 	#board_write, #board_udpate {text-align:center;}
 	#board_write tr input[type='text'], #board_update tr input[type='text'] {width:500px; height:23px; border-radius:4px;}
 	#board_write tr:nth-child(3) td, #board_update tr:nth-child(3) td {text-align:left; text-indent:95px;}
+	
+	/* mypage1 */
+	section.mypage1 {text-align:center; margin-top:80px;}
+	section.mypage1 h1 {font-size:40px; color:#333; }
+	section.mypage1 table {width:1000px;}
+	section.mypage1 table, th, td {border:1px solid lightgray; border-collapse:collapse; margin:auto;
+		border-left:1px solid white; border-right:1px solid white;}
+	section.mypage1 table tr {height:80px; border:1px solid red;}
+	section.mypage1 td:first-child {background-color:#F9F9F9;}
+	section.mypage1 tr:last-child td {background-color:white; border:1px solid white; padding-top:100px;}
+	section.mypage1 tr:last-child td>button {width:100px; height:40px; font-size:15px;}
+	section.mypage1 td:nth-child(2) {text-align:left; text-indent:40px;}
 	
 	

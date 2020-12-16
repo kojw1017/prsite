@@ -26,8 +26,8 @@ public class UserDAO extends DBConn{
 	}
 	
 	/** È¸¿ø°¡ÀÔÆû **/
-	public int join2(JoinVO user) {
-		int count = 0;
+	public boolean join2(JoinVO user) {
+		boolean result = false;
 		
 		try {
 			String sql = "insert into user_table(id, pass, name, birth, gender, email, hp, mdate) values(?, ?, ?, ?, ?, ?, ?, sysdate)";
@@ -40,13 +40,13 @@ public class UserDAO extends DBConn{
 			pstmt.setString(6, user.getEmail());
 			pstmt.setString(7, user.getHp());
 			
-			count = pstmt.executeUpdate();
-			if(count != 0) count++;
+			int count = pstmt.executeUpdate();
+			if(count != 0) result = true;
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		return count;
+		return result;
 	}
 }
