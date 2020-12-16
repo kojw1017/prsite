@@ -1,28 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
+<%@ page import="java.io.PrintWriter" %>
+<% request.setCharacterEncoding("utf-8"); %>
+<jsp:useBean id="user" class="com.myprsite.vo.JoinVO"/>
+<jsp:setProperty name="user" property="*"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="//code.jquery.com/jquery.min.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jung/myprsite.css">
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jw/myprsite.css">
 </head>
 <body>              
+<%
+		String id=null;
+		if(session.getAttribute("id") != null){
+			id =(String) session.getAttribute("id");
+		}
+%>
 <header>
      <div class="up">
            </div>
            <div class="top">    
-       <a href="http://localhost:9000/MyPrSite/index.jsp">
-  		<img src="http://localhost:9000/MyPrSite/images/logo.png" class="logo"></a> 
+      		 <a href="http://localhost:9000/MyPrSite/index.jsp">
+  			<img src="http://localhost:9000/MyPrSite/images/logo.png" class="logo"></a> 
+           <%if(id == null){%>
             <ul>
 			   <li><!--  <input type="search" name="sea" placeholder="검색어를 입력하세요"> --></li>
-               <li><a id="btn_open" href="#">로그인</a><div></div></li>
+	 			<li><a id="btn_open" href="#">로그인</a><div></div></li>
                <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">MyPR</a><div></div></li>
                <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
- 				<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp"><button type="button" class="free">무료회원가입</button></a></li>
+		   <!--<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp"><button type="button" class="free">무료회원가입</button></a></li>-->
+            	<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp">무료회원가입</a><div></div></li>
             </ul>
+             <%}else{%>
+             <ul>
+			   <li><!--  <input type="search" name="sea" placeholder="검색어를 입력하세요"> --></li>
+	 			<li><a href="http://localhost:9000/MyPrSite/login/logoutAction.jsp">로그아웃</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">MyPR</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
+            </ul>
+            <%}%>
          </div>
           <div class="bottom">
            <nav>
@@ -55,7 +74,7 @@
             <li class="input_area">
               <input
                 type="text"
-                name="userID"
+                name="id"
                 id="id"
                 autocomplete="off"
                 required
@@ -67,14 +86,14 @@
             <li class="input_area">
               <input
                 type="password"
-                name="userPassword"
-                id="pw"
+                name="pass"
+                id="pass"
                 autocomplete="off"
                 required
                 oninvalid="this.setCustomValidity('비밀번호를 입력해주세요')"
                 oninput="setCustomValidity('')"
               />
-              <label class="lb_pw" for="pw">PASSWORD</label>
+              <label class="lb_pw" for="pass">PASSWORD</label>
             </li>
             <li class="login_btn">
               <button type="submit" id="btn_login">LOGIN</button>
@@ -113,7 +132,7 @@
             setTimeout(function () {
               $(".lb_id").removeClass("warning");
             }, 1500);
-          } else if ($("#pw").val() == "") {
+          } else if ($("#pass").val() == "") {
             $(".lb_pw").addClass("warning");
             setTimeout(function () {
               $(".lb_pw").removeClass("warning");
