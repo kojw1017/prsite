@@ -9,7 +9,7 @@
 <script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jw/myprsite.css">
   </head>
-  <body>
+  <!-- <body>
     <button id="btn_open">로그인</button>
     <div class="login_form hidden">
       <div class="login_overlay"></div>
@@ -39,14 +39,14 @@
             <li class="input_area">
               <input
                 type="password"
-                name="pw"
-                id="pw"
+                name="pass"
+                id="pass"
                 autocomplete="off"
                 required
                 oninvalid="this.setCustomValidity('비밀번호를 입력해주세요')"
                 oninput="setCustomValidity('')"
               />
-              <label class="lb_pw" for="pw">PASSWORD</label>
+              <label class="lb_pw" for="pass">PASSWORD</label>
             </li>
             <li class="login_btn">
               <button type="submit" id="btn_login">LOGIN</button>
@@ -86,7 +86,7 @@
             setTimeout(function () {
               $(".lb_id").removeClass("warning");
             }, 1500);
-          } else if ($("#pw").val() == "") {
+          } else if ($("#pass").val() == "") {
             $(".lb_pw").addClass("warning");
             setTimeout(function () {
               $(".lb_pw").removeClass("warning");
@@ -97,5 +97,5 @@
         });
       });
     </script>
-  </body>
+  </body> -->
 </html>

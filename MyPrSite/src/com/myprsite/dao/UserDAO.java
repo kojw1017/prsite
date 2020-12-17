@@ -1,11 +1,10 @@
 package com.myprsite.dao;
 
 import java.sql.ResultSet;
-
 import com.myprsite.vo.JoinVO;
 
 public class UserDAO extends DBConn{
-	
+	ResultSet rs;
 	/** checkbox **/
 	public int join1(JoinVO user) {
 		int count = 0;
@@ -104,6 +103,27 @@ public class UserDAO extends DBConn{
 			e.printStackTrace();
 		}
 		
-		return user;
+		return user; 
+	}
+
+	/** 로그인폼 **/
+	public int login(String id,String pass) {
+		String SQL ="SELECT pass FROM USER_TABLE WHERE id=?";
+		try {
+			getPreparedStatement(SQL);
+			pstmt.setString(1,id);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				if(rs.getString(1).equals(pass)) {
+					return 1;//로그인 성공
+				}else {
+					return 0;//비밀번호불일치
+				}
+			}
+			return -1;//아이디가 없음
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -2;//데이터베이스오류
 	}
 }
