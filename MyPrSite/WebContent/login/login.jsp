@@ -9,7 +9,7 @@
 <script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jw/myprsite.css">
   </head>
-  <body>
+  <!-- <body>
     <button id="btn_open">로그인</button>
     <div class="login_form hidden">
       <div class="login_overlay"></div>
@@ -97,5 +97,5 @@
         });
       });
     </script>
-  </body>
+  </body> -->
 </html>
