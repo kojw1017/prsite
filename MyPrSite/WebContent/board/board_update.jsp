@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
+<% 
+	String bid = request.getParameter("bid"); 
+	TableDAO dao = new TableDAO();
+	TableVO vo = dao.getUpdate(bid);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,23 +19,24 @@
 	
 	<!-- content -->
 	<section class="board" id="board_update">
-		<form name="board_wirte">
+		<form name="board_wirte" action="updateProc.jsp" method="post">
+			<input type="hidden" name="bid" value="<%= vo.getBid() %>">
 			<table border="1">
 				<tr>
-					<th><input type="text" value="정보입력이 안돼요ಥ_ಥ"></th>
+					<th><input type="text" name="btitle" value="<%= vo.getBtitle() %>"></th>
 				</tr>
 				<tr>
 					<td>
-						<textarea>2차 프로젝트</textarea>
+						<textarea name="bcontent"><%= vo.getBcontent() %></textarea>
 					</td>
 				</tr>
 				<tr>
-					<td><input type="file"></td>
+					<td><input type="file" name="bfile"></td>
 				</tr>
 				<tr>
 					<td>
 						<a href="board_list.jsp"><button type="button" class="btn_style">이전으로</button></a>
-						<a href="board_list.jsp"><button type="button" class="btn_style">등록</button></a>
+						<button type="submit" class="btn_style">등록</button>
 						<a href="board_list.jsp"><button type="button" class="btn_style">임시저장</button></a>
 					</td>
 				</tr>

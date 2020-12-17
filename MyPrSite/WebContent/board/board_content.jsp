@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
+<% 
+	String id = request.getParameter("id");
+	String bid = request.getParameter("bid");
+	TableDAO dao = new TableDAO();
+	TableVO vo = dao.getContent(bid);
+	
+	dao.setHits(bid);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,20 +22,20 @@
 	<!-- content -->
 	<section class="board" id="board_content">
 		<table border=1>
-			<tr><th colspan="3">정보입력이 안돼요ಥ_ಥ</th></tr>
+			<tr><th colspan="3"><%= vo.getBtitle() %></th></tr>
 			<tr>
-				<td>작성자 : 홍길동</td>
-				<td>등록일 : 2020-12-12</td>
-				<td>조회수 : 3</td>
+				<td>작성자 : <%= vo.getUser_id() %></td>
+				<td>등록일 : <%= vo.getBdate() %></td>
+				<td>조회수 : <%= vo.getBhits()+1 %></td>
 			</tr>
 			<tr>
-				<td colspan="3" id="content">2차 프로젝트</td>
+				<td colspan="3" id="content"><%= vo.getBcontent() %></td>
 			</tr>
 			<tr>
 				<td colspan="3">
-					<a href="board_update.jsp"><button type="button" class="btn_style">수정</button></a>
-					<a href="board_list.jsp"><button type="button" class="btn_style">취소</button></a>
-					<a href="board_delete.jsp"><button type="button" class="btn_style">삭제</button></a>
+					<a href="board_update.jsp?bid=<%= bid %>"><button type="button" class="btn_style">수정</button></a>
+					<a href="board_list.jsp"><button type="button" class="btn_style">목록</button></a>
+					<a href="board_delete.jsp?bid=<%= bid %>"><button type="button" class="btn_style">삭제</button></a>
 				</td>
 			</tr>
 			<tr>

@@ -13,15 +13,15 @@
 	
 	<!-- content -->
 	<div class="content">
-		<section class="joinSuccess">
+		<section class="success">
 			<div>
 				<ul>
 					<li>
-						<div>회원가입 완료 :)</div>
-						<img src ="../images/checked.png" ">
+						<div>완료되었습니다 :)</div>
+						<img src ="../images/checked.png">
 					</li>
 					<li>
-						<a href="http://localhost:9000/MyPrSite/index.jsp"><button type="button" class="btn_style">메인 페이지</button></a>
+						<a href="http://localhost:9000/MyPrSite/board/board_list.jsp"><button type="button" class="btn_style">목록으로</button></a>
 					</li>
 				</ul>
 			</div>

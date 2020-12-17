@@ -3,11 +3,9 @@
 <jsp:useBean id="user" class="com.myprsite.vo.JoinVO" />
 <jsp:setProperty name="user" property="*" />
 <% 
-	System.out.println(user.getChk1());
-	System.out.println(user.getChk2());
-	System.out.println(user.getChk3());
-	System.out.println(user.getChk4());
-	
+	String id = request.getParameter("id");
+	UserDAO dao = new UserDAO();
+	String pass = dao.getPass(id);
 %>
 <!DOCTYPE html>
 <html>
@@ -23,7 +21,7 @@
 	<jsp:include page="../header.jsp" />
 	
 	<section class="mypage1">
-		<form name="mypage1_intro" action="mypage1.jsp" method="post" class="mypage1_intro">
+		<form name="mypage1_intro" action="mypage1.jsp?id=<%= id %>" method="post" class="mypage1_intro">
 			<ul>
 				<li>
 					<h1>회원정보 수정</h1>
@@ -32,10 +30,10 @@
 					<img src="http://localhost:9000/MyPrSite/images/key.png">
 				</li>
 				<li>
-					<input type="password" placeholder="비밀번호를 입력해주세요">
+					<input type="password" id="mypage1_intro_pass" placeholder="비밀번호를 입력해주세요" required/>
 				</li>
 				<li>
-					<button type="submit" class="btn_style">확인</button>
+					<button type="submit" class="btn_style" id="mypage1_intro_btn">확인</button>
 				</li>
 			</ul>
 		</form>
