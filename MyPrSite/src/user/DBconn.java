@@ -10,8 +10,8 @@ public class DBconn {
 	//Field
 	String Driver="oracle.jdbc.driver.OracleDriver";
 	String url="jdbc:oracle:thin:@localhost:1521";
-	String user="user01";
-	String pass="1234";
+	String user="scott";
+	String pass="tiger";
 	Connection conn;
 	PreparedStatement pstmt;
 	ResultSet rs;

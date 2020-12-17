@@ -1,5 +1,7 @@
 package com.myprsite.dao;
 
+import java.sql.ResultSet;
+
 import com.myprsite.vo.JoinVO;
 
 public class UserDAO extends DBConn{
@@ -48,5 +50,60 @@ public class UserDAO extends DBConn{
 		}
 		
 		return result;
+	}
+	
+	/**
+	 * mypage1_intro
+	 */
+	public String getPass(String id) {
+		String result = "";
+		
+		try {
+			String sql = "select pass from user_table where id=?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = rs.getString(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 회원정보 가져오기
+	 */
+	public JoinVO getUserList(String id) {
+		JoinVO user = new JoinVO();
+		
+		try {
+			String sql = "select * from user_table where id=?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, id);
+			
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				user.setChk1(rs.getString(1));
+				user.setChk2(rs.getString(2));
+				user.setChk3(rs.getString(3));
+				user.setChk4(rs.getString(4));
+				user.setId(rs.getString(5));
+				user.setPass(rs.getString(6));
+				user.setName(rs.getString(7));
+				user.setBirth(rs.getString(8));
+				user.setGender(rs.getString(9));
+				user.setEmail(rs.getString(10));
+				user.setHp(rs.getString(11));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return user;
 	}
 }

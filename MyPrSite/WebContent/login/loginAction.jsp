@@ -15,12 +15,14 @@
 <body>
 	<%
 		UserDAO userDAO = new UserDAO();
+		String id = user.getUserID();
 		int result = userDAO.login(user.getUserID(), user.getUserPassword());
 		if(result==1){//로그인성공
 			PrintWriter script = response.getWriter();
-			script.println("<script>");
+			response.sendRedirect("http://localhost:9000/MyPrSite/index.jsp?id="+id);
+			/* script.println("<script>");
 			script.println("location.href = 'http://localhost:9000/MyPrSite/index.jsp'");
-			script.println("</script>");
+			script.println("</script>"); */
 		}else if(result == 0){//비밀번호불일치
 			PrintWriter script = response.getWriter();
 			script.println("<script>");

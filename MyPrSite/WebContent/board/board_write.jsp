@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String user_id = request.getParameter("id"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,23 +15,24 @@
 	
 	<!-- content -->
 	<section class="board" id="board_write">
-		<form name="board_wirte">
+		<form name="board_wirte" action="writeProc.jsp" method="post">
+			<input type="hidden" name="user_id" value="<%= user_id %>">
 			<table border="1">
 				<tr>
-					<th><input type="text" placeholder="제목"></th>
+					<th><input type="text" name="btitle" placeholder="제목"></th>
 				</tr>
 				<tr>
 					<td>
-						<textarea placeholder="내용"></textarea>
+						<textarea name="bcontent" placeholder="내용"></textarea>
 					</td>
 				</tr>
 				<tr>
-					<td><input type="file"></td>
+					<td><input name="bsfile" type="file"></td>
 				</tr>
 				<tr>
 					<td>
 						<a href="board_list.jsp"><button type="button" class="btn_style">이전으로</button></a>
-						<a href="board_list.jsp"><button type="button" class="btn_style">등록</button></a>
+						<button type="submit" class="btn_style">등록</button>
 						<a href="board_list.jsp"><button type="button" class="btn_style">임시 저장</button></a>
 					</td>
 				</tr>

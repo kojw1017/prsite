@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% 
+	String bid = request.getParameter("bid"); 
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +25,8 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="board_list.jsp"><button type="button" class="btn_style">삭제</button></a>		
-					<a href="board_content.jsp"><button type="button" class="btn_style">취소</button>	</a>
+					<a href="deleteProc.jsp?bid=<%= bid %>"><button type="button" class="btn_style">삭제</button></a>		
+					<a href="board_content.jsp?bid=<%= bid %>"><button type="button" class="btn_style">취소</button>	</a>
 				</td>
 			</tr>
 		</table>

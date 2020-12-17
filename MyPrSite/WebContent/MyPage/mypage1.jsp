@@ -1,13 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
-<jsp:useBean id="user" class="com.myprsite.vo.JoinVO" />
-<jsp:setProperty name="user" property="*" />
 <% 
-	System.out.println(user.getChk1());
-	System.out.println(user.getChk2());
-	System.out.println(user.getChk3());
-	System.out.println(user.getChk4());
-	
+	String id = request.getParameter("id");
+	UserDAO dao = new UserDAO();
+	JoinVO user = dao.getUserList(id); 
 %>
 <!DOCTYPE html>
 <html>
@@ -41,7 +37,7 @@
 				<tr>
 					<td>생년월일</td>
 					<td>
-						<input type="text" name="year" id="year" value="<%= user.getYear() %>" placeholder="년">
+						<input type="text" name="year" id="year" value="<%= user.getBirth() %>" placeholder="년">
 						<input type="text" name="month" id="month" value="<%= user.getMonth() %>" placeholder="월">
 						<input type="text" name="day" id="day" value="<%= user.getDay() %>" placeholder="일">
 					</td>
