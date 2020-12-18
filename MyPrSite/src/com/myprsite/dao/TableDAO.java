@@ -157,9 +157,33 @@ public class TableDAO extends DBConn{
 	}
 	
 	/**
-	 * 업데이트하기
+	 * 업데이트하기 : 새 파일 O
 	 */
 	public boolean update(TableVO vo) {
+		boolean result = false;
+		
+		try {
+			String sql = "update board_table set btitle=?, bcontent=?, bfile=?, bsfile=? where bid=?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, vo.getBtitle());
+			pstmt.setString(2, vo.getBcontent());
+			pstmt.setString(3, vo.getBfile());
+			pstmt.setString(4, vo.getBsfile());
+			pstmt.setString(5, vo.getBid());
+			
+			int count = pstmt.executeUpdate();
+			if(count != 0) result = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return result;
+	}
+	
+	/**
+	 * 업데이트하기 : 새 파일 X
+	 */
+	public boolean updateNofile(TableVO vo) {
 		boolean result = false;
 		
 		try {

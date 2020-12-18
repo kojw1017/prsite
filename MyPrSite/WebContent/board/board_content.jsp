@@ -29,7 +29,12 @@
 				<td>조회수 : <%= vo.getBhits()+1 %></td>
 			</tr>
 			<tr>
-				<td colspan="3" id="content"><%= vo.getBcontent() %></td>
+				<td colspan="3" id="content">
+					<%= vo.getBcontent().replace("\r\n", "<br>") %><br>
+					<% if(vo.getBsfile() != null){ %>
+						<img src="http://localhost:9000/MyPrSite/upload/<%= vo.getBsfile() %>">
+					<% } %>
+				</td>
 			</tr>
 			<tr>
 				<td colspan="3">
