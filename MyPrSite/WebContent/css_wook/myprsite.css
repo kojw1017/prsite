@@ -515,10 +515,10 @@
 			font-weight:500; color:gray; width:150px; height:54px;margin-left:5px;
 		}
 		.section6>div.save_area{text-align:right;margin-top:15px;}
-		.section6>div.save_area>.save{
+		.section6>div.save_area .save{
 			display:inline-block;width:200px; height:70px;border:1px solid rgb(79,123,240);border-radius:10px;
 		background-color:rgb(79,123,240);color:rgb(236,241,253);outline: none;
 		}
-		.section6>div.save_area>.save:hover{
+		.section6>div.save_area .save:hover{
 			background-color:rgb(236,241,253);color:rgb(79,123,240);border:1px solid rgb(79,123,240);border-radius:10px;
 		}
