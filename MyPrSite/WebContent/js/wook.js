@@ -20,6 +20,7 @@ $(document).ready(function(){
 	    
 	    $(".job_select").change(function(){
 	    	//alert($(this).val());
+	    	$(".job_select_2").prop("disabled",false);
 	    	if($(this).val()== "디자인"){
 	    		
 	    		$(".job_select_2 option:eq(1)").val("웹·모바일 디자인").text("웹·모바일 디자인");
@@ -54,29 +55,41 @@ $(document).ready(function(){
 	
 	    });//jobselect
 	    
-	    
+	    $('.job_select').change(function(){
+	    	
+	    });
 	    var count=0;
-	    var radomvalue=0;
+	  //  var radomvalue=0;
 	    var arr = new Array();
 	    $('.job_select , .job_select_2 ').change(function(){
-	    	if(count<5){
+	    	if(arr.length<5){
 	 	    	 if($(".job_select option:selected").val() !="전문분야" && $(".job_select_2 option:selected").val() !="상세분야" ){
 	  	    		 var sel1=$(".job_select option:selected").val();
 	  	    		 var sel2=$(".job_select_2 option:selected").val();
-	 	    		 if(arr.includes(sel1+","+sel2)){
-	 	    			 alert("중복되는 값이 있습니다.")
+	 	    		 if(arr.includes(sel1+":"+sel2)){
+	 	    			 alert("중복되는 값이 있습니다.");
+	 	    			
+	 	    			$(".job_select option:eq(0)").prop("selected",true);
+	 	 	    		$(".job_select_2 option:eq(0)").prop("selected",true);
+	 	 	    		$(".job_select_2").prop("disabled",true);
 	 	    		 }else{
 		 	 	    	count++;
-		 	 	    	radomvalue++;
+		 	 	    	//radomvalue++;
+		 	 	    	var radomvalue = Math.random();
+		 	 	    	arr.push(sel1+":"+sel2);
+		 	 	    	alert(arr.length);
 		  	    		//alert(count);
-		 	    		$(".pf_job_select_area ul").append("<li class='job_select_content'>"+ sel1 +":&nbsp&nbsp"+sel2+"<button type='button'id='x_btn' name='"+radomvalue+"'>x</button></li>");
+		 	    		$(".pf_job_select_area ul").append("<li class='job_select_content' >"+ sel1 +":&nbsp&nbsp"+sel2+"<button type='button'id='x_btn' name='"+radomvalue+"'>x</button></li>");
+		 	    		
 		 	    		$(".job_select option:eq(0)").prop("selected",true);
 		 	    		$(".job_select_2 option:eq(0)").prop("selected",true);
-		 	    		arr.push(sel1+","+sel2);
-		 	    	
+		 	    		$(".job_select_2").prop("disabled",true);
+		 	    		
+		 	    		
+		 	    		$("#job_select_input_content").val(arr);
 		 	    		$("#job_count_area").css("color","gray");
-			    		$("#job_count_area").html("("+count+" / 최대 5개)");
-			    		if(count==5){
+			    		$("#job_count_area").html("("+arr.length+" / 최대 5개)");
+			    		if(arr.length==5){
 			    			$("#job_count_area").css("color","red");
 			    		}
 		 	    		//alert(arr.includes(sel1+","+sel2));
@@ -84,20 +97,30 @@ $(document).ready(function(){
 	 	    		
 
 	 	    	$(".job_select_content>button[name='"+radomvalue+"']").click(function(){
-	 	    		$(this).parent().remove();	
- 	 	    		var find =arr.indexOf(sel1+","+sel2); 
-	 	    		arr.splice(find,1);
-		 	    	
+	 	    		
 			 	    /* alert(arr); */
-			 	    count--;
-			 	    $("#job_count_area").css("color","gray");
-		    		$("#job_count_area").html("("+count+" / 최대 5개)");
+	 	    		
+	 	    			var find =$.inArray(sel1+":"+sel2,arr)
+	 	    			if(find>=0){
+	 	    				arr.splice(find,1);
+	 	    			
+		 	    			count--;
+		 	    			$(this).parent().remove();	
+		 	    			$("#job_select_input_content").val(arr);
+					 	    $("#job_count_area").css("color","gray");
+				    		$("#job_count_area").html("("+arr.length+" / 최대 5개)");
+	 	    			}
+	 	 	    		/*var find =arr.indexOf(sel1+":"+sel2); */
+		 	    		
+	 	    		
+	 	    		 
 	 			   }); 
 	 	    	}
-	    	}else if(count==5){
+	    	}else if(arr.length==5){
 	    		alert("최대 5개 선택 가능합니다");
 	    		$(".job_select option:eq(0)").prop("selected",true);
  	    		$(".job_select_2 option:eq(0)").prop("selected",true);
+ 	    		$(".job_select_2").prop("disabled",true);
  	    		
 	    	}
 
@@ -245,52 +268,61 @@ $(document).ready(function(){
 	    		);		
 
 	    	}
-	    var obj_name = $(this).text();
-	    var random =0;
-	    $(".category-tech2>div").click(function(){
-	    	var name_check = obj_name+":  "+$(this).text();
-	    	if(arr2.includes(name_check)){
-	    		alert("중복되는 값이 존재");
-	    	}else if(category_count<6){
-	    		category_count++;
-	    		$("#tech_count_area").css("color","gray");
-	    		$("#tech_count_area").html("("+category_count+" / 최대 6개)");
-	    		random++;
-	    		/* alert(category_count); */
-	    		arr2.push(name_check);
-	    		if(category_count==6){
-	    			$("#tech_count_area").css("color","red");
-	    		}
-		    	$(".category-tech-select").append("<div>"+obj_name+":  "+$(this).text()+"<button type='button'id='x_btn' name ='"+random+"'>x</button></div>");
-		    	/* alert(arr2); */
-		    	check(random);
-		    	function check(random){
-			    	 $(".category-tech-select>div>button[name='"+random+"']").click(function(){
-		 	    		$(this).parent().remove();	
-		 	    		category_count--;
-		 	    		$("#tech_count_area").css("color","gray");
-		 	    		$("#tech_count_area").html("("+category_count+" / 최대 6개)");
-		 	    		/* alert(category_count); */
-		 	    		//$(this).parent().text().pop();
-		 	    		
-		 	    		var find =arr2.indexOf($(this).parent().text().slice(0,-1));
-				 	    arr2.splice(find,1);
-				 	    	
-				 	   /*  alert(arr2); */
-		
-		 	    		
-		 			 });  
+		    var obj_name = $(this).text();
+		   // var random =0;
+		    $(".category-tech2>div").click(function(){
+		    	var name_check = obj_name+":  "+$(this).text();
+		    	if(arr2.includes(name_check)){
+		    		alert("중복되는 값이 존재");
+		    	}else if(arr2.length<6){
+		    		arr2.push(name_check);
+		    		category_count++;
+		    		$("#tech_count_area").css("color","gray");
+		    		$("#tech_count_area").html("("+arr2.length+" / 최대 6개)");
+		    		//random++;
+		    		var random = Math.random();
+		    		/* alert(category_count); */
+		    		
+		    		$("#category_tech1_input_content").val(arr2);
+		    		if(arr2.length==6){
+		    			$("#tech_count_area").css("color","red");
+		    		}
+			    	$(".category-tech-select").append("<div>"+obj_name+":  "+$(this).text()+"<button type='button'id='x_btn' name ='"+random+"'>x</button></div>");
+			    	/* alert(arr2); */
+			    	check(random);
+			    	function check(random){
+				    	 $(".category-tech-select>div>button[name='"+random+"']").click(function(){
+			 	    		
+			 	    		/* alert(category_count); */
+			 	    		//$(this).parent().text().pop();
+			 	    		
+			 	    		/*var find =arr2.indexOf($(this).parent().text().slice(0,-1));
+					 	    arr2.splice(find,1);*/
+					 	
+					 	   /*  alert(arr2); */
+					 	   
+					 	  var find =$.inArray($(this).parent().text().slice(0,-1),arr2)
+		 	    			if(find>=0){
+		 	    				arr2.splice(find,1);
+		 	    				$(this).parent().remove();	
+				 	    		category_count--;
+				 	    		$("#tech_count_area").css("color","gray");
+				 	    		$("#tech_count_area").html("("+arr2.length+" / 최대 6개)");
+				 	    	    $("#category_tech1_input_content").val(arr2);	
+		 	    			}
+			 	    		
+			 			 });  
+			    		
+			    	}
+			    	
+			    	 
+		    	}else if(arr2.length==6){
+		    		alert("최대 6개까지 선택 가능합니다");
 		    		
 		    	}
+	
 		    	
-		    	 
-	    	}else if(category_count==6){
-	    		alert("최대 6개까지 선택 가능합니다");
-	    		
-	    	}
-
-	    	
-	    })//
+		    })//
 
 	    });//.category-tech1-select").click
 	    
@@ -350,6 +382,10 @@ $(document).ready(function(){
             }
         }
 	     
+	    $("#save").click(function(){
+	    	
+	    	profileWriteForm.submit();
+	    });
 	    
 	    
-    });
+    });//ready
