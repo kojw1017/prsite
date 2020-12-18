@@ -11,7 +11,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
-
+<script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
+<script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -19,7 +20,7 @@
 	
 	<!-- content -->
 	<section class="board" id="board_update">
-		<form name="board_wirte" action="updateProc.jsp" method="post">
+		<form name="board_wirte" action="updateProc.jsp" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="bid" value="<%= vo.getBid() %>">
 			<table border="1">
 				<tr>
@@ -31,7 +32,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="file" name="bfile"></td>
+					<td><input type="file" name="bfile" id="u_bfile"><span id="bfile"><%= vo.getBfile() %></span></td>
 				</tr>
 				<tr>
 					<td>

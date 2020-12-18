@@ -148,4 +148,11 @@ $(document).ready(function(){
 			}
 		}
 	});
+	
+	$("input[type='file']#u_bfile").on('change', function(){
+		if(window.FileReader){
+			var fileName = $(this)[0].files[0].name;
+			$("span#bfile").text("").text(fileName);
+		}
+	});
 });

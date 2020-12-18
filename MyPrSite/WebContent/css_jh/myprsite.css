@@ -189,6 +189,7 @@
 	#board_write, #board_udpate {text-align:center;}
 	#board_write tr input[type='text'], #board_update tr input[type='text'] {width:500px; height:23px; border-radius:4px;}
 	#board_write tr:nth-child(3) td, #board_update tr:nth-child(3) td {text-align:left; text-indent:95px;}
+	#board_update table td span#bfile {display:inline-block; width:200px; margin-left:-190px; background-color:white; text-indent:7px; font-size:14px;}
 	
 	/* mypage1 */
 	section.mypage1 {text-align:center; margin-top:80px;}

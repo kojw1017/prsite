@@ -15,7 +15,7 @@
 	
 	<!-- content -->
 	<section class="board" id="board_write">
-		<form name="board_wirte" action="writeProc.jsp" method="post">
+		<form name="board_wirte" action="writeProc.jsp" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="user_id" value="<%= user_id %>">
 			<table border="1">
 				<tr>
@@ -27,7 +27,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input name="bsfile" type="file"></td>
+					<td><input name="bfile" type="file"></td>
 				</tr>
 				<tr>
 					<td>
