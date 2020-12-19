@@ -100,7 +100,7 @@ NAVER 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정�
 				</li>
 				<li>
 					<button type="reset">취소</button>	
-					<button type="button" class="confirm">확인</button>	
+					<button type="submit" class="confirm">확인</button>	
 				</li>
 			</ul>
 		</form>

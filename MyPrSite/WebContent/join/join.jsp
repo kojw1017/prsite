@@ -2,13 +2,6 @@
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
 <jsp:useBean id="user" class="com.myprsite.vo.JoinVO" />
 <jsp:setProperty name="user" property="*" />
-<% 
-	System.out.println(user.getChk1());
-	System.out.println(user.getChk2());
-	System.out.println(user.getChk3());
-	System.out.println(user.getChk4());
-	
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,11 +16,12 @@
 		<div class="logo">
 			<a href="http://localhost:9000/MyPrSite/index.jsp"><img src="http://localhost:9000/MyPrSite/images/saram.png" class="logo"></a>
 		</div>
-		<form name="join1" action="joinProc.jsp" method="post">
+		<form name="join1" action="joinProc.jsp?chk1=<%= user.getChk1() %>&chk2=<%= user.getChk2() %>&chk3=<%= user.getChk3() %>&chk4=<%= user.getChk4() %>" method="post">
 			<ul>
 				<li>
 					<div><label><span class="red">*</span>아이디</label></div>
 					<input type="text" name="id" placeholder="아이디 입력" class="id" id="id">
+					<button type="button" class="con_number" id="btnidCheck">아이디 중복 체크</button><br>
 					<div id="id_msg"></div>
 				</li>
 				<li>
@@ -49,30 +43,30 @@
 					<input type="text" name="year" placeholder="년(4자)" class="year" id="year">
 					<select name="month" class="month" id="month">
 						<option value="월">월</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
+						<option value="01">1</option>
+						<option value="02">2</option>
+						<option value="03">3</option>
+						<option value="04">4</option>
+						<option value="05">5</option>
+						<option value="06">6</option>
+						<option value="07">7</option>
+						<option value="08">8</option>
+						<option value="09">9</option>
 						<option value="10">10</option>
 						<option value="11">11</option>
 						<option value="12">12</option>
 					</select>
 					<select name="day" class="day" id="day">
 						<option value="일">일</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
+						<option value="01">1</option>
+						<option value="02">2</option>
+						<option value="03">3</option>
+						<option value="04">4</option>
+						<option value="05">5</option>
+						<option value="06">6</option>
+						<option value="07">7</option>
+						<option value="08">8</option>
+						<option value="09">9</option>
 						<option value="10">10</option>
 						<option value="11">11</option>
 						<option value="12">12</option>
@@ -113,52 +107,9 @@
 				</li>
 				<li>
 					<div><label><span class="red">*</span>휴대전화</label></div>
-					<select name="number" class="number">
-						<option value="82">대한민국 +82</option>
-						<option value="233">가나 +233</option>
-						<option value="963">시리아 +963</option>
-						<option value="241">가봉 +241</option>
-						<option value="232">시에라리온 +232</option>
-						<option value="592">가이아나 +592</option>
-						<option value="65">싱가포르 +65</option>
-						<option value="502">과테말라 +502  </option>
-						<option value="971">아랍에미리트 +971</option>
-						<option value="1671">괌 +1671 </option>
-						<option value="374">아르메니아 +374</option>
-						<option value="">그레나다 +1473</option>
-						<option value="">아르헨티나 +54</option>
-						<option value="">그리스 +30</option>
-						<option value="">아메리칸사모아 +1684</option>
-						<option value="">기니 +224</option>
-						<option value="">아이슬란드 +354</option>
-						<option value="">기니비사우 +245 </option>
-						<option value="">아이티 +509</option>
-						<option value="">나미비아 +264 </option>
-						<option value="">아일랜드 +353</option>
-						<option value="">나우루 +674 </option>
-						<option value="">아제르바이잔 +994</option>
-						<option value="">나이지리아 +234 </option>
-						<option value="">아프가니스탄 +93</option>
-						<option value="">남극 오스트레일리아 +672 </option>
-						<option value="">안도라 +376</option>
-						<option value="">남아프리카공화국 +27</option>
-						<option value="">알바니아 +355</option>
-						<option value="">네덜란드 +31  </option>
-						<option value="">알제리 +213</option>
-						<option value="">네덜란드령보네르 +599</option>
-						<option value="">앙골라 +244</option>
-						<option value="">네덜란드령아루바 +297</option>
-						<option value="">에디오피아 +251</option>
-						<option value="">네팔 +977</option>
-						<option value="">에리트레아 +291</option>
-						<option value="">노르웨이 +47</option>
-						<option value="">에스토니아 +372</option>
-						<option value="">뉴질랜드 +64</option>
-						<option value="">에콰도르 +593</option>
-					</select><br>
 					<input type="text" name="hp" placeholder="전화번호 입력" class="hp" id="hp">
-					<button type="button" class="con_number">인증번호 받기</button><br>
-					<input type="text" name="c_number" placeholder="인증번호를 입력하세요" class="c_number" disabled>
+					<button type="button" class="con_number" id="btnhpCheck">번호 중복 체크</button><br>
+					<div id="hp_msg"></div>
 				</li>
 				<li>
 					<button type="button" class="btn_style" id="register">가입하기</button> 
