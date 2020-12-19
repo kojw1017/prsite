@@ -1,29 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
-<jsp:useBean id="user" class="com.myprsite.vo.JoinVO"></jsp:useBean>
+<jsp:useBean id="user" class="com.myprsite.vo.JoinVO" />
 <jsp:setProperty name="user" property="*" />
 <%
-	user.setChk1(request.getParameter("chk1"));
-	user.setChk2(request.getParameter("chk2"));
-	user.setChk3(request.getParameter("chk3"));
 	user.setChk4(request.getParameter("chk4"));
-	
+	user.setPass(request.getParameter("cpass"));
 	System.out.println(user.getId());
-	System.out.println(user.getPass());
 	System.out.println(user.getName());
 	System.out.println(user.getBirth());
-	System.out.println(user.getGender());
 	System.out.println(user.getEmail());
 	System.out.println(user.getHp());
+	System.out.println("chk : " + user.getChk4());
+	System.out.println("id : " + request.getParameter("id"));
 	
 	//DB연결
 	UserDAO dao = new UserDAO();
-	boolean result = dao.join(user);
+	boolean result = dao.updateUser(user);
 	
 	if(result){
-		response.sendRedirect("http://localhost:9000/MyPrSite/join/joinSuccess.jsp");
+		response.sendRedirect("http://localhost:9000/MyPrSite/MyPage/success.jsp");
 	}else{
 		response.sendRedirect("../errorPage.jsp");
 	}
 %>
+

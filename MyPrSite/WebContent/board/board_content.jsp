@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
 <% 
-	String id = request.getParameter("id");
+	String user_id = (String)session.getAttribute("id");
 	String bid = request.getParameter("bid");
 	TableDAO dao = new TableDAO();
 	TableVO vo = dao.getContent(bid);
@@ -24,7 +24,7 @@
 		<table border=1>
 			<tr><th colspan="3"><%= vo.getBtitle() %></th></tr>
 			<tr>
-				<td>작성자 : <%= vo.getUser_id() %></td>
+				<td>작성자 : <% String name = dao.getName(vo.getUser_id()); %><%= name %></td>
 				<td>등록일 : <%= vo.getBdate() %></td>
 				<td>조회수 : <%= vo.getBhits()+1 %></td>
 			</tr>
@@ -38,9 +38,13 @@
 			</tr>
 			<tr>
 				<td colspan="3">
-					<a href="board_update.jsp?bid=<%= bid %>"><button type="button" class="btn_style">수정</button></a>
+					<% if(vo.getUser_id().equals(user_id)){ %>
+						<a href="board_update.jsp?bid=<%= bid %>"><button type="button" class="btn_style">수정</button></a>
+					<% } %>
 					<a href="board_list.jsp"><button type="button" class="btn_style">목록</button></a>
-					<a href="board_delete.jsp?bid=<%= bid %>"><button type="button" class="btn_style">삭제</button></a>
+					<% if(vo.getUser_id().equals(user_id)){ %>
+						<a href="board_delete.jsp?bid=<%= bid %>"><button type="button" class="btn_style">삭제</button></a>
+					<% } %>
 				</td>
 			</tr>
 			<tr>

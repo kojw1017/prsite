@@ -29,19 +29,18 @@
             <ul>
 			   <li><!--  <input type="search" name="sea" placeholder="검색어를 입력하세요"> --></li>
 	 		   <li><a id="btn_open" href="#">로그인</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp?id=<%= id %>">MyPR</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage1_intro.jsp?id=<%= id %>">MyPage</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp?id=<%= id %>">게시판</a><div></div></li>	
+               <!-- <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">MyPR</a><div></div></li> -->
+            	<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp">회원가입</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
 		   <!--<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp"><button type="button" class="free">무료회원가입</button></a></li>-->
-            	<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp">무료회원가입</a><div></div></li>
             </ul>
              <%}else{%>
              <ul>
 			   <li><!--  <input type="search" name="sea" placeholder="검색어를 입력하세요"> --></li>
 	 			<li><a href="http://localhost:9000/MyPrSite/login/logoutAction.jsp">로그아웃</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp?id=<%= id %>">MyPR</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage1.jsp?id=<%= id %>">MyPage</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp?id=<%= id %>">게시판</a><div></div></li>	
+               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">MyPR</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage1_intro.jsp">MyPage</a><div></div></li>
+               <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
             </ul>
             <%}%>
          </div>
