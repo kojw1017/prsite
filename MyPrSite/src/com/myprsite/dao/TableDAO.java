@@ -201,4 +201,26 @@ public class TableDAO extends DBConn{
 
 		return result;
 	}
+	
+	/**
+	 * 이름 가져오기
+	 */
+	public String getName(String id) {
+		String result = "";
+		
+		try {
+			String sql = "select name from user_table where id=?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, id);
+			
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getString(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 }
