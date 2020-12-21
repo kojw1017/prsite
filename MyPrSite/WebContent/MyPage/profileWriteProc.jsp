@@ -6,6 +6,13 @@
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%-- <jsp:useBean id="vo" class="com.myprsite.vo.ProfileVO"/>
 <jsp:setProperty  name="vo" property="*" /> --%>
+<%
+      String id=null;
+      if(session.getAttribute("id") != null){
+         id =(String) session.getAttribute("id");
+         System.out.println(id);
+      }
+%>
 
 <% 
 //1. 파일이 저장되는 경로 설정 : upload폴더 주소
