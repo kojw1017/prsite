@@ -293,6 +293,9 @@ $(document).ready(function(){
 	   
    });
    
+   /**
+    * 마이페이지 정규식 체크
+    */
    $("#m_pass").blur(function(){
 	      var pass_check = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{7,15}$/;
 
@@ -310,4 +313,11 @@ $(document).ready(function(){
 	         return true;
 	      }
 	   });
+   
+   /**
+    * 
+    */
+   $("#withdrawal").click(function(){
+	  alert("탈퇴가 완료되었습니다 :)"); 
+   });
 });
