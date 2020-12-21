@@ -4,7 +4,6 @@
 <% request.setCharacterEncoding("utf-8"); %>
 <jsp:useBean id="user" class="com.myprsite.vo.JoinVO"/>
 <jsp:setProperty name="user" property="*"/>
-
 	<%
 		String id = null;
 		if(session.getAttribute("id") != null){
