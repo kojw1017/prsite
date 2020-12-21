@@ -9,6 +9,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
+<script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
+<script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -25,7 +27,7 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="withdrawalProc.jsp"><button type="button" class="btn_style">탈퇴</button></a>		
+					<a href="withdrawalProc.jsp"><button type="button" class="btn_style" id="withdrawal">탈퇴</button></a>		
 					<a href="mypage1.jsp"><button type="button" class="btn_style">취소</button>	</a>
 				</td>
 			</tr>
