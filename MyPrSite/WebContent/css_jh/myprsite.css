@@ -163,8 +163,8 @@
 	/*
 		°Ô½ÃÆÇ(board_list)
 	*/
-	.board table {width:700px; margin:auto; margin-top:60px; height:350px;}
-	.board table, .board th, .board td {border-collapse:collapse;}
+	.board table {width:700px; margin:auto; margin-top:60px; }
+	.board table, .board th, .board td {border-collapse:collapse; padding:13px;}
 	.board table {text-align:center;}
 	.board tr:first-child td:first-child {text-align:left; text-indent:5px;}
 	.board tr:first-child td:last-child {text-align:right;}

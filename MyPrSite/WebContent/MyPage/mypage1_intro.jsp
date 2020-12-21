@@ -30,12 +30,13 @@
 					<h1>회원정보 수정</h1>
 				</li>
 				<li>
-					<img src="http://localhost:9000/MyPrSite/images/key.png">
+					<img src="http://localhost:9000/MyPrSite/images/password (1).png">
 				</li>
 				<li>
+					<p>현재 로그인 중인 아이디의 비밀번호를 입력하세요</p>
 					<input type="password" id="mypage1_intro_pass" placeholder="비밀번호를 입력해주세요" required/>
 					<input type="hidden" id="user_pass" value="<%= pass %>">
-				</li>
+				</li> 
 				<li>
 					<button type="button" class="btn_style" id="mypage1_intro_btn">확인</button>
 				</li>

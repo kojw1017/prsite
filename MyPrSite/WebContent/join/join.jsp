@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
+<%-- <%
+	String id = request.getParameter("id");
+	System.out.println("입력한 id는 : " + id);
+%> --%>
 <jsp:useBean id="user" class="com.myprsite.vo.JoinVO" />
 <jsp:setProperty name="user" property="*" />
 <!DOCTYPE html>
@@ -10,6 +14,13 @@
 <script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
 <script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
+<!-- <script>
+	$(document).ready(function(){
+		$("#btnidCheck").click(function(){
+			$(location).attr('href' ,'http://localhost:9000/MyPrSite/join/join.jsp?id='+$("#id").val());
+		});
+	});
+</script> -->
 </head>
 <body class="join">
 	<section class="join1">

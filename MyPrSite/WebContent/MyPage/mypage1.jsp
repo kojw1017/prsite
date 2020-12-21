@@ -36,6 +36,7 @@
 					<td>
 						<input type="password" name="pass" id="m_pass" value="<%= user.getPass() %>" placeholder="비밀번호" disabled>
 						<button type="button" class="btn_style" id="change_pass">비밀번호 변경</button>
+						<div id="m_pass_msg"></div>
 					</td>
 				</tr>
 				<tr>

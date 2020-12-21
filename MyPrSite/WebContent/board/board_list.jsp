@@ -1,11 +1,42 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*, java.util.*" %>
-<% request.setCharacterEncoding("utf-8"); %>
 <%
-	TableDAO dao = new TableDAO();
-	ArrayList<TableVO> list = dao.getList();
-	
 	String user_id = (String)session.getAttribute("id");
+
+	TableDAO dao = new TableDAO();
+	
+	//1. 선택한 페이지값
+	String rpage = request.getParameter("rpage");
+	ArrayList<TableVO> all = dao.getList();
+		
+	//2. 페이지값에 따라서 start, end count 구하기
+	int start = 0;
+	int end = 0;
+	int pageSize = 10;
+	int totPage = 1;
+	int dbCount = dao.getCount();
+	int reqPage = 1;
+		
+	System.out.println("db 개수 : "+dbCount);
+	//2-2. 전체 페이지 수 구하기
+	if((dbCount % pageSize) == 0){
+		totPage = dbCount/pageSize;
+	}else{
+		totPage = (dbCount/pageSize)+1;
+	}
+		
+	//2-3. start, end 값 구하기
+	if(rpage != null){
+		reqPage = Integer.parseInt(rpage);
+		start = (reqPage-1)*pageSize+1;
+		end = reqPage*pageSize;
+	}else{
+		start = reqPage;
+		end = pageSize;
+	}
+	
+	ArrayList<TableVO> list = dao.getList(start, end);
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -13,6 +44,31 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
+<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/am-pagination.css">
+<script src="http://localhost:9000/MyWeb/js/jquery-3.5.1.min.js"></script>
+<script src="http://localhost:9000/MyCGV/js/am-pagination.js"></script>
+<script>
+	$(document).ready(function(){
+		var pager = jQuery("#ampaginationsm").pagination({
+			maxSize : 5,
+			totals : '<%= dbCount %>',
+			pageSize : '<%= pageSize %>',
+			page : '<%= reqPage %>',
+			
+			lastText : '&raquo;&raquo;',
+			firstText : '&laquo;&laquo;',
+			prevText : '&laquo;',
+			nextText : '&raquo;',
+			
+			btnSize : 'sm'
+		});
+		
+		jQuery("#ampaginationsm").on('am.pagination.change', function(e){
+			$(location).attr('href', 'http://localhost:9000/MyPrSite/board/board_list.jsp?rpage='+e.page);
+		});
+		
+	});
+</script>
 </head>
 <body>
 	<!-- header -->
@@ -22,7 +78,7 @@
 	<section class="board" id="board_list">
 		<table border=1>
 			<tr>
-				<td colspan="2"><span id="list_count">게시글 <%= list.size() %>개</span></td>
+				<td colspan="2"><span id="list_count">게시글 <%= all.size() %>개</span></td>
 				<td colspan="3">
 					<% if(user_id != null){  %>
 						<a href="board_write.jsp"><button type="button" id="btn_write" class="btn_style">글쓰기</button></a>
@@ -46,9 +102,7 @@
 			</tr>
 			<% } %>
 			<tr>
-				<td colspan="5"> 
-					<< 1 2 3 4 5 6 7 8 9 10 >>
-				</td>
+				<td colspan="5"><div id="ampaginationsm"></div></td>
 			</tr>
 		</table>
 	</section>
