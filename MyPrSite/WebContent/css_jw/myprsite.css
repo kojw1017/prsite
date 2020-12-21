@@ -255,6 +255,9 @@
 		div.idpw_body {
 		  padding: 30px;
 		}
+		div.idpw_body input:nth-last-child(){
+		  margin-top: 50px;
+		}
 		div.idpw input {
 		  width: 93%;
 		  height: 50px;
@@ -329,5 +332,23 @@
 		  border: 1px solid gainsboro;
 		}
 		div.idpw_btn {
-		  margin-top: 10px;
+		  margin-top: 35px;
+		}
+		/*워닝 아이콘 영역*/
+		div.icon-form {
+		  margin-left:5px;
+		  padding-bottom: 10px;
+		  animation: 0.3s ease;
+		  animation-iteration-count: 3;
+		}
+		/*워닝 아이콘 사이즈*/
+		i.fa-exclamation-triangle {
+		  color: #ff7262;
+		  font-size: 13px;
+		}
+		/*워닝 메시지*/
+		p.warningmsg {
+		  display: inline;
+		  font-size: 13px;
+		  color: #ff7262;
 		}
