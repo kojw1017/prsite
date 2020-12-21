@@ -219,18 +219,16 @@ $(document).ready(function(){
    
    $("#m_cpass").blur(function(){
       if($("#m_pass").val() == $("#m_cpass").val()){
-         $("#m_cpass_msg").addClass("warning");
+    	  $("#m_cpass_msg").removeClass("warning");
          $("#m_cpass_msg").text("비밀번호가 일치합니다");
          $("#m_cpass_msg").css("color", "blue");
-         $("#m_cpass_msg").removeClass("warning");
          $("#m_year").focus();
          return true;
       }else if($("#m_pass").val() != $("#m_cpass").val()){
          $("#m_cpass_msg").addClass("warning");
          $("#m_cpass_msg").text("비밀번호가 일치하지 않습니다");
          $("#m_cpass_msg").css("color", "red");
-         $("#m_cpass_msg").removeClass("warning");
-         m_cpass.focus();
+         m_pass.focus();
          return false;
       }
    });
@@ -258,14 +256,12 @@ $(document).ready(function(){
             $("#m_email_msg").addClass("warning");
             $("#m_email_msg").text("이메일 형식에 맞춰 작성해주세요");
             $("#m_email_msg").css("color","red");
-            $("#m_email_msg").removeClass("warning");
             $("#m_email").focus();
             return false;
          }else {
-            $("#m_email_msg").addClass("warning");
+        	$("#m_email_msg").removeClass("warning");
             $("#m_email_msg").text("사용가능한 이메일 입니다");
             $("#m_email_msg").css("color", "blue");
-            $("#m_email_msg").removeClass("warning");
             return true;
          }
       }
@@ -274,7 +270,7 @@ $(document).ready(function(){
    /**
     * 아이디 중복 체크
     */
-   $("#btnidCheck").click(function(){
+   /*$("#btnidCheck").click(function(){
       var id = $("#id").val();
       if(id == ""){
          alert("아이디를 입력해주세요 :)");
@@ -283,7 +279,7 @@ $(document).ready(function(){
       }else{
          popUp = window.open("idDuplCheck.jsp?id="+id,"comfirm","width=400px,height=300px,top=300px,left=200px");
       }
-   });
+   });*/
    
    /**
     * 비밀번호 변경
@@ -296,4 +292,22 @@ $(document).ready(function(){
 	   }
 	   
    });
+   
+   $("#m_pass").blur(function(){
+	      var pass_check = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{7,15}$/;
+
+	      if(!pass_check.test($("#m_pass").val())){
+	         $("#m_pass_msg").addClass("warning");
+	         $("#m_pass_msg").text("비밀번호는 영문과 숫자를 조합한 7~15자 이내로 입력해주세요");
+	         $("#m_pass_msg").css("color","red");
+	         $("#m_pass").focus();
+	         return false;
+	      }else if(pass_check.test($("#m_pass").val())){
+	    	 $("#m_pass_msg").removeClass("warning");
+	         $("#m_pass_msg").text("사용가능한 비밀번호 입니다");
+	         $("#m_pass_msg").css("color","blue"); 
+	         $("#m_cpass").focus();
+	         return true;
+	      }
+	   });
 });

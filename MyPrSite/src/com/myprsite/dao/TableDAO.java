@@ -66,6 +66,41 @@ public class TableDAO extends DBConn{
 	}
 	
 	/**
+	 * list : ∆‰¿Ã¬°
+	 */
+	public ArrayList<TableVO> getList(int start, int end){
+		ArrayList<TableVO> list = new ArrayList<TableVO>();
+		
+		try {
+			String sql = "select * from (select rownum rno, bid, btitle, bcontent, bfile, bsfile, to_char(bdate,'yyyy.mm.dd') bdate, bhits, user_id "
+					+ "from (select * from board_table order by bdate desc)) where rno between ? and ?";
+			getPreparedStatement(sql);
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, end);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				TableVO vo = new TableVO();
+				vo.setRno(rs.getInt(1));
+				vo.setBid(rs.getString(2));
+				vo.setBtitle(rs.getString(3));
+				vo.setBcontent(rs.getString(4));
+				vo.setBfile(rs.getString(5));
+				vo.setBsfile(rs.getString(6));
+				vo.setBdate(rs.getString(7));
+				vo.setBhits(rs.getInt(8));
+				vo.setUser_id(rs.getString(9));
+				
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+	
+	/**
 	 * content
 	 */
 	public TableVO getContent(String bid) {
@@ -216,6 +251,23 @@ public class TableDAO extends DBConn{
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {
 				result = rs.getString(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	public int getCount() {
+		int result = 0;
+		
+		try {
+			String sql = "select count(*) from board_table";
+			getPreparedStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getInt(1);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
