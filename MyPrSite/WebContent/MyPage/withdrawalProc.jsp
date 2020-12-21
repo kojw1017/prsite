@@ -7,8 +7,10 @@
 	boolean result = dao.withdrawal(id);
 	
 	if(result){
-		response.sendRedirect("success.jsp");
+		response.sendRedirect("http://localhost:9000/MyPrSite/login/logoutAction.jsp");
+		/* response.sendRedirect("success.jsp"); */
 	}else{
 		response.sendRedirect("../errorPage.jsp");
 	}
 %>
+
