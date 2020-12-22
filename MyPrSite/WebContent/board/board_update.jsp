@@ -32,7 +32,11 @@
 					</td>
 				</tr>
 				<tr>
+					<% if(vo.getBfile() != null){ %>
 					<td><input type="file" name="bfile" id="u_bfile"><span id="bfile"><%= vo.getBfile() %></span></td>
+					<% }else{ %>
+					<td><input type="file" name="bfile" id="u_bfile"><span id="bfile">선택된 파일 없음</span></td>
+					<% } %>
 				</tr>
 				<tr>
 					<td>

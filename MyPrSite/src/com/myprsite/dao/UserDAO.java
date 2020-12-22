@@ -239,8 +239,8 @@ public class UserDAO extends DBConn{
 	/**
 	 * 아이디 중복 체크
 	 */
-	public boolean idCheck(String id) {
-		boolean result = false;
+	public int idCheck(String id) {
+		int result = 0;
 		
 		try {
 			String sql = "select count(*) from user_table where id=?";
@@ -249,8 +249,29 @@ public class UserDAO extends DBConn{
 			
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {
-				int count = rs.getInt(1);
-				if(count == 0) result = true;
+				result = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 전화번호 중복 체크
+	 */
+	public int hpCheck(String hp) {
+		int result = 0;
+		
+		try {
+			String sql = "select count(*) from user_table where hp=?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, hp);
+			
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getInt(1);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
