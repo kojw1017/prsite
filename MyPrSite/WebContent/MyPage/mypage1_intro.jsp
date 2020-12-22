@@ -6,7 +6,6 @@
 	String id = (String)session.getAttribute("id");
 	UserDAO dao = new UserDAO();
 	String pass = dao.getPass(id);
-	System.out.println("로그인한 아이디는 비밀번호는 : " + (String)session.getAttribute("pass"));
 	
 %>
 <!DOCTYPE html>

@@ -9,14 +9,6 @@
 	user.setChk3(request.getParameter("chk3"));
 	user.setChk4(request.getParameter("chk4"));
 	
-	System.out.println(user.getId());
-	System.out.println(user.getPass());
-	System.out.println(user.getName());
-	System.out.println(user.getBirth());
-	System.out.println(user.getGender());
-	System.out.println(user.getEmail());
-	System.out.println(user.getHp());
-	
 	//DB연결
 	UserDAO dao = new UserDAO();
 	boolean result = dao.join(user);

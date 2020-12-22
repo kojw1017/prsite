@@ -12,7 +12,7 @@
 <body class="join">
 	<section class="join_intro1">
 		<div class="logo">
-			<a href="http://localhost:9000/MyPrSite/index.jsp"><img src="http://localhost:9000/MyPrSite/images/saram.png" class="logo"></a>
+			<a href="http://localhost:9000/MyPrSite/index.jsp"><img src="http://localhost:9000/MyPrSite/images/logo.png" class="logo"></a>
 		</div>
 		<form name="join_intro1" action="join.jsp" method="post">
 			<ul>

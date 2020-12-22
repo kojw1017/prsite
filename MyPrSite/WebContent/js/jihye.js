@@ -25,10 +25,12 @@ $(document).ready(function(){
     * join.jsp
     */
    $("#register").click(function(){
-      if($("#id").val()==""){
-            alert("아이디를 입력해주세요 :)");
-            $("#id").focus();
+      if(!ruleCheck()){
             return false;
+         }else if($("#id_msg").text() != "사용가능한 아이디 입니다"){
+        	 alert("아이디를 확인해주세요 :)");
+        	 $("#id").focus();
+        	 return false;
          }else if($("#pass").val()==""){
             alert("비밀번호를 입력해주세요 :)");
             $("#pass").focus();
@@ -61,6 +63,10 @@ $(document).ready(function(){
             alert("핸드폰번호를 입력해주세요 :)");
             $("#hp").focus();
             return false;
+         }else if($("#hp_msg").text() != "사용가능한 전화번호 입니다"){
+        	 alert("이미 사용중인 번호입니다. 다른 번호를 입력해주세요");
+        	 $("#hp").focus();
+        	 return false;
          }else {
             join1.submit();
             /*location.href="http://localhost:9000/MyPrSite/index.jsp";*/
@@ -68,19 +74,26 @@ $(document).ready(function(){
    });
    
    $("#id").focusout(function(){
-      var id_check = /^[A-Za-z0-9]{5,13}$/;
-      
-      if(id_check.test($("#id").val())){
-         $("#id_msg").text("사용가능한 아이디 입니다");
-         $("#id_msg").css("color", "blue");
-         $("#pass").focus();
-         return true;
-      }else {
-         $("#id_msg").addClass("warning");
-         $("#id_msg").text("아이디는 5~13이내로 입력해주세요")
-                  .css("color", "red");
-         $("#id").focus();
-         return false;
+	  /* alert($("#id_msg").css("color"));*/
+      if(!ruleCheck()){
+    	  return false;
+      }else{
+    	  $.ajax({
+			   url:"idDuplCheck.jsp?id="+$("#id").val(),
+			   success:function(result){
+				   if(result == 0){
+					   $("#id_msg").text("사용가능한 아이디 입니다");
+				       $("#id_msg").css("color", "blue");
+				       $("#pass").focus();
+				   }else{
+					   $("#id_msg").removeClass("warning");
+					   $("#id_msg").addClass("warning");
+					   $("#id_msg").text("이미 사용중인 아이디 입니다");
+				       $("#id_msg").css("color", "red");
+				       $("#id").focus();
+				   }
+			   }
+		   });
       }
    });
    
@@ -150,6 +163,28 @@ $(document).ready(function(){
       }
    });
    
+   $("#hp").blur(function(){
+	   if($("#hp").val() == ""){
+		   return false;
+	   }else{
+		   $.ajax({
+			   url:"hpDuplCheck.jsp?hp="+$("#hp").val(),
+			   success:function(result){
+				   if(result == 0){
+					   $("#hp_msg").text("사용가능한 전화번호 입니다");
+				       $("#hp_msg").css("color", "blue");
+				   }else{
+					   $("#hp_msg").removeClass("warning");
+					   $("#hp_msg").addClass("warning");
+					   $("#hp_msg").text("이미 사용중인 전화번호 입니다");
+				       $("#hp_msg").css("color", "red");
+				       $("#hp").focus();
+				   }
+			   }
+		   });
+	   }
+   });
+   
    /**
     * board_update
     */
@@ -211,6 +246,10 @@ $(document).ready(function(){
             alert("핸드폰번호를 입력해주세요 :)");
             $("#m_hp").focus();
             return false;
+         }else if($("#m_hp_msg").text() != "사용가능한 전화번호 입니다"){
+        	 alert("이미 사용중인 번호입니다. 다른 번호를 입력해주세요");
+        	 $("#m_hp").focus();
+        	 return false;
          }else {
             mypage1.submit();
             /*location.href="http://localhost:9000/MyPrSite/index.jsp";*/
@@ -267,19 +306,27 @@ $(document).ready(function(){
       }
    });
    
-   /**
-    * 아이디 중복 체크
-    */
-   /*$("#btnidCheck").click(function(){
-      var id = $("#id").val();
-      if(id == ""){
-         alert("아이디를 입력해주세요 :)");
-         $("#id").focus()
-         return false;
-      }else{
-         popUp = window.open("idDuplCheck.jsp?id="+id,"comfirm","width=400px,height=300px,top=300px,left=200px");
-      }
-   });*/
+   $("#m_hp").blur(function(){
+	   if($("#m_hp").val() == ""){
+		   return false;
+	   }else{
+		   $.ajax({
+			   url:"http://localhost:9000/MyPrSite/join/hpDuplCheck.jsp?hp="+$("#m_hp").val(),
+			   success:function(result){
+				   if(result == 0){
+					   $("#m_hp_msg").removeClass("warning");
+					   $("#m_hp_msg").text("사용가능한 전화번호 입니다");
+				       $("#m_hp_msg").css("color", "blue");
+				   }else{
+					   $("#m_hp_msg").addClass("warning");
+					   $("#m_hp_msg").text("이미 사용중인 전화번호 입니다");
+				       $("#m_hp_msg").css("color", "red");
+				       $("#m_hp").focus();
+				   }
+			   }
+		   });
+	   }
+   });
    
    /**
     * 비밀번호 변경
@@ -315,9 +362,30 @@ $(document).ready(function(){
 	   });
    
    /**
-    * 
+    * 회원탈퇴
     */
    $("#withdrawal").click(function(){
 	  alert("탈퇴가 완료되었습니다 :)"); 
    });
+ 
 });
+
+	function ruleCheck(){
+		var id_check = /^[A-Za-z0-9]{5,13}$/;
+	    
+		if($("#id").val() == ""){
+			alert("아이디를 입력해주세요 :)");
+	        $("#id").focus();
+			return false;
+		}else{
+			if(id_check.test($("#id").val())){
+				   return true;
+			}else {
+			    $("#id_msg").addClass("warning");
+			    $("#id_msg").text("아이디는 5~13이내로 입력해주세요")
+			             .css("color", "red");
+			    $("#id").focus();
+			     return false;
+			 }
+		}
+	}
