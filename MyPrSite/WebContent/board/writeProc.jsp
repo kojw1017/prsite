@@ -15,6 +15,7 @@
 	//4. 저장된 파일명 가져오기
 	TableVO vo = new TableVO();
 	vo.setUser_id(multi.getParameter("user_id"));
+	vo.setName(multi.getParameter("name"));
 	vo.setBtitle(multi.getParameter("btitle"));
 	vo.setBcontent(multi.getParameter("bcontent"));
 	vo.setBfile(multi.getOriginalFileName("bfile"));

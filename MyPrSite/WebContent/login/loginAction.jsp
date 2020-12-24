@@ -21,6 +21,8 @@
 		if(result==1){//로그인성공
 			session.setAttribute("id", user.getId());
 			session.setAttribute("pass", user.getPass());
+			String name = userDAO.getName(user.getId(), user.getPass());
+			session.setAttribute("name", name);
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("location.href = 'http://localhost:9000/MyPrSite/index.jsp'");

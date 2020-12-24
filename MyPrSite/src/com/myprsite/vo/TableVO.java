@@ -2,8 +2,14 @@ package com.myprsite.vo;
 
 public class TableVO {
 	int rno, bhits;
-	String bid, btitle, bcontent, bfile, bsfile, bdate, user_id;
+	String bid, btitle, bcontent, bfile, bsfile, bdate, user_id, name;
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getUser_id() {
 		return user_id;
 	}

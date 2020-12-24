@@ -279,4 +279,27 @@ public class UserDAO extends DBConn{
 		
 		return result;
 	}
+	
+	/**
+	 * 이름 가져오기
+	 */
+	public String getName(String id, String pass) {
+		String result = "";
+		
+		try {
+			String sql = "select name from user_table where id=? and pass=?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pass);
+			
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getString(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 }
