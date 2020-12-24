@@ -164,23 +164,26 @@
 	/*
 		°Ô½ÃÆÇ(board_list)
 	*/
-	.board table {width:700px; margin:auto; margin-top:60px; }
+	.board table {width:800px; margin:auto; margin-top:60px; }
 	.board table, .board th, .board td {border-collapse:collapse; padding:13px;}
 	.board table {text-align:center;}
-	.board tr:first-child td:first-child {text-align:left; text-indent:5px;}
-	.board tr:first-child td:last-child {text-align:right;}
+	#board_list tr:first-child td:first-child {text-align:left; text-indent:5px;}
+	#board_list tr:first-child td:last-child {text-align:right;}
 	.board table td>a {text-decoration:none; }
 	.board table tr:last-child td{padding:8px;}
 	.board tr, .board table {border:lightgray;}
 	.btn_style {border-radius:4px; border:none; background-color:rgb(79,123,240); padding:5px 15px; color:white; margin:0px 5px;}
 	
 	/* board_content */
-	#board_content table {height:800px;}
-	#board_content table td#content {height:50%;}
+	#board_content table#con_table {height:800px;}
+	#board_content table#con_table td#content {height:50%;}
 	#board_content tr:last-child {height:30%;}
 	.board table textarea { width:500px; height:200px; border-radius:4px;}
 	#board_content table textarea {height:100px; float:left;}
 	#board_content #user_img {width:50px; height:50px; float:left; margin-left:30px; margin-right:10px;}
+	#reply_table td:nth-child(1), #reply_table td:nth-child(2), #reply_table td:nth-child(4) {width:80px;}
+	#reply_table td:nth-child(4) button {font-size:12px; background-color:white; border:white; color:#333; float:left; }
+	#reply_table td:last-child {font-size:13px; width:100px;}
 	
 	/* board_delete */
 	#board_delete table td #delete_img {width:200px; height:210px; }

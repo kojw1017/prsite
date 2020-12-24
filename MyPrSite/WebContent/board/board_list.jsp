@@ -2,7 +2,6 @@
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*, java.util.*" %>
 <%
 	String user_id = (String)session.getAttribute("id");
-
 	TableDAO dao = new TableDAO();
 	
 	//1. 선택한 페이지값
@@ -17,7 +16,6 @@
 	int dbCount = dao.getCount();
 	int reqPage = 1;
 		
-	System.out.println("db 개수 : "+dbCount);
 	//2-2. 전체 페이지 수 구하기
 	if((dbCount % pageSize) == 0){
 		totPage = dbCount/pageSize;
@@ -96,7 +94,7 @@
 			<tr>
 				<td><%= vo.getRno() %></td>
 				<td><a href="board_content.jsp?bid=<%= vo.getBid() %>"><%= vo.getBtitle() %></a></td>
-				<td><% String name = dao.getName(vo.getUser_id()); %><%= name %></td>
+				<td><%= vo.getName() %></td>
 				<td><%= vo.getBdate() %></td>
 				<td><%= vo.getBhits() %></td>
 			</tr>

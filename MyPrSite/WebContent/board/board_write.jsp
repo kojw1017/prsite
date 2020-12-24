@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String user_id = (String)session.getAttribute("id"); %>
+<% 
+	String user_id = (String)session.getAttribute("id"); 
+	String name = (String)session.getAttribute("name");
+%>
 
 <!DOCTYPE html>
 <html>
@@ -18,6 +21,7 @@
 	<section class="board" id="board_write">
 		<form name="board_wirte" action="writeProc.jsp" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="user_id" value="<%= user_id %>">
+			<input type="hidden" name="name" value="<%= name %>">
 			<table border="1">
 				<tr>
 					<th><input type="text" name="btitle" placeholder="제목"></th>

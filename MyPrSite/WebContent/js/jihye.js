@@ -367,6 +367,8 @@ $(document).ready(function(){
    $("#withdrawal").click(function(){
 	  alert("탈퇴가 완료되었습니다 :)"); 
    });
+   
+   
  
 });
 
