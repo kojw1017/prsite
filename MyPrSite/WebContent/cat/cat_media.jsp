@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
+<script src="http://localhost:9000/MyWeb/js/jquery-3.5.1.min.js"></script>
 </head>
 <body>
 	<!-- header -->

@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
 <% 
+	String user_id = (String)session.getAttribute("id");
 	String bid = request.getParameter("bid"); 
 	TableDAO dao = new TableDAO();
 	TableVO vo = dao.getUpdate(bid);
+	
+	if(user_id != null){
 %>
 <!DOCTYPE html>
 <html>
@@ -54,3 +57,9 @@
 	
 </body>
 </html>
+<% }else {%>
+<script>
+	alert("로그인을 진행하셔야 접근이 가능합니다.");
+	location.href="http://localhost:9000/MyPrSite/index.jsp";
+</script>
+<% } %>

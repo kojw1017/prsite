@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*, java.util.*" %>
+    pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
 <% 
 	String user_id = (String)session.getAttribute("id");
 	String bid = request.getParameter("bid");
+	
 	TableDAO dao = new TableDAO();
 	TableVO vo = dao.getContent(bid);
 	
@@ -119,7 +120,7 @@
 					output+="</table>";
 					
 					$("#reply_table").remove();
-	                $("#here").after(output); 
+	                $("#here").append(output); 
 				}
 			});
 		}
@@ -142,7 +143,9 @@
 			</tr>
 			<tr>
 				<td colspan="3" id="content">
+					<% if(vo.getBcontent() != null){ %>
 					<%= vo.getBcontent().replace("\r\n", "<br>") %><br>
+					<% } %>
 					<% if(vo.getBsfile() != null){ %>
 						<img src="http://localhost:9000/MyPrSite/upload/<%= vo.getBsfile() %>">
 					<% } %>
@@ -161,13 +164,20 @@
 			</tr>
 			<tr>
 				<td colspan="3" id="last">
-					<div id="here"></div>
 					<input type="hidden" id="u_id" value="<%= user_id %>">
 					<input type="hidden" id="bid" value="<%= bid %>">
 					<br>
 					<img src="http://localhost:9000/MyPrSite/images/circle.png" id="user_img">
+					<% if(user_id != null){ %>		
 					<textarea id="r_content" placeholder="댓글을 남겨주세요.(200자)"></textarea>
+					<% }else{ %>
+					<textarea id="r_content" placeholder="로그인 이후에 작성할 수 있습니다 :)"></textarea>
+					<% } %>
+					<% if(user_id != null){ %>
 					<button type="button" id="btn_send" class="btn_style">작성</button>
+					<% } %>
+					<br>
+					<div id="here"></div>
 				</td>
 			</tr>
 		</table>

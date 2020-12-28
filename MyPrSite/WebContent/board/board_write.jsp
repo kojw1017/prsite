@@ -3,6 +3,8 @@
 <% 
 	String user_id = (String)session.getAttribute("id"); 
 	String name = (String)session.getAttribute("name");
+	
+	if(user_id != null){
 %>
 
 <!DOCTYPE html>
@@ -50,3 +52,9 @@
 	
 </body>
 </html>
+<% }else {%>
+<script>
+	alert("로그인을 진행하셔야 접근이 가능합니다.");
+	location.href="http://localhost:9000/MyPrSite/index.jsp";
+</script>
+<% } %>

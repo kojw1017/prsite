@@ -65,6 +65,17 @@
 			$(location).attr('href', 'http://localhost:9000/MyPrSite/board/board_list.jsp?rpage='+e.page);
 		});
 		
+		$("#search_btn").click(function(){
+			if($("#svalue").val() == "" && $("#sname").val() != "all"){
+				alert("검색할 데이터를 입력해 주세요");
+				$("#svalue").focus();
+				return false;
+			}else{
+				var sname = $("#sname").val();
+				var svalue = $("#svalue").val();
+			}
+		});
+		
 	});
 </script>
 </head>
@@ -74,6 +85,17 @@
 	
 	<!-- content -->
 	<section class="board" id="board_list">
+		<div>
+			<select id="sname">
+				<option value="all">전체</option>
+				<option value="btitle">제목</option>
+				<option value="bcontent">내용</option>
+				<option value="user_id">아이디</option>
+				<option value="name">작성자</option>
+			</select>
+			<input type="text" id="svalue" placeholder="검색할 단어를 입력해주세요 :)">
+			<button type="button" id="search_btn" class="btn_style">검색</button>
+		</div>
 		<table border=1>
 			<tr>
 				<td colspan="2"><span id="list_count">게시글 <%= all.size() %>개</span></td>
