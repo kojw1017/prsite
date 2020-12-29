@@ -1,5 +1,131 @@
 $(document).ready(function(){
-    	
+	
+	
+	//1. Ajax 서버  - DB연동 후 데이터 출력(JSON)
+	/*
+	face_file ,s_face_file ,area_select,introduce ,job_select_input_content ,
+	category_tech1_input_content,univercity ,univercity_major ,attendance_status 
+	,univercity_file ,s_univercity_file,certificate_name ,certificate_date,certificate_agency 
+	,certificate_file ,s_certificate_file ,company ,department,position 
+	,career_year ,career_month ,career_file ,s_career_file 
+	
+	*/
+	 var arr = new Array();
+	 var arr2=new Array();
+	if(user_id!=null){
+ 		$.ajax({
+			url:"profileAjaxProc.jsp",
+			success:function(result){
+				//JSON 형식으로 parsing
+				var jdata = JSON.parse(result);
+				//2-1. DHTML을 이용하여 테이블 생성 및 출력
+
+				$('#myhome_profile_photo').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file) +")";
+				//$("#file").val(jdata.jlist[0].s_face_file);
+				
+				$('#area_select').val(jdata.jlist[0].area_select).prop("selected",true);
+				$("#introduce").text(jdata.jlist[0].introduce); 
+				
+				/////////////////// 전문분야 선택 부분 데이터 불러오는 부분 ////////////////////////////
+				var sel= jdata.jlist[0].job_select_input_content
+ 			    var arrs = sel.split(",");
+				for ( i in arrs){
+					      arr.push(arrs[i]);
+				}
+				var radomvalue = Math.random();
+				 $("#job_count_area").css("color","gray");
+		    	$("#job_count_area").html("("+arr.length+" / 최대 5개)");
+				$("#job_select_input_content").val(arr);
+				 for( i in arr){
+					$(".pf_job_select_area ul").append("<li class='job_select_content' >"+ arr[i]+"<button type='button'id='x_btn' name='"+radomvalue+"'>x</button></li>");
+				}
+				 $(".job_select_content>button[name='"+radomvalue+"']").click(function(){
+		 	    		
+				 	    /* alert(arr); */
+				 	    var sel_text = $(this).parent().text();
+							var xchar = sel_text.indexOf("x"); 
+							
+							if (xchar !== -1) { 
+								sel_text = sel_text.slice(0, xchar) ; 
+							}
+		 	    		//$("h1").append(sel_text);
+		 	    			var find =$.inArray(sel_text,arr)
+		 	    			if(find>=0){
+		 	    				arr.splice(find,1);
+		 	    			
+			 	    	
+			 	    			$(this).parent().remove();	
+			 	    			$("#job_select_input_content").val(arr);
+						 	    $("#job_count_area").css("color","gray");
+					    		$("#job_count_area").html("("+arr.length+" / 최대 5개)");
+		 	    			}
+		 	 	    		/*var find =arr.indexOf(sel1+":"+sel2); */
+			 	    		
+		 	    		
+		 	    		 
+		 			   }); 
+			/////////////////// 보유기술 선택 부분 데이터 불러오는 부분 ////////////////////////////
+			var sel_tech= jdata.jlist[0].category_tech1_input_content;
+			var arr2s = sel_tech.split(",");
+			for ( i in arr2s){
+			      arr2.push(arr2s[i]);
+		}
+		
+			var random = Math.random();
+			$("#tech_count_area").css("color","gray");
+    		$("#tech_count_area").html("("+arr2.length+" / 최대 6개)");
+    		$("#category_tech1_input_content").val(arr2);
+    		for( i in arr2){
+    			$(".category-tech-select").append("<div>"+arr2[i]+"<button type='button'id='x_btn' name ='"+random+"'>x</button></div>");
+    		}
+    	   	check(random);
+	    	function check(random){
+		    	 $(".category-tech-select>div>button[name='"+random+"']").click(function(){
+		    	 	    var sel_text = $(this).parent().text();
+						var xchar = sel_text.indexOf("x"); 
+						
+						if (xchar !== -1) { 
+							sel_text = sel_text.slice(0, xchar) ; 
+						}
+			 	  var find =$.inArray(sel_text,arr2)
+ 	    			if(find>=0){
+ 	    				arr2.splice(find,1);
+ 	    				$(this).parent().remove();	
+		 	    		
+		 	    		$("#tech_count_area").css("color","gray");
+		 	    		$("#tech_count_area").html("("+arr2.length+" / 최대 6개)");
+		 	    	    $("#category_tech1_input_content").val(arr2);	
+ 	    			}
+	 	    		
+	 			 });  
+	    		
+	    	}
+    		
+	    	$("#univercity_input").val(jdata.jlist[0].univercity);
+	    	$("#univercity_major_input").val(jdata.jlist[0].univercity_major);
+	    	$('#attendance_status').val(jdata.jlist[0].attendance_status).prop("selected",true);
+	    	$("#file_name").append(jdata.jlist[0].univercity_file);
+	    	
+	  
+	    	
+	    	
+	    	$('#certificate_name').val(jdata.jlist[0].certificate_name);
+	    	$('#certificate_date').val(jdata.jlist[0].certificate_date);
+	    	$('#certificate_agency').val(jdata.jlist[0].certificate_agency);
+	    	$("#certificate_file_name").append(jdata.jlist[0].certificate_file);
+	    	
+	    	$('#company').val(jdata.jlist[0].company);
+	    	$('#department').val(jdata.jlist[0].department);
+	    	$('#position').val(jdata.jlist[0].position);
+	    	$('#career_year').val(jdata.jlist[0].career_year).prop("selected",true);
+	    	$('#career_month').val(jdata.jlist[0].career_month).prop("selected",true);
+	    	$("#certificate_career_file_name").append(jdata.jlist[0].career_file);
+    		
+    		}
+		});//ajax
+ 		
+	}//id null 체크
+
 	    $('#introduce').keyup(function (e){
 	    	var content = $(this).val();
 	    	 $('#introduce').css("font-weight","8");
@@ -55,12 +181,10 @@ $(document).ready(function(){
 	
 	    });//jobselect
 	    
-	    $('.job_select').change(function(){
-	    	
-	    });
+
 	    var count=0;
 	  //  var radomvalue=0;
-	    var arr = new Array();
+	   
 	    $('.job_select , .job_select_2 ').change(function(){
 	    	if(arr.length<5){
 	 	    	 if($(".job_select option:selected").val() !="전문분야" && $(".job_select_2 option:selected").val() !="상세분야" ){
@@ -128,7 +252,7 @@ $(document).ready(function(){
 	    
 	    
 	    
-	    var arr2=new Array();
+	   
 		var category_count =0;
 	    $(".category-tech1-select").click(function(){
 	    	//alert($(this).attr("id"));
@@ -337,7 +461,7 @@ $(document).ready(function(){
 	    $(".career_month").change(function(){
 	    	 $(".career_month").css("color","black");		
 	    });
-	    $("#certificate_file").change(function(){
+	    $("#univercity_file").change(function(){
 	    	if($(this).val().length == 0){
 	        } else {
 	          var fileName = $(this).val().split('/').pop().split('\\').pop();
@@ -346,7 +470,7 @@ $(document).ready(function(){
 	        }
 	    	
 	    });
-	    $("#certificate_area_file").change(function(){
+	    $("#certificate_file").change(function(){
 	    	if($(this).val().length == 0){
 	        } else {
 	          var fileName = $(this).val().split('/').pop().split('\\').pop();
@@ -355,7 +479,7 @@ $(document).ready(function(){
 	        }
 	    	
 	    });
-	    $("#certificate_career_area_file").change(function(){
+	    $("#career_file").change(function(){
 	    	if($(this).val().length == 0){
 	        } else {
 	          var fileName = $(this).val().split('/').pop().split('\\').pop();

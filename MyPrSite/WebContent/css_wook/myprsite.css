@@ -432,9 +432,9 @@
 		width:200px;display:inline-block;text-align:center;
 		background-color:rgba(165,190,175,.12);
 		}
-		.section4>div.pf_area4>div.university_certificate>input#certificate_file,
-		.section5>div.pf_area5>div.certificate_area_input>input#certificate_area_file,
-		.section6>div.pf_area6>div.certificate_area_input>input#certificate_career_area_file{
+		.section4>div.pf_area4>div.university_certificate>input#univercity_file,
+		.section5>div.pf_area5>div.certificate_area_input>input#certificate_file,
+		.section6>div.pf_area6>div.certificate_area_input>input#career_file{
 		 margin-left:-250px; padding:20px 0; opacity:0;
 		 }
 		.section4>div.pf_area4>div.university_certificate>span#file_name,

@@ -1,16 +1,28 @@
 package com.myprsite.vo;
 
 public class ProfileVO {
-	String area_select,introduce,job_select,job_select_2,attendance_status,career_year,career_month,job_select_content;
-	String job_select_input_content,category_tech1_input_content;
-	String face_file,univercity_file,certiticate_file,career_file;
-	String s_face_file,s_univercity_file,s_certiticate_file,s_career_file;
-	String univercity,univercity_major;
-	String certificate_name,certificate_date,certificate_agency;
-	String company,department,position;
+	String id,area_select,introduce,
+	job_select_input_content,category_tech1_input_content,
+	univercity,univercity_major,attendance_status,
+	certificate_name,certificate_date,certificate_agency,
+	company,department,position,career_year,career_month;
+	//String job_select_input_content,category_tech1_input_content;
+	String face_file,univercity_file,certificate_file,career_file;
+	String s_face_file,s_univercity_file,s_certificate_file,s_career_file;
+	//String univercity,univercity_major;
+	//String certificate_name,certificate_date,certificate_agency;
+	//String company,department,position;
 	
 	public String getS_face_file() {
 		return s_face_file;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public void setS_face_file(String s_face_file) {
@@ -25,12 +37,12 @@ public class ProfileVO {
 		this.s_univercity_file = s_univercity_file;
 	}
 
-	public String getS_certiticate_file() {
-		return s_certiticate_file;
+	public String getS_certificate_file() {
+		return s_certificate_file;
 	}
 
-	public void setS_certiticate_file(String s_certiticate_file) {
-		this.s_certiticate_file = s_certiticate_file;
+	public void setS_certificate_file(String s_certificate_file) {
+		this.s_certificate_file = s_certificate_file;
 	}
 
 	public String getS_career_file() {
@@ -57,12 +69,12 @@ public class ProfileVO {
 		this.univercity_file = univercity_file;
 	}
 
-	public String getCertiticate_file() {
-		return certiticate_file;
+	public String getCertificate_file() {
+		return certificate_file;
 	}
 
-	public void setCertiticate_file(String certiticate_file) {
-		this.certiticate_file = certiticate_file;
+	public void setCertificate_file(String certificate_file) {
+		this.certificate_file = certificate_file;
 	}
 
 	public String getCareer_file() {
@@ -153,13 +165,7 @@ public class ProfileVO {
 		this.job_select_input_content = job_select_input_content;
 	}
 
-	public String getJob_select_content() {
-		return job_select_content;
-	}
-
-	public void setJob_select_content(String job_select_content) {
-		this.job_select_content = job_select_content;
-	}
+	
 
 	public String getArea_select() {
 		return area_select;
@@ -177,21 +183,9 @@ public class ProfileVO {
 		this.introduce = introduce;
 	}
 
-	public String getJob_select() {
-		return job_select;
-	}
 
-	public void setJob_select(String job_select) {
-		this.job_select = job_select;
-	}
 
-	public String getJob_select_2() {
-		return job_select_2;
-	}
-
-	public void setJob_select_2(String job_select_2) {
-		this.job_select_2 = job_select_2;
-	}
+	
 
 	public String getAttendance_status() {
 		return attendance_status;
