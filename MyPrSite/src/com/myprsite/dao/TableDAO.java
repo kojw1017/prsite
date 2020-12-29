@@ -104,6 +104,47 @@ public class TableDAO extends DBConn{
 	}
 	
 	/**
+	 * list : ÆäÀÌÂ¡ & °Ë»ö
+	 */
+	public ArrayList<TableVO> getList(String sname, String svalue, int start, int end){
+		ArrayList<TableVO> list = new ArrayList<TableVO>();
+		
+		String str = "";
+		if(sname.equals("all")) {
+			str = "";
+		}else {
+			str = " where " +sname + " like '%" + svalue + "%'";
+		}
+		
+		try {
+			String sql = "select * from (select rownum rno, bid, btitle, bcontent, bfile, bsfile, to_char(bdate,'yyyy.mm.dd') bdate, bhits, user_id, name "
+					+ "from (select * from board_table " + str + "order by bdate desc)) where rno between " + start + " and " + end;
+			getStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				TableVO vo = new TableVO();
+				vo.setRno(rs.getInt(1));
+				vo.setBid(rs.getString(2));
+				vo.setBtitle(rs.getString(3));
+				vo.setBcontent(rs.getString(4));
+				vo.setBfile(rs.getString(5));
+				vo.setBsfile(rs.getString(6));
+				vo.setBdate(rs.getString(7));
+				vo.setBhits(rs.getInt(8));
+				vo.setUser_id(rs.getString(9));
+				vo.setName(rs.getString(10));
+				
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+	
+	/**
 	 * content
 	 */
 	public TableVO getContent(String bid) {
@@ -248,6 +289,30 @@ public class TableDAO extends DBConn{
 			String sql = "select count(*) from board_table";
 			getPreparedStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	public int getCount(String sname, String svalue) {
+		int result = 0;
+		String str = "";
+		
+		if(sname.equals("all")) {
+			str = "";
+		}else {
+			str = " where " + sname +" like '%"+ svalue +"%'";
+		}
+		
+		try {
+			String sql = "select count(*) from board_table " + str;
+			getStatement();
+			ResultSet rs = stmt.executeQuery(sql);
 			if(rs.next()) {
 				result = rs.getInt(1);
 			}
