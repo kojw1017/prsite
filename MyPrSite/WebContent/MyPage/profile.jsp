@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    import = "com.myprsite.vo.*,com.myprsite.dao.*"
+    %>
+<%	
+		String user_id = (String)session.getAttribute("id");
+	 	ProfileDAO dao = new ProfileDAO();
+	 	ProfileVO vo = dao.getContent(user_id);
+		
+	 	
+    
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +19,14 @@
 </head>
 	<script src="http://localhost:9000/MyPrSite/jquery-3.5.1.min.js"></script>
 	<script src="http://localhost:9000/MyPrSite/js/wook.js"></script>
- 
+
 <body>
 	<!-- header -->
 	<jsp:include page="../header.jsp" />
 	<div class="content">
 	<h1>프로필 등록/수정</h1>
 	<form name="profileWriteForm" action="profileWriteProc.jsp" method="post" class="profileWriteForm" enctype="multipart/form-data">
+		<input type="text" name="user_id" id="user_id" value="<%= user_id %>"> 
 		<section class="section1">
 			<div class ="pf_area1">
 				<aside class="my_aside_profile">
@@ -30,7 +41,7 @@
 							<li>이름</li>
 							<li>김남욱</li>
 							<li><label>지역</label>
-							<select name="area_select" class="area_select"  >
+							<select name="area_select" class="area_select"  id="area_select">
 							<option value="선택">선택</option>
 							<option value="서울">서울</option>
 							<option value="경기북부">경기북부</option>
@@ -112,8 +123,8 @@
 			<div class ="pf_area4">
 					<div class="university_major_area"><h4>학력 전공을 작성해주세요</h4></div>	
 					<div class="university_major_area_input">
-						<input type="text" class="univercity_input" placeholder="학교명(ex 사람온대학교)" name="univercity">
-						<input type="text" class="univercity_major_input" placeholder="전공(ex 컴퓨터공학과)"name="univercity_major">
+						<input type="text" class="univercity_input" id = "univercity_input" placeholder="학교명(ex 사람온대학교)" name="univercity">
+						<input type="text" class="univercity_major_input"  id = "univercity_major_input" placeholder="전공(ex 컴퓨터공학과)"name="univercity_major">
 						<select name="attendance_status" class="attendance_status" id="attendance_status">
 							<option value="" selected disabled hidden>상태</option>
 							<option value="재학">재학</option>
@@ -125,7 +136,7 @@
 					<h4 class="h4_certificate">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
 					<div class="university_certificate">
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
-						<input type="file" id="certificate_file" accept=".jpg, .png" name="univercity_file">
+						<input type="file" id="univercity_file" accept=".jpg, .png" name="univercity_file">
 						<span id="file_name"></span>
 						<div>
 							<p>
@@ -147,15 +158,15 @@
 			<div class ="pf_area5">
 					<div class="h4_certificate_area"><h4>보유한 자격증을 작성해주세요</h4></div>	
 					<div class="certificate_area">
-						<input type="text" class="certificate_area_input1" placeholder="자격증명" name="certificate_name">
-						<input type="text" class="certificate_area_input2" placeholder="발급일" name="certificate_date">
-						<input type="text" class="certificate_area_input3" placeholder="발급기관" name="certificate_agency">
+						<input type="text" class="certificate_area_input1" placeholder="자격증명" name="certificate_name" id="certificate_name">
+						<input type="text" class="certificate_area_input2" placeholder="발급일" name="certificate_date"id="certificate_date">
+						<input type="text" class="certificate_area_input3" placeholder="발급기관" name="certificate_agency"id="certificate_agency">
 						
 					</div>
 					<h4 class="h4_certificate_area_input">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
 					<div class="certificate_area_input">
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
-						<input type="file" id="certificate_area_file" accept=".jpg, .png" name="certificate_file">
+						<input type="file" id="certificate_file" accept=".jpg, .png" name="certificate_file">
 						<span id="certificate_file_name"></span>
 						<div>
 							<p>
@@ -178,9 +189,9 @@
 			<div class ="pf_area6">
 					<div class="h4_career_area"><h4>경력사항을 작성해주세요</h4></div>	
 					<div class="career_area">
-						<input type="text" class="career_area_input1" placeholder="회사명" name="company">
-						<input type="text" class="career_area_input2" placeholder="근무부서" name="department">
-						<input type="text" class="career_area_input3" placeholder="직위" name="position">
+						<input type="text" class="career_area_input1" placeholder="회사명" name="company" id="company">
+						<input type="text" class="career_area_input2" placeholder="근무부서" name="department"id="department">
+						<input type="text" class="career_area_input3" placeholder="직위" name="position"id="position">
 						<select name="career_year" class="career_year" id="career_year" >
 							<option value="" selected disabled hidden>년</option>
 							<option value="1년">1년</option>
@@ -218,7 +229,7 @@
 					<h4 class="h4_certificate_area_input">증빙 자료를 첨부해주세요  <span>선택</span> </h4>
 					<div class="certificate_area_input">
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+증빙 자료 첨부</span></label>
-						<input type="file" id="certificate_career_area_file" accept=".jpg, .png" name="career_file">
+						<input type="file" id="career_file" accept=".jpg, .png" name="career_file">
 						<span id="certificate_career_file_name"></span>
 						<div>
 							<p>
