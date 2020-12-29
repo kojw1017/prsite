@@ -4,6 +4,8 @@
 	String id = (String)session.getAttribute("id");
 	UserDAO dao = new UserDAO();
 	JoinVO user = dao.getUserList(id); 
+	
+	if(id != null){
 %>
 <!DOCTYPE html>
 <html>
@@ -90,3 +92,9 @@
 	<jsp:include page="../footer.jsp" />
 </body>
 </html>
+<% }else {%>
+<script>
+	alert("로그인을 진행하셔야 접근이 가능합니다.");
+	location.href="http://localhost:9000/MyPrSite/index.jsp";
+</script>
+<% } %>

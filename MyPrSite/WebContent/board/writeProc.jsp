@@ -11,13 +11,17 @@
 	
 	//3. MultipartRequest 객체 생성 -- 생성되는 동시에 파일이 자동 업로드(서버에 저장)
 	MultipartRequest multi = new MultipartRequest(request, save_path, max_size, "utf-8", new DefaultFileRenamePolicy());	
+	String bcontent = multi.getParameter("bcontent");
+	if(bcontent.equals("")){
+		bcontent = " ";
+	}
 	
 	//4. 저장된 파일명 가져오기
 	TableVO vo = new TableVO();
 	vo.setUser_id(multi.getParameter("user_id"));
 	vo.setName(multi.getParameter("name"));
 	vo.setBtitle(multi.getParameter("btitle"));
-	vo.setBcontent(multi.getParameter("bcontent"));
+	vo.setBcontent(bcontent);
 	vo.setBfile(multi.getOriginalFileName("bfile"));
 	vo.setBsfile(multi.getFilesystemName("bfile"));
 

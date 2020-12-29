@@ -164,26 +164,36 @@
 	/*
 		°Ô½ÃÆÇ(board_list)
 	*/
-	.board table {width:800px; margin:auto; margin-top:60px; }
-	.board table, .board th, .board td {border-collapse:collapse; padding:13px;}
-	.board table {text-align:center;}
-	#board_list tr:first-child td:first-child {text-align:left; text-indent:5px;}
-	#board_list tr:first-child td:last-child {text-align:right;}
-	.board table td>a {text-decoration:none; }
-	.board table tr:last-child td{padding:8px;}
-	.board tr, .board table {border:lightgray;}
-	.btn_style {border-radius:4px; border:none; background-color:rgb(79,123,240); padding:5px 15px; color:white; margin:0px 5px;}
-	
+	#board_list>div {text-align:center; margin-top:100px;}
+    #board_list>div select {width:100px; height:40px; border-radius:5px; margin-right:5px; font-size:14px; text-indent:25px; background-color:rgb(245,245,245); border:1px solid rgb(245,245,245);}
+    #board_list>div input {width:400px; height:37px; border-radius:5px; 
+     	 text-indent:15px; font-size:15px; background-color:rgb(245,245,245); border:1px solid rgb(245,245,245);}
+    #board_list>div button {width:80px; height:41px; border-radius:4px; font-size:14px;}
+    .board table {width:800px; margin:auto; margin-top:60px; margin-bottom:150px; }
+    #board_list table {margin-top:40px;}
+    .board table, .board th, .board td {border-collapse:collapse; padding:13px;}
+    .board table {text-align:center;}
+    #board_list tr:first-child td:first-child {text-align:left; text-indent:5px;}
+    #board_list tr:first-child td:last-child {text-align:right;}
+    .board table td>a {text-decoration:none; }
+    .board table tr:last-child td{padding:8px;}
+    #board_list table tr:last-child td{padding:100px;}
+    .board tr, .board table {border:lightgray;}
+    .btn_style {border-radius:4px; border:none; background-color:rgb(79,123,240); padding:5px 15px; color:white; margin:0px 5px;}
+
 	/* board_content */
 	#board_content table#con_table {height:800px;}
-	#board_content table#con_table td#content {height:50%;}
-	#board_content tr:last-child {height:30%;}
-	.board table textarea { width:500px; height:200px; border-radius:4px;}
-	#board_content table textarea {height:100px; float:left;}
-	#board_content #user_img {width:50px; height:50px; float:left; margin-left:30px; margin-right:10px;}
-	#reply_table td:nth-child(1), #reply_table td:nth-child(2), #reply_table td:nth-child(4) {width:80px;}
-	#reply_table td:nth-child(4) button {font-size:12px; background-color:white; border:white; color:#333; float:left; }
-	#reply_table td:last-child {font-size:13px; width:100px;}
+   #board_content table#con_table td#content {height:50%;}
+   #board_content table#con_table tr:last-child td{border:1px solid white;}
+   .board table textarea { width:550px; height:230px; border-radius:4px;}
+   #board_content table textarea {height:100px; float:left; margin-bottom:20px;}
+   #board_content #user_img {width:50px; height:50px; float:left; margin-left:60px; margin-right:20px;}
+   #reply_table td:nth-child(1), #reply_table td:nth-child(2), #reply_table td:nth-child(4) {width:80px;}
+   #reply_table td:nth-child(4) button {font-size:12px; background-color:white; border:white; color:#333; float:left; }
+   #reply_table td:last-child {font-size:13px; width:100px; } 
+   #board_content table#reply_table, #board_content table#reply_table th, #board_content table#reply_table td {margin:20px;}
+   #reply_table textarea {width:450px;}
+
 	
 	/* board_delete */
 	#board_delete table td #delete_img {width:200px; height:210px; }
