@@ -2,8 +2,8 @@
 	pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*"%>
 <%@ page import="java.io.PrintWriter"%>
 <% request.setCharacterEncoding("utf-8"); %>
-<%-- <jsp:useBean id="user" class="com.myprsite.vo.JoinVO" scope="page"/>
-<jsp:setProperty name="user" property="*"/> --%>
+<jsp:useBean id="user" class="com.myprsite.vo.JoinVO" scope="page"/>
+<jsp:setProperty name="user" property="*"/>
 <%
 		String uid = request.getParameter("id");
 		String upass = request.getParameter("pass");
@@ -27,8 +27,8 @@
 		
 		int result = userDAO.login(uid,upass);
 		if(result==1){//로그인성공
-			session.setAttribute("id", uid);
-			session.setAttribute("pass", upass);
+			session.setAttribute("id", user.getId());
+			session.setAttribute("pass", user.getPass());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("location.href = 'http://localhost:9000/MyPrSite/index.jsp'");
