@@ -95,7 +95,7 @@ public class UserDAO extends DBConn{
 		String SQL ="SELECT pass FROM USER_TABLE WHERE id=?";
 		try {
 			getPreparedStatement(SQL);
-			pstmt.setString(1,id);
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				if(rs.getString(1).equals(pass)) {
