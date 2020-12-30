@@ -5,8 +5,6 @@
 <jsp:useBean id="user" class="com.myprsite.vo.JoinVO" scope="page"/>
 <jsp:setProperty name="user" property="*"/>
 <%
-		String uid = request.getParameter("id");
-		String upass = request.getParameter("pass");
 		
 		String id = null;
 		
@@ -25,7 +23,7 @@
 		
 		UserDAO userDAO = new UserDAO();
 		
-		int result = userDAO.login(uid,upass);
+		int result = userDAO.login(user.getId(),user.getPass());
 		if(result==1){//로그인성공
 			session.setAttribute("id", user.getId());
 			session.setAttribute("pass", user.getPass());

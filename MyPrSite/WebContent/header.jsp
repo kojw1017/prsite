@@ -11,7 +11,6 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jung/myprsite.css">
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jw/myprsite.css">
-<script src="//code.jquery.com/jquery.min.js"></script>
 </head>
 <body>              
 <%
