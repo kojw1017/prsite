@@ -39,7 +39,7 @@
 						<ul>
 						
 							<li>이름</li>
-							<li id="profile_name">김남욱</li>
+							<li id="profile_name"></li>
 							<li><label>지역</label>
 							<select name="area_select" class="area_select"  id="area_select">
 							<option value="선택">선택</option>
