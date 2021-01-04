@@ -19,10 +19,12 @@ $(document).ready(function(){
 				//JSON 형식으로 parsing
 				var jdata = JSON.parse(result);
 				//2-1. DHTML을 이용하여 테이블 생성 및 출력
-
-				$('#myhome_profile_photo').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file) +")";
+				if(jdata.jlist[0].s_face_file!=null){
+					
+					$('#myhome_profile_photo').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file) +")";
+				}
 				//$("#file").val(jdata.jlist[0].s_face_file);
-				
+				$("#profile_name").text(jdata.jlist[0].name);
 				$('#area_select').val(jdata.jlist[0].area_select).prop("selected",true);
 				$("#introduce").text(jdata.jlist[0].introduce); 
 				
@@ -126,6 +128,9 @@ $(document).ready(function(){
  		
 	}//id null 체크
 
+
+	
+	
 	    $('#introduce').keyup(function (e){
 	    	var content = $(this).val();
 	    	 $('#introduce').css("font-weight","8");
@@ -201,7 +206,7 @@ $(document).ready(function(){
 		 	 	    	//radomvalue++;
 		 	 	    	var radomvalue = Math.random();
 		 	 	    	arr.push(sel1+":"+sel2);
-		 	 	    	alert(arr.length);
+		 	 	    	//alert(arr.length);
 		  	    		//alert(count);
 		 	    		$(".pf_job_select_area ul").append("<li class='job_select_content' >"+ sel1 +":&nbsp&nbsp"+sel2+"<button type='button'id='x_btn' name='"+radomvalue+"'>x</button></li>");
 		 	    		

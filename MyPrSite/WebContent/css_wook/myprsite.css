@@ -37,8 +37,8 @@
 		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(3){
 			text-align:center;
 		}
-		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(2) div,
-		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(3) div{
+		section.section1>div.m1>aside.my_aside>div.info>ul>li:nth-child(2) div
+		{
 			display:inline-block; width: 100px;border:1px solid gray ; border-radius:2px;padding:5px;margin:1px;
 			color: rgb(79,123,240);
 		}
@@ -49,6 +49,10 @@
 			background-image: url("http://localhost:9000/MyPrSite/images/my_people_250x250.png");
 			margin:60px 0 ;
 		}
+		section.section1>div.m1>aside.my_aside>div.info>ul>li span.thum{
+		background-size:100% 100%;
+		}
+		
 		.section1>div>aside.my_aside_profile>span.thum{
 			margin:50px 5px 10px 110px; 
 			background-size:100% 100%;
@@ -174,6 +178,9 @@
 		}
 		section.section2>div.j1>ul>li>div{
 		color:rgb(79,123,240);}
+		section.section2>div.mypage_content_introduce p.mypage_introduce{
+			color:gray;
+		}
 		section.section2>div.mypage_content_introduce div.bar,
 		section.section2>div.mypage_content_portfolio div.bar,
 		section.section2>div.mypage_content_evaluation div.bar{

@@ -26,7 +26,7 @@
 	<div class="content">
 	<h1>프로필 등록/수정</h1>
 	<form name="profileWriteForm" action="profileWriteProc.jsp" method="post" class="profileWriteForm" enctype="multipart/form-data">
-		<input type="text" name="user_id" id="user_id" value="<%= user_id %>"> 
+		<input type="hidden" name="user_id" id="user_id" value="<%= user_id %>"> 
 		<section class="section1">
 			<div class ="pf_area1">
 				<aside class="my_aside_profile">
@@ -39,7 +39,7 @@
 						<ul>
 						
 							<li>이름</li>
-							<li>김남욱</li>
+							<li id="profile_name">김남욱</li>
 							<li><label>지역</label>
 							<select name="area_select" class="area_select"  id="area_select">
 							<option value="선택">선택</option>
@@ -79,7 +79,7 @@
 			<div class = "content_name">전문분야</div> 
 			<div class ="pf_area2">
 				<div class="pf_job">
-				<input type="text" name="job_select_input_content" id="job_select_input_content" style="width:600px">
+				<input type="hidden" name="job_select_input_content" id="job_select_input_content" style="width:600px">
 							<select name="job_select" class="job_select">
 							<option value="전문분야">전문분야</option>
 							<option value="디자인">디자인</option>
@@ -102,7 +102,7 @@
 		</section>
 		<section class="section3">
 			<div class = "content_name">보유기술</div> 
-			<input type="text" name="category_tech1_input_content" id="category_tech1_input_content" style="width:600px">
+			<input type="hidden" name="category_tech1_input_content" id="category_tech1_input_content" style="width:600px">
 			<div class ="pf_area3">
 						<div class="category-tech1">
 				          <div class="category-tech1-select"  id="tech1-design" >디자인</div>
