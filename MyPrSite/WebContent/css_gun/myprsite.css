@@ -208,7 +208,7 @@ body ul{
   margin:auto;
   width:1100px;
   padding-top:50px;
-  height:500px;
+  height:1250px;
 }
 
 
@@ -230,11 +230,19 @@ body ul{
   background-color:white;
 }
 
-.section2 div.design_img{
+.section2 div.design_img,
+.section2 div.software_img,
+.section2 div.video_img,
+.section2 div.marketing_img,
+.section2 div.translation_img{
   text-align:center;
 }
 
-.section2 div.design_img div{
+.section2 div.design_img div,
+.section2 div.software_img div,
+.section2 div.video_img div,
+.section2 div.marketing_img div,
+.section2 div.translation_img div{
   display:inline-block;
   border:1px solid white;
   border-radius:20px;
@@ -266,27 +274,27 @@ body ul{
 
 .section2 div.design_one{
   overflow:hidden;
-  background-image:url(https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  /* background-image:url(https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); */
   background-size:cover;
 }
 
 .section2 div.design_two{
-  background-image:url(https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+ /*  background-image:url(https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); */
   background-size:cover;
 }
 
 .section2 div.design_three{
-  background-image:url(https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+  /* background-image:url(https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80); */
   background-size:cover;
 }
 
 .section2 div.design_four{
-  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLdzcQ0LAua19fRkXgHRZ-D-6aJtgnYtJgxg&usqp=CAU);
+  /* background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLdzcQ0LAua19fRkXgHRZ-D-6aJtgnYtJgxg&usqp=CAU); */
   background-size:cover;
 }
 
 .section2 div.design_five{
-  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHa-KJ-5CHqlzCizT29X2IKzUKJJWcL0EqQ&usqp=CAU);
+ /*  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHa-KJ-5CHqlzCizT29X2IKzUKJJWcL0EqQ&usqp=CAU); */
   background-size:cover;
 }
 

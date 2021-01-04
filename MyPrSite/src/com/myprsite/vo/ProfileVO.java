@@ -1,5 +1,7 @@
 package com.myprsite.vo;
 
+import java.util.ArrayList;
+
 public class ProfileVO {
 	String id,area_select,introduce,
 	job_select_input_content,category_tech1_input_content,
@@ -12,7 +14,25 @@ public class ProfileVO {
 	//String univercity,univercity_major;
 	//String certificate_name,certificate_date,certificate_agency;
 	//String company,department,position;
+	ArrayList<String> face_list;
+	ArrayList<String> face_id_list;
 	
+	public ArrayList<String> getFace_id_list() {
+		return face_id_list;
+	}
+
+	public void setFace_id_list(ArrayList<String> face_id_list) {
+		this.face_id_list = face_id_list;
+	}
+
+	public ArrayList<String> getFace_list() {
+		return face_list;
+	}
+
+	public void setFace_list(ArrayList<String> face_list) {
+		this.face_list = face_list;
+	}
+
 	public String getS_face_file() {
 		return s_face_file;
 	}

@@ -32,14 +32,14 @@
 				<aside class="my_aside_profile">
 					<span class="thum" id="myhome_profile_photo"></span>
 					<label for="file"><span class="thum_insert" id="myhome_profile_photo_insert"></span></label>
-					<input type="file" id="file" accept=".jpg, .png" name="face_file">
+					<input type="file" id="file" accept=".jpg, .png, .jpeg, .jfif" name="face_file">
 					<!-- <div class="pf_update_name"><label class="name_header">이름 : </label><label class="name_content">김남욱</label></div> -->
 					<div class="pf_update_name">  
 					
 						<ul>
 						
 							<li>이름</li>
-							<li id="profile_name">김남욱</li>
+							<li id="profile_name"></li>
 							<li><label>지역</label>
 							<select name="area_select" class="area_select"  id="area_select">
 							<option value="선택">선택</option>
