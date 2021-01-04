@@ -66,7 +66,11 @@
 				<tr>
 					<td>이메일</td>
 					<td>
-						<input type="text" name="email" id="m_email" value="<%= user.getEmail() %>" placeholder="ex)hong@naver.com">
+						<% if(user.getEmail() != null){ %>
+							<input type="text" name="email" id="m_email" value="<%= user.getEmail() %>" placeholder="ex)hong@naver.com">
+						<%} else{ %>
+							<input type="text" name="email" id="m_email" value="" placeholder="ex)hong@naver.com">
+						<% } %>
 						<div id="m_email_msg"></div>
 					</td>
 				</tr>
