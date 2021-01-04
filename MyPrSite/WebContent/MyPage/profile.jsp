@@ -142,7 +142,6 @@
 							<p>
 							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
 								
-								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 재학증명서, 졸업증명서 또는 성적증명서<br>
 								&nbsp&nbsp&nbsp&nbsp	• 1mb이하, jpg/png 파일만 등록 가능합니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
@@ -172,7 +171,6 @@
 							<p>
 							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
 								
-								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 자격증 사본<br>
 								&nbsp&nbsp&nbsp&nbsp	• 1mb이하, jpg/png 파일만 등록 가능합니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
@@ -235,7 +233,6 @@
 							<p>
 							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
 								
-								&nbsp&nbsp&nbsp&nbsp	• 증빙자료를 첨부하시면 담당자 검토 후, 확인 마크인증아이콘를 달아드립니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 국민연금 가입증명서, 재직/경력증명서<br>
 								&nbsp&nbsp&nbsp&nbsp	• 1mb이하, jpg/png 파일만 등록 가능합니다.<br>
 								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
