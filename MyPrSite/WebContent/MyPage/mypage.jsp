@@ -27,6 +27,7 @@ $(document).ready(function(){
 				//JSON 형식으로 parsing
 				var jdata = JSON.parse(result);
 				//2-1. DHTML을 이용하여 테이블 생성 및 출력
+				$("#mypage_head").text(jdata.jlist[0].name +"님의 MyPR").css("color","gray").css("margin-bottom","10px");
 				if(jdata.jlist[0].s_face_file!=null){
 					$('#myhome_profile_photo').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file) +")";
 				}
@@ -79,8 +80,9 @@ $(document).ready(function(){
 	<!-- header -->
 	<jsp:include page="../header.jsp" />
 	<div class="content">
-	<h1>Hi!김남욱님의 MyPage!</h1>
 	
+	
+		<h2 id="mypage_head"></h2>
 		<section class="section1">
 				<div class="m1">
 					<aside class="my_aside">
