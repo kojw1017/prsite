@@ -6,6 +6,8 @@
 	
 	TableDAO dao = new TableDAO();
 	TableVO vo = dao.getContent(bid);
+	ProfileDAO pdao = new ProfileDAO();
+	ProfileVO pvo = pdao.getContent(user_id);
 	
 	dao.setHits(bid);
 %>
@@ -17,6 +19,9 @@
 <link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_jh/myprsite.css">
 <script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
 <script src="http://localhost:9000/MyPrSite/js/jihye.js"></script>
+<style>
+	#rimg {border-radius:50%;}
+</style>
 <script>
 	$(document).ready(function(){
 		ajax_list();
@@ -31,7 +36,7 @@
 			  return false;
 		  }else{
 			  $.ajax({
-				  url:"replyProc_write.jsp?u_id="+$("#u_id").val()+"&bid="+$("#bid").val()+"&rcon="+$("#r_content").val()+"&name="+name,
+				  url:"replyProc_write.jsp?u_id="+$("#u_id").val()+"&bid="+$("#bid").val()+"&rcon="+$("#r_content").val()+"&name="+name+"&psfile=<%= pvo.getS_face_file() %>"+"&pfile=<%= pvo.getFace_file() %>",
 				  success:function(result){
 					  if(result == 1){
 						  alert("댓글이 성공적으로 작성되었습니다 :)");
@@ -94,7 +99,7 @@
 		/* 댓글 리스트 */
 		function ajax_list(){
 			$.ajax({
-				url:"replyProc_list.jsp?bid="+$("#bid").val(),
+				url:"replyProc_list.jsp?bid="+$("#bid").val()+"&psfile=<%= pvo.getS_face_file() %>"+"&pfile=<%= pvo.getFace_file() %>",
 				success:function(result){
 					var jdata = JSON.parse(result);
 					
@@ -102,7 +107,11 @@
                    
 					for(var i in jdata.jlist){
 						output += "<tr>";
-						output += "<td><img src='http://localhost:9000/MyPrSite/images/circle.png' id='rimg' style='width:30px; height:30px;'></td>";
+						if(jdata.jlist[i].psfile != "null"){
+							output += "<td><img src='http://localhost:9000/MyPrSite/upload/" + jdata.jlist[i].psfile + "' id='rimg' style='width:30px; height:30px;'></td>";
+						}else{
+							output += "<td><img src='http://localhost:9000/MyPrSite/images/circle.png' id='rimg' style='width:30px; height:30px;'></td>";
+						}
 		                output += "<td>" + jdata.jlist[i].name +"</td>";   
 		                output += "<td id='"+ jdata.jlist[i].rid +"'>" + jdata.jlist[i].rcon +"</td>";   
 		                if($("#u_id").val() == jdata.jlist[i].uid){
@@ -167,7 +176,11 @@
 					<input type="hidden" id="u_id" value="<%= user_id %>">
 					<input type="hidden" id="bid" value="<%= bid %>">
 					<br>
-					<img src="http://localhost:9000/MyPrSite/images/circle.png" id="user_img">
+					<% if(pvo.getS_face_file() != null){ %>
+						<img src="http://localhost:9000/MyPrSite/upload/<%= pvo.getS_face_file() %>" id="user_img">						
+					<% }else{ %>
+						<img src="http://localhost:9000/MyPrSite/images/circle.png" id="user_img">
+					<% } %>
 					<% if(user_id != null){ %>		
 					<textarea id="r_content" placeholder="댓글을 남겨주세요.(200자)"></textarea>
 					<% }else{ %>

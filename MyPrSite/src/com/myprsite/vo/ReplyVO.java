@@ -2,7 +2,21 @@ package com.myprsite.vo;
 
 public class ReplyVO {
 	int rno;
-	String user_id, bid, rid, rcon, rdate, name;
+	String user_id, bid, rid, rcon, rdate, name, pfile, psfile;
+	
+	
+	public String getPfile() {
+		return pfile;
+	}
+	public void setPfile(String pfile) {
+		this.pfile = pfile;
+	}
+	public String getPsfile() {
+		return psfile;
+	}
+	public void setPsfile(String psfile) {
+		this.psfile = psfile;
+	}
 	public String getName() {
 		return name;
 	}

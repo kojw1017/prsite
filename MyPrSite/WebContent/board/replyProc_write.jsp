@@ -4,13 +4,18 @@
 	String id = request.getParameter("u_id");
 	String bid = request.getParameter("bid");
 	String rcon = request.getParameter("rcon");
+	String pfile = request.getParameter("pfile");
+	String psfile = request.getParameter("psfile");
 	String name = (String)session.getAttribute("name");
+	
 	
 	ReplyVO vo = new ReplyVO();
 	vo.setUser_id(id);
 	vo.setBid(bid);
 	vo.setRcon(rcon);
 	vo.setName(name);
+	vo.setPfile(pfile);
+	vo.setPsfile(psfile);
 	
 	ReplyDAO dao = new ReplyDAO();
 	int result = dao.write(vo);
