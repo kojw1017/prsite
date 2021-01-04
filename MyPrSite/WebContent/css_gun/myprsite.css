@@ -208,7 +208,7 @@ body ul{
   margin:auto;
   width:1100px;
   padding-top:50px;
-  height:500px;
+  height:1250px;
 }
 
 
@@ -230,11 +230,19 @@ body ul{
   background-color:white;
 }
 
-.section2 div.design_img{
+.section2 div.design_img,
+.section2 div.software_img,
+.section2 div.video_img,
+.section2 div.marketing_img,
+.section2 div.translation_img{
   text-align:center;
 }
 
-.section2 div.design_img div{
+.section2 div.design_img div,
+.section2 div.software_img div,
+.section2 div.video_img div,
+.section2 div.marketing_img div,
+.section2 div.translation_img div{
   display:inline-block;
   border:1px solid white;
   border-radius:20px;
