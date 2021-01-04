@@ -7,6 +7,40 @@ import com.myprsite.vo.ProfileVO;
 
 
 public class ProfileDAO extends DBConn{
+	
+	/**
+	 *  index화면에 유저 얼굴 나오게하는 부분
+	 * **/
+	public ArrayList<ProfileVO> getFace() {
+		
+		ArrayList<ProfileVO> list = new ArrayList<ProfileVO>();
+		try {
+			//4. SQL 실행 - ResultSet 객체 생성 
+			
+			String sql = "select id,s_face_file from(" + 
+					"  select id,s_face_file from user_profile_test2 order by DBMS_RANDOM.RANDOM " + 
+					" ) where rownum < 6 ";
+			getPreparedStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			//5. ResultSet 객체 생성되는 경우 - 데이터 가져오기
+			while(rs.next()){
+				ProfileVO vo  = new ProfileVO();
+				vo.setId(rs.getString(1));
+				vo.setS_face_file(rs.getString(2));
+			
+				list.add(vo);
+
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+		
+	}
+	
+	
+	
+	
 	/**
 	 * 
 	 * update  file: 경력증명파일 업데이트
