@@ -3,10 +3,12 @@
      import = "com.myprsite.dao.*,com.myprsite.vo.*,java.util.*,com.google.gson.*"%>
 <%
 String user_id = (String)session.getAttribute("id");
-//System.out.println(user_id);
+// System.out.println("xpxpxpxp테트스ㅡ");
 ProfileDAO dao = new ProfileDAO();
+UserDAO dao2 = new UserDAO();
 
 ProfileVO vo = dao.getProfileContent(user_id);	
+JoinVO vo2 = dao2.getUserList(user_id);	
 //System.out.println(vo);
 //list객체의 데이터를 JSON 객체로 변환작업 필요  ---> JSON 라이브러리 설치(gson)
 JsonArray jarray = new JsonArray();
@@ -15,6 +17,10 @@ Gson gson = new Gson();
 
 
 	JsonObject jobj = new JsonObject();
+	
+	jobj.addProperty("name",vo2.getName());
+	
+	
 	jobj.addProperty("face_file",vo.getFace_file());
 	jobj.addProperty("s_face_file",vo.getS_face_file());
 	jobj.addProperty("area_select",vo.getArea_select());
