@@ -144,7 +144,7 @@
     #board_list>div input {width:400px; height:37px; border-radius:5px; 
      	 text-indent:15px; font-size:15px; background-color:rgb(245,245,245); border:1px solid rgb(245,245,245);}
     #board_list>div button {width:80px; height:41px; border-radius:4px; font-size:14px;}
-    .board table {width:800px; margin:auto; margin-top:60px; margin-bottom:150px; }
+    .board table {width:800px; margin:auto; margin-top:60px; }
     #board_list table {margin-top:40px;}
     .board table, .board th, .board td {border-collapse:collapse; padding:13px;}
     .board table {text-align:center;}
