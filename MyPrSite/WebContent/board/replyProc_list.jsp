@@ -2,8 +2,11 @@
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*, java.util.*, com.google.gson.*"%>
 <%
 	String bid = request.getParameter("bid");
-
+	String pfile = request.getParameter("pfile");
+	String psfile = request.getParameter("psfile");
+	String uid = (String)session.getAttribute("id");
 	ReplyDAO rdao = new ReplyDAO();
+	rdao.updateProfile(uid, pfile, psfile);
 	ArrayList<ReplyVO> list = rdao.select(bid);
 	
 	JsonArray jarray = new JsonArray();
@@ -18,8 +21,11 @@
 		jobj.addProperty("rcon", vo.getRcon());
 		jobj.addProperty("rdate", vo.getRdate());
 		jobj.addProperty("name", vo.getName());
-		
+		jobj.addProperty("pfile", vo.getPfile());
+		jobj.addProperty("psfile", vo.getPsfile());
+
 		jarray.add(jobj);
+		
 	}
 	
 	jdata.add("jlist", jarray);
