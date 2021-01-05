@@ -15,7 +15,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-	<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_wook/admin.css">
+<link rel="stylesheet" href="http://localhost:9000/MyPrSite/css_wook/admin.css">
 
 <script src="http://localhost:9000/MyPrSite/js/jquery-3.5.1.min.js"></script>
 <script>
@@ -73,7 +73,7 @@ $(document).ready(function(){
 			<nav>
 				<ul>
 					 <li><a href="http://localhost:9000/MyPrSite/admin/member/member_list_ajax.jsp">회원관리</a></li>
-					<li><a href="http://localhost:9000/MyCGV/admin/notice/notice_list.jsp">공지사항 관리</a></li>
+					<li><a href="http://localhost:9000/MyPrSite/admin/notice/notice_list.jsp">공지사항 관리</a></li>
 				</ul>
 			
 			</nav>
