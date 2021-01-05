@@ -40,7 +40,7 @@
                <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage1_intro.jsp">MyPage</a><div></div></li>
                <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
           		<%if(id.equals("admin")){ %>
-					<li><a href="http://localhost:9000/MyPrSite/admin/admin.jsp">Admin</a></li>
+					<li><a href="http://localhost:9000/MyPrSite/admin/member/member_list_ajax.jsp">Admin</a></li>
 				<% } %>		
             </ul>
             <%}%>

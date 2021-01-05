@@ -129,7 +129,7 @@
 			<nav>
 				<ul>
 					<li><a href="http://localhost:9000/MyPrSite/admin/member/member_list_ajax.jsp">회원관리</a></li>
-					<li><a href="http://localhost:9000/MyCGV/admin/notice/notice_list.jsp">공지사항 관리</a></li>
+					<li><a href="http://localhost:9000/MyPrSite/admin/notice/notice_list.jsp">공지사항 관리</a></li>
 				</ul>
 			</nav>
 		</aside>
