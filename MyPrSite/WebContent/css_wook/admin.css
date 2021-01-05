@@ -1,0 +1,86 @@
+/**
+  관리자 메인  스타일 
+*/	
+	div.content{width:1300px;margin:auto;/*화면 가운데 나오게**/ /* border:1px solid red; */ }
+	div.content aside.admin_main{
+		width:150px; height:700px; background-color:rgb(79,123,240);
+		
+		display:inline-block; float:left;
+		padding:20px 0 0 30px;
+		/* border:1px solid blue; */
+		/* margin-right:20px; */
+	}
+	div.content section#admin_section1 >div table{
+		margin-left:170px;
+	}
+	div.content aside.admin_main ul li{
+		list-style-type:none;
+		padding:3px 0;
+	}
+	div.content aside.admin_main ul li a{
+		color:white;
+		font-size:13px;
+		font-weight:700;
+		text-decoration:none;
+	}
+	div.content aside.admin_main ul li a:hover{
+		text-decoration:underline;
+	
+	}
+	div.content section#admin_section1{
+		margin-left:155px;
+	}
+	
+	
+/*
+* 회원리스트
+*/
+	
+	table.admin_member_list,table.admin_member_list th,
+	table.admin_member_list td,
+	table.admin_member_content,table.admin_member_content th,table.admin_member_content td	{
+		border:1px solid #333;
+		border-collapse:collapse; /*보더 에 나타나는 두 줄 같은거 한줄로 만들어줌!*/
+	}
+	
+	table.admin_member_list th, table.admin_member_list td,
+	table.admin_member_content th,table.admin_member_content td{
+		padding:15px 40px; /*패딩으로 글자 간격 설정해줘야함 그렇지 않고 height weight쓰면 글자 아래로 늘어난다*/
+		color:#333;
+		font-size:13px;
+	}
+	table.admin_member_list th,
+	table.admin_member_content th{
+		background-color:rgb(236,241,253);
+		paddong:10px 0 ;
+	}
+	table.admin_member_list tr td,
+	table.admin_member_content tr:first-child td{
+		text-align:center;
+	}
+	table.admin_member_list tr td:nth-child(2) a {
+		text-decoration:none;
+		
+	}
+	
+	table.admin_member_content tr td
+	{
+		padding-left:30px;
+	
+	}
+	table.admin_member_content tr:first-child td{
+		padding-left:0px;
+	
+	}
+	table.admin_member_content tr:nth-child(4) td{
+		height:150px;
+	}
+	
+	.section1 div.search{
+		display:inline-block;
+		margin-left:120px;
+	}
+	#admin_section1 h1{
+	
+		margin-left:150px;
+	}
