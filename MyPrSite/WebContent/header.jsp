@@ -47,13 +47,45 @@
          </div>
           <div class="bottom">
            <nav>
-            <ul>
-               <li><a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp">디자인</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp">IT·프로그래밍</a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp"> 영상·사진·음향 </a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp"> 마케팅 </a><div></div></li>
-               <li><a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp">번역·통역  </a><div></div></li>
-		  </ul>
+          	 <div id = "menu"> 
+	            <ul class = "main1">
+	               <li><a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp">디자인</a>
+	                 <ul class="main2">
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp">웹·모바일 디자인</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp">제품·패키지</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_design.jsp">일러스트·캐리커쳐</a></li>
+					</ul>
+					</li>
+	               <li><a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp">IT·프로그래밍</a>
+	               <ul class="main2">
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp">웹사이트 개발</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp">모바일 개발</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_programming.jsp">데이터베이스</a></li>
+					</ul>
+					</li>
+	               <li><a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp"> 영상·사진·음향 </a>
+	               <ul class="main2">
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp">영상촬영·편집</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp">애니메이션</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_media.jsp">3D·VR</a></li>
+					</ul>
+					</li>	               
+	               <li><a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp"> 마케팅 </a>
+	               	<ul class="main2">
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp">SNS 마케팅</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp">키워드·배너 광고</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_marketing.jsp">브랜드 마케팅</a></li>
+					</ul>
+					</li>	
+	               <li><a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp">번역·통역  </a>
+	                <ul class="main2">
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp">일반 번역</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp">통역</a></li>
+		               <li><a href="http://localhost:9000/MyPrSite/cat/cat_translation.jsp">영상 번역</a></li>
+					</ul>
+					</li>
+			 	</ul>
+			   </div> 
             </nav>
         </div>
 
