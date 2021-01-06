@@ -31,6 +31,7 @@
 	 		   <li><a id="btn_open" href="#">로그인</a><div></div></li>
             	<li><a href="http://localhost:9000/MyPrSite/join/join_intro.jsp">회원가입</a><div></div></li>
                <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
+                 <li><a href="http://localhost:9000/MyPrSite/notice/notice_list.jsp">공지사항</a><div></div></li>	
             </ul>
              <%}else{%>
              <ul>
@@ -39,6 +40,7 @@
                <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage.jsp">MyPR</a><div></div></li>
                <li><a href="http://localhost:9000/MyPrSite/MyPage/mypage1_intro.jsp">MyPage</a><div></div></li>
                <li><a href="http://localhost:9000/MyPrSite/board/board_list.jsp">게시판</a><div></div></li>	
+               <li><a href="http://localhost:9000/MyPrSite/notice/notice_list.jsp">공지사항</a><div></div></li>	
           		<%if(id.equals("admin")){ %>
 					<li><a href="http://localhost:9000/MyPrSite/admin/member/member_list_ajax.jsp">Admin</a></li>
 				<% } %>		
@@ -88,7 +90,6 @@
 			   </div> 
             </nav>
         </div>
-
    </header>
    
    <!-- 로그인 영역  헤더침범 ㅈㅅ-->

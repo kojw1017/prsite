@@ -15,9 +15,7 @@
 			
 		}
 	}
-
 </script>
-
 </head>
 <body id ="main_body">
 	<!-- header -->
@@ -54,11 +52,7 @@
 							</ul>
 						</div>
 					</aside>
-					
-					
-				
 				</div> <!-- m1끝나는부분 -->
-				
 				<div class="m2">
 					<div>
 						<ul>
@@ -111,15 +105,12 @@
 						포토폴리오가 없습니다.
 					</li>
 				</ul>
-				
 			</div>
 			<div class="mypage_content_evaluation">
 				<div class="bar">받은평가</div>
 			</div>
 			<div class="star">0.0</div>
-		
 		</section>
-		
 	</div>
 	<!-- footer -->
 	<jsp:include page="../footer.jsp" />
