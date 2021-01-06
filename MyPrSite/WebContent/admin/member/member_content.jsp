@@ -90,17 +90,26 @@ $(document).ready(function(){
 						<% } %>
 						<th>성명</th>
 						<td><%= vo.getName() %></td>
-						<th>성별</th>
-						<td><%= vo.getGender() %></td>
+						<th>사진</th>
+						<td>
+						<%if(pvo.getS_face_file()!=null){ %>
+							<img src="http://localhost:9000/MyPrSite/upload/<%= pvo.getS_face_file() %>" width="200" height="100" class="member_face">
+						<% }else{ %>
+							 x
+						
+						<% } %>
+						</td>
 					</tr>
 					<tr>
 						<th>지역</th>
 						<%if(pvo.getArea_select()!=null){ %>
-							<td colspan="5"><%= pvo.getArea_select() %></td>
+							<td colspan="3"><%= pvo.getArea_select() %></td>
 						<% }else{ %>
-							<td colspan="5">x</td>
+							<td colspan="3">x</td>
 						
 						<% } %>
+						<th>성별</th>
+						<td><%= vo.getGender() %></td>
 					</tr>
 					<tr>
 						<th>핸드폰</th>

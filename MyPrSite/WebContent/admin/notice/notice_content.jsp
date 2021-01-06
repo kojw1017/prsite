@@ -34,11 +34,14 @@
 		</aside>
 		<section class="section1" id="admin_section1"> 
 			<div>
-				<h1>게시판</h1>
+				<h1>공지사항-게시판</h1>
 				<table class="admin_notice_content">
 					<tr>
 						<th>제목</th>
-						<td><%= vo.getNtitle() %></td>
+						<td colspan="3"><%= vo.getNtitle() %></td>
+					
+					</tr>
+					<tr>
 						<th>등록일</th>
 						<td><%= vo.getNdate() %></td>
 						<th>조회수</th>
@@ -47,11 +50,11 @@
 					<tr>
 						<td colspan="6">
 							<p>
-								<%= vo.getNcontent().replace("\r\n", "<br>") %><br>
 								<%if(vo.getNsfile()!=null){ %>
 									<img src="http://localhost:9000/MyPrSite/upload/<%=vo.getNsfile()%>" width="200" height="200">
 								<% }%>
 							</p>
+								<%= vo.getNcontent().replace("\r\n", "<br>") %><br>
 						</td>
 					</tr>
 					<tr>
