@@ -6,9 +6,6 @@
 		String user_id = (String)session.getAttribute("id");
 	 	ProfileDAO dao = new ProfileDAO();
 	 	ProfileVO vo = dao.getContent(user_id);
-		
-	 	
-    
 %>
 <!DOCTYPE html>
 <html>
