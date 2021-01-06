@@ -191,7 +191,7 @@ public class NoticeDAO extends DBConn {
 	public boolean getInsert(NoticeVO vo) {
 		boolean result = false;
 		try {
-			String sql="insert into myprnotice values('n_'||sequ_cgvnotice.nextval,?,?,?,?,sysdate,0)";
+			String sql="insert into myprnotice values('n_'||sequ_myprnotice.nextval,?,?,?,?,sysdate,0)";
 			
 			getPreparedStatement(sql);
 			pstmt.setString(1, vo.getNtitle());
