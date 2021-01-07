@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="com.myprsite.dao.*, com.myprsite.vo.*, java.util.*"%>
+<%
+	CatDAO dao = new CatDAO();
+	ArrayList<CatVO> clist = dao.getCat1("영상·사진·음향");
+	
+	System.out.println(clist.size());
+%>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +21,7 @@
   	<div class="cat_body">
 	  	<!-- aside -->
 	  	<aside>
-	  		<h1>영상·사진·음악</h1>
+	  		<h1>영상·사진·음향</h1>
 			<hr>
 	  		<nav>
 	  			<ul>
@@ -28,36 +34,14 @@
 	  	
 	  	<!-- content -->
 	  	<ul class="cat_content">
+	  		<% for(CatVO vo : clist){ %>
 	  		<li>
-	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/qku4M1599622405.jpg" class="pr_img"></a>
-	  			<a href="#"><div class="con_name">홍길동</div></a>
-	  			<a href="#"><div class="con_title">디자이너 입니다.</div></a>
-	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
+	  			<a href="#"><img src="http://localhost:9000/MyPrSite/upload/<%= vo.getImg() %>" class="pr_img"></a>
+	  			<a href="#"><div class="con_name"><%= vo.getId() %></div></a>
+	  			<a href="#"><div class="con_title">편집자 입니다:)</div></a>
+	  			<!-- <div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div> -->
 	  		</li>
-	  		<li>
-	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/qku4M1599622405.jpg" class="pr_img"></a>
-	  			<a href="#"><div class="con_name">홍길동</div></a>
-	  			<a href="#"><div class="con_title">디자이너 입니다.</div></a>
-	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-	  		</li>
-	  		<li>
-	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/qku4M1599622405.jpg" class="pr_img"></a>
-	  			<a href="#"><div class="con_name">홍길동</div></a>
-	  			<a href="#"><div class="con_title">디자이너 입니다.</div></a>
-	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-	  		</li>
-	  		<li>
-	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/qku4M1599622405.jpg" class="pr_img"></a>
-	  			<a href="#"><div class="con_name">홍길동</div></a>
-	  			<a href="#"><div class="con_title">디자이너 입니다.</div></a>
-	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-	  		</li>
-	  		<li>
-	  			<a href="#"><img src="http://localhost:9000/MyPrSite/images/qku4M1599622405.jpg" class="pr_img"></a>
-	  			<a href="#"><div class="con_name">홍길동</div></a>
-	  			<a href="#"><div class="con_title">디자이너 입니다.</div></a>
-	  			<div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div>
-	  		</li>
+	  		<% } %>
 	  	</ul>
   	</div>
   	
