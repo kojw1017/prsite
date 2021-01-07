@@ -32,7 +32,7 @@
 	 ProfileDAO dao = new ProfileDAO();
 	 boolean result = false;
  
-	String file_check [] = {"face_file","univercity_file", "certificate_file", "career_file","tech1_file","tech2_file","tech3_file","video_file","video_img_file"};
+	String file_check [] = {"face_file","univercity_file", "certificate_file", "career_file","top1_file","top2_file","top3_file","video_file","video_img_file"};
 
 	
 	int check = dao.getProfileCount(user_id);
@@ -69,8 +69,10 @@
 	
 	 vo.setTop1_file(multi.getOriginalFileName("top1_file"));
 	 vo.setS_top1_file(multi.getFilesystemName("top1_file"));
+	 
 	 vo.setTop2_file(multi.getOriginalFileName("top2_file"));
 	 vo.setS_top2_file(multi.getFilesystemName("top2_file"));
+	 
 	 vo.setTop3_file(multi.getOriginalFileName("top3_file"));
 	 vo.setS_top3_file(multi.getFilesystemName("top3_file")); 
 	 
@@ -178,6 +180,9 @@
 		 }
 	
 		 result = dao.getUpdateNofile(vo);
+		 if(result){ 
+				result = dao.getUpdateNofile2(vo);
+		 }
 	
 		if(result){
 			response.sendRedirect("mypage.jsp");

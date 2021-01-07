@@ -300,7 +300,55 @@ public class ProfileDAO extends DBConn{
 		return result;
 	}
 	
+	
+	/**
+	 * 
+	 * update : 내용업데이트 - 기존파일 유지
+	 */
+	public boolean getUpdateNofile2(ProfileVO vo) {
+		boolean result=false;
+		try {
+			String sql =" update user_profile_test3 set top1_file=?,s_top1_file=? ,"
+					+ " top2_file=? ,s_top2_file=?,top3_file=? ,"
+					+ " s_top3_file=? ,top1_per=? ,"
+					+ " top2_per=? ,top3_per=?,video_file=? ,"
+					+ " s_video_file =?,video_img_file=?,s_video_img_file =?,video_name =?,video_content =? "
+					+ " where id= ? ";
+			getPreparedStatement(sql);
+			
 
+			pstmt.setString(1, vo.getTop1_file());
+			pstmt.setString(2, vo.getS_top1_file());
+			pstmt.setString(3, vo.getTop2_file());
+			pstmt.setString(4, vo.getS_top2_file());
+			pstmt.setString(5, vo.getTop3_file());
+			pstmt.setString(6, vo.getS_top3_file());		
+			pstmt.setString(7, vo.getTop1_per());
+			pstmt.setString(8, vo.getTop2_per());
+			pstmt.setString(9, vo.getTop3_per());			
+			pstmt.setString(10, vo.getVideo_file());
+			pstmt.setString(11, vo.getS_video_file());			
+			pstmt.setString(12, vo.getVideo_img_file());
+			pstmt.setString(13, vo.getS_video_img_file());			
+			pstmt.setString(14, vo.getVideo_name());
+			pstmt.setString(15, vo.getVideo_content());
+			
+			pstmt.setString(16, vo.getId());		
+			
+
+			int val = pstmt.executeUpdate();
+			if(val!=0) result= true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+
+	
+	
 //	/**
 //	 * write 
 //	 */
