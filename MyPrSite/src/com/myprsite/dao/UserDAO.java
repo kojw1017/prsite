@@ -232,7 +232,7 @@ public class UserDAO extends DBConn{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		System.out.println("수정 결과 : " + result);
 		return result;
 	}
 	
@@ -268,6 +268,29 @@ public class UserDAO extends DBConn{
 			String sql = "select count(*) from user_table where hp=?";
 			getPreparedStatement(sql);
 			pstmt.setString(1, hp);
+			
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 전화번호 중복 체크
+	 */
+	public int hpCheck(String hp, String id) {
+		int result = 0;
+		
+		try {
+			String sql = "select count(*) from user_table where hp=? and id != ?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, hp);
+			pstmt.setString(2, id);
 			
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {

@@ -6,6 +6,7 @@
 <%
 	user.setChk4(request.getParameter("chk4"));
 	user.setPass(request.getParameter("cpass"));
+	user.setId((String)session.getAttribute("id"));
 	System.out.println(user.getId());
 	System.out.println(user.getName());
 	System.out.println(user.getBirth());
