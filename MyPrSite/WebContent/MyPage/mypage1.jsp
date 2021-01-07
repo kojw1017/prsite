@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.myprsite.vo.*, com.myprsite.dao.*" %>
 <% 
-	String id = (String)session.getAttribute("id");
+	String uid = (String)session.getAttribute("id");
 	UserDAO dao = new UserDAO();
-	JoinVO user = dao.getUserList(id); 
+	JoinVO user = dao.getUserList(uid); 
 	
-	if(id != null){
+	if(uid != null){
 %>
 <!DOCTYPE html>
 <html>
