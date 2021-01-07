@@ -410,6 +410,65 @@ public class ProfileDAO extends DBConn{
 		return result;
 	}
 	
+	
+	/**
+	 * write :프로필 등록되어잇지 않는 경우 인서트(영상 및 사진)
+	 */
+	public boolean setProfileInsert2(ProfileVO vo) {
+		boolean result = false;
+		
+		try {
+			String sql = "insert into user_profile_test3 " + 
+					" values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			getPreparedStatement(sql);
+			pstmt.setString(1, vo.getTop1_file());
+			pstmt.setString(2, vo.getS_top1_file());
+			pstmt.setString(3, vo.getTop2_file());
+			pstmt.setString(4, vo.getS_top2_file());
+			pstmt.setString(5, vo.getTop3_file());
+			pstmt.setString(6, vo.getS_top3_file());			
+			pstmt.setString(7, vo.getId());			
+			pstmt.setString(8, vo.getTop1_per());
+			pstmt.setString(9, vo.getTop2_per());
+			pstmt.setString(10, vo.getTop3_per());			
+			pstmt.setString(11, vo.getVideo_file());
+			pstmt.setString(12, vo.getS_video_file());			
+			pstmt.setString(13, vo.getVideo_img_file());
+			pstmt.setString(14, vo.getS_video_img_file());			
+			pstmt.setString(15, vo.getVideo_name());
+			pstmt.setString(16, vo.getVideo_content());
+			
+				int count = pstmt.executeUpdate();
+				if(count!=0) result = true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	
+	/**
+	 * 
+	 * update  file: 경력증명파일 업데이트(영상 및 사진)
+	 */
+	public boolean getUpdatefile2(String file ,String sfile,String file_name,String sfile_name,String id) {
+		boolean result=false;
+		try {
+			String sql =" update user_profile_test3 set "+file_name +"= '"+file+ "'," +sfile_name+"= '" + sfile +"'"
+					+ " where id='" + id +"'";
+			getStatement();
+			
+			int val = stmt.executeUpdate(sql);
+			if(val!=0) result= true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
 	/**
 	 * 
 	 * update : 프로필 등록 되어있는 경우에 업데이트
@@ -568,6 +627,52 @@ public class ProfileDAO extends DBConn{
 				vo.setCareer_file(rs.getString(23));
 				vo.setS_career_file(rs.getString(24));
 				
+			
+				//System.out.println("Asdasdas");
+				System.out.println(vo.getIntroduce());
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return vo;
+		
+	}
+	
+	public ProfileVO getProfileContent2(String id) {
+		ProfileVO vo  = new ProfileVO();
+		try {
+			//4. SQL 실행 - ResultSet 객체 생성 
+			
+			String sql = "select * from user_profile_test3 where id = ?";
+			getPreparedStatement(sql);
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			//5. ResultSet 객체 생성되는 경우 - 데이터 가져오기
+			while(rs.next()){
+				
+				vo.setTop1_file(rs.getString(1));
+				vo.setS_top1_file(rs.getString(2));				
+
+				vo.setTop2_file(rs.getString(3));
+				vo.setS_top2_file(rs.getString(4));
+				
+				vo.setTop3_file(rs.getString(5));
+				vo.setS_top3_file(rs.getString(6));	
+				
+				vo.setId(rs.getString(7));
+				
+				vo.setTop1_per(rs.getString(8));
+				vo.setTop2_per(rs.getString(9));
+				vo.setTop3_per(rs.getString(10));
+
+				vo.setVideo_file(rs.getString(11));
+				vo.setS_video_file(rs.getString(12));
+								
+				vo.setVideo_img_file(rs.getString(13));
+				vo.setS_video_img_file(rs.getString(14));
+				
+				vo.setVideo_name(rs.getString(15));
+				vo.setVideo_content(rs.getString(16));
 			
 				//System.out.println("Asdasdas");
 				System.out.println(vo.getIntroduce());

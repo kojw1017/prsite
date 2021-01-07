@@ -9,6 +9,8 @@ UserDAO dao2 = new UserDAO();
 
 ProfileVO vo = dao.getProfileContent(user_id);	
 JoinVO vo2 = dao2.getUserList(user_id);	
+ProfileVO vo3 = dao.getProfileContent2(user_id);
+
 //System.out.println(vo);
 //list객체의 데이터를 JSON 객체로 변환작업 필요  ---> JSON 라이브러리 설치(gson)
 JsonArray jarray = new JsonArray();
@@ -19,6 +21,9 @@ Gson gson = new Gson();
 	JsonObject jobj = new JsonObject();
 	
 	jobj.addProperty("name",vo2.getName());
+	jobj.addProperty("email",vo2.getEmail());
+	jobj.addProperty("id",vo2.getId());
+	jobj.addProperty("phone",vo2.getHp());
 	
 	
 	jobj.addProperty("face_file",vo.getFace_file());
@@ -44,6 +49,28 @@ Gson gson = new Gson();
 	jobj.addProperty("career_month",vo.getCareer_month());
 	jobj.addProperty("career_file",vo.getCareer_file());
 	jobj.addProperty("s_career_file",vo.getS_career_file());
+
+	jobj.addProperty("top1_file",vo3.getTop1_file());
+	jobj.addProperty("s_top1_file",vo3.getS_top1_file());
+	jobj.addProperty("top2_file",vo3.getTop2_file());
+	jobj.addProperty("s_top2_file",vo3.getS_top2_file());
+	jobj.addProperty("top3_file",vo3.getTop3_file());
+	jobj.addProperty("s_top3_file",vo3.getS_top3_file());
+	 
+
+	jobj.addProperty("top1",vo3.getTop1_per());
+	jobj.addProperty("top2",vo3.getTop2_per());
+	jobj.addProperty("top3",vo3.getTop3_per());
+	 
+
+	jobj.addProperty("video_file",vo3.getVideo_file());
+	jobj.addProperty("s_video_file",vo3.getS_video_file());
+	jobj.addProperty("video_img_file",vo3.getVideo_img_file());
+	jobj.addProperty("s_video_img_file",vo3.getS_video_img_file());
+	
+
+	jobj.addProperty("video_name",vo3.getVideo_name());
+	jobj.addProperty("video_content",vo3.getVideo_content());	 
 
 	
 	//{"rno" : 1, "empno" :7369, "ename":smith, "hiredate":2020-10-15}

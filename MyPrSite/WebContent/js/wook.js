@@ -27,7 +27,7 @@ $(document).ready(function(){
 				$("#profile_name").text(jdata.jlist[0].name);
 				$('#area_select').val(jdata.jlist[0].area_select).prop("selected",true);
 				$("#introduce").text(jdata.jlist[0].introduce); 
-				
+	
 				/////////////////// 전문분야 선택 부분 데이터 불러오는 부분 ////////////////////////////
 				var sel= jdata.jlist[0].job_select_input_content
  			    var arrs = sel.split(",");
