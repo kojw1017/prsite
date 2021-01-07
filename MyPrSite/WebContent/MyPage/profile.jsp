@@ -237,7 +237,77 @@
 						</div>
 					</div>
 					
+			
 			</div>
+			</section>
+		<section class="section7">
+		<div class = "content_name">포토폴리오 페이지 등록내용</div> 
+			<div class ="pf_area7">
+			
+					<h4 class="h4_tech_3_input">기술 이미지 3가지를 첨부해주세요  <span>필수</span> </h4>
+					<div class="tech3_area_input">
+						<div>
+							<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부</span></label>
+							<input type="file" id="tech1_file" accept=".jpg, .png" name="tech1_file">
+							<span id="tech1_file_name"></span>
+						</div>
+						<div>
+						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부</span></label>
+						<input type="file" id="tech2_file" accept=".jpg, .png" name="tech2_file">
+						<span id="tech2_file_name"></span>
+						</div>
+						<div>
+						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부</span></label>
+						<input type="file" id="tech3_file" accept=".jpg, .png" name="tech3_file">
+						<span id="tech3_file_name"></span>
+						</div>
+					<div class="h4_tech3_area"><h4>자신이 잘하는 기술 3가지의 이해도를 입력해 주세요(숫자)</h4></div>	
+					<div class="tech3_area">
+						<input type="text" class="tech_area_input1" placeholder="이해도(숫자)" name="tech1" id="tech1">
+						<input type="text" class="tech_area_input2" placeholder="이해도(숫자)" name="tech2"id="tech2">
+						<input type="text" class="tech_area_input3" placeholder="이해도(숫자)" name="tech3"id="tech3">
+					</div>
+						
+						<div class = "pcontent">
+							<p>
+							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
+								
+								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 전문기술 아이콘 파일 ex)CSS, JS, HTML<br>
+								&nbsp&nbsp&nbsp&nbsp	• 1mb이하, jpg/png 파일만 등록 가능합니다.<br>
+								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
+							</p>
+						</div>
+						
+						<h4 class="h4_tech_3_input">홍보 동영상을 첨부해주세요  <span>필수</span> </h4>
+						<input type="text" class="video_name_input1" placeholder="동영상 제목" name="video_name" id="video_name">
+						<input type="text" class="video_content_input2" placeholder="동영상 설명(간단히)" name="video_content"id="video_content">
+						<div>
+							<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부(동영상)</span></label>
+							<input type="file" id="video_file" accept="video/mp4,video/mkv, video/x-m4v,video/*" name="video_file">
+							<span id="video_file_name"></span>
+						</div>
+						<div>
+							<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부(썸네일 사진)</span></label>
+							<input type="file" id="video_img_file" accept=".jpg, .png" name="video_img_file">
+							<span id="video_img_file_name"></span>
+						</div>
+							<div class = "pcontent">
+							<p>
+							&nbsp&nbsp&nbsp&nbsp<span>TIP</span><br> 
+								
+								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 동영상 파일 ex)video/mp4,video/mkv, video/x-m4v,video<br>
+								&nbsp&nbsp&nbsp&nbsp	• 첨부 가능 자료: 썸네일 파일(1mb이하, jpg/png 파일만 등록 가능합니다) ex)jpg/png <br>
+								&nbsp&nbsp&nbsp&nbsp	• 제출한 자료는 의뢰인에게 노출되지 않습니다.<br>
+							</p>
+						</div>
+					</div>
+					
+			
+	
+			</div>
+			
+			
+			
 			<div class="save_area">
 				<button type="button" class="save" id="save">프로필 저장</button>
 <!-- 				<a href="profileWriteProc.jsp"><button type="button" class="save" id="save">프로필 저장</button></a> -->
