@@ -38,9 +38,8 @@
 				</tr>
 				<tr>
 					<td>
-						<a href="board_list.jsp"><button type="button" class="btn_style">이전으로</button></a>
-						<button type="submit" class="btn_style">등록</button>
-						<a href="board_list.jsp"><button type="button" class="btn_style">임시 저장</button></a>
+						<button type="submit" class="btn_style">작성</button>
+						<a href="board_list.jsp"><button type="button" class="btn_style">취소</button></a>
 					</td>
 				</tr>
 			</table>
