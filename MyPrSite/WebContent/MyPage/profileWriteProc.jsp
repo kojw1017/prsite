@@ -32,7 +32,7 @@
 	 ProfileDAO dao = new ProfileDAO();
 	 boolean result = false;
  
-	String file_check [] = {"face_file","univercity_file", "certificate_file", "career_file"};
+	String file_check [] = {"face_file","univercity_file", "certificate_file", "career_file","top1_file","top2_file","top3_file","video_file","video_img_file"};
 
 	
 	int check = dao.getProfileCount(user_id);
@@ -66,9 +66,37 @@
 	 vo.setCareer_year(multi.getParameter("career_year"));
 	 vo.setCareer_month(multi.getParameter("career_month"));
 	 
+	
+	 vo.setTop1_file(multi.getOriginalFileName("top1_file"));
+	 vo.setS_top1_file(multi.getFilesystemName("top1_file"));
+	 
+	 vo.setTop2_file(multi.getOriginalFileName("top2_file"));
+	 vo.setS_top2_file(multi.getFilesystemName("top2_file"));
+	 
+	 vo.setTop3_file(multi.getOriginalFileName("top3_file"));
+	 vo.setS_top3_file(multi.getFilesystemName("top3_file")); 
+	 
+	 vo.setTop1_per(multi.getParameter("top1"));
+	 vo.setTop2_per(multi.getParameter("top2"));
+	 vo.setTop3_per(multi.getParameter("top3"));
+
+	 vo.setVideo_file(multi.getOriginalFileName("video_file"));
+	 vo.setS_video_file(multi.getFilesystemName("video_file"));
+	 
+	 vo.setVideo_img_file(multi.getOriginalFileName("video_img_file"));
+	 vo.setS_video_img_file(multi.getFilesystemName("video_img_file"));
+	 
+	 vo.setVideo_name(multi.getParameter("video_name"));
+	 vo.setVideo_content(multi.getParameter("video_content"));
+	 
 	result = dao.setProfileInsert(vo);
 		if(result){ 
-			response.sendRedirect("mypage.jsp");
+			result = dao.setProfileInsert2(vo);
+			if(result){
+				response.sendRedirect("mypage.jsp");				
+			}else{
+				response.sendRedirect("../errorPage.jsp");				
+			}
 		}else{
 			response.sendRedirect("../errorPage.jsp");
 		} 
@@ -94,6 +122,13 @@
     	 vo.setAttendance_status(multi.getParameter("attendance_status"));
     	 vo.setCareer_year(multi.getParameter("career_year"));
     	 vo.setCareer_month(multi.getParameter("career_month"));
+    	 
+    	 vo.setTop1_per(multi.getParameter("top1"));
+    	 vo.setTop2_per(multi.getParameter("top2"));
+    	 vo.setTop3_per(multi.getParameter("top3"));
+    	 
+    	 vo.setVideo_name(multi.getParameter("video_name"));
+    	 vo.setVideo_content(multi.getParameter("video_content"));
 	
 		 for(int i =0; i<file_check.length ;i++){
 			 if(multi.getOriginalFileName(file_check[i]) != null){
@@ -113,12 +148,41 @@
 					 vo.setCareer_file(multi.getOriginalFileName("career_file"));
 			    	 vo.setS_career_file(multi.getFilesystemName("career_file"));
 			    	 result = dao.getUpdatefile(vo.getCareer_file(),vo.getS_career_file(),"career_file","s_career_file",user_id);
+			    	 
+				 }else if(file_check[i].equals("top1_file")){
+					 vo.setTop1_file(multi.getOriginalFileName("top1_file"));
+			    	 vo.setS_top1_file(multi.getFilesystemName("top1_file"));	
+			    	 result = dao.getUpdatefile2(vo.getTop1_file(),vo.getS_top1_file(),"top1_file","s_top1_file",user_id);
+
+				 }else if(file_check[i].equals("top2_file")){
+					 vo.setTop2_file(multi.getOriginalFileName("top2_file"));
+			    	 vo.setS_top2_file(multi.getFilesystemName("top2_file"));	
+			    	 result = dao.getUpdatefile2(vo.getTop2_file(),vo.getS_top2_file(),"top2_file","s_top2_file",user_id);
+
+				 }else if(file_check[i].equals("top3_file")){
+					 vo.setTop3_file(multi.getOriginalFileName("top3_file"));
+			    	 vo.setS_top3_file(multi.getFilesystemName("top3_file"));	
+			    	 result = dao.getUpdatefile2(vo.getTop3_file(),vo.getS_top3_file(),"top3_file","s_top3_file",user_id);
+
+				 }else if(file_check[i].equals("video_file")){
+					 vo.setVideo_file(multi.getOriginalFileName("video_file"));
+			    	 vo.setS_video_file(multi.getFilesystemName("video_file"));
+			    	 result = dao.getUpdatefile2(vo.getVideo_file(),vo.getS_video_file(),"video_file","s_video_file",user_id);
+
+				 }else if(file_check[i].equals("video_img_file")){
+					 vo.setVideo_img_file(multi.getOriginalFileName("video_img_file"));
+			    	 vo.setS_video_img_file(multi.getFilesystemName("video_img_file"));
+			    	 result = dao.getUpdatefile2(vo.getVideo_img_file(),vo.getS_video_img_file(),"video_img_file","s_video_img_file",user_id);
+
 				 }
 			 }
 			
 		 }
 	
 		 result = dao.getUpdateNofile(vo);
+		 if(result){ 
+				result = dao.getUpdateNofile2(vo);
+		 }
 	
 		if(result){
 			response.sendRedirect("mypage.jsp");

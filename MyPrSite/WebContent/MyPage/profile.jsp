@@ -248,24 +248,24 @@
 					<div class="tech3_area_input">
 						<div>
 							<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부</span></label>
-							<input type="file" id="tech1_file" accept=".jpg, .png" name="tech1_file">
-							<span id="tech1_file_name"></span>
+							<input type="file" id="top1_file" accept=".jpg, .png" name="top1_file">
+							<span id="top1_file_name"></span>
 						</div>
 						<div>
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부</span></label>
-						<input type="file" id="tech2_file" accept=".jpg, .png" name="tech2_file">
-						<span id="tech2_file_name"></span>
+						<input type="file" id="top2_file" accept=".jpg, .png" name="top2_file">
+						<span id="top2_file_name"></span>
 						</div>
 						<div>
 						<label  id="file_label"><span class="thum_insert" id="myhome_profile_photo_insert">+자료 첨부</span></label>
-						<input type="file" id="tech3_file" accept=".jpg, .png" name="tech3_file">
-						<span id="tech3_file_name"></span>
+						<input type="file" id="top3_file" accept=".jpg, .png" name="top3_file">
+						<span id="top3_file_name"></span>
 						</div>
 					<div class="h4_tech3_area"><h4>자신이 잘하는 기술 3가지의 이해도를 입력해 주세요(숫자)</h4></div>	
 					<div class="tech3_area">
-						<input type="text" class="tech_area_input1" placeholder="이해도(숫자)" name="tech1" id="tech1">
-						<input type="text" class="tech_area_input2" placeholder="이해도(숫자)" name="tech2"id="tech2">
-						<input type="text" class="tech_area_input3" placeholder="이해도(숫자)" name="tech3"id="tech3">
+						<input type="text" class="tech_area_input1" placeholder="이해도(숫자)" name="top1"id="top1">
+						<input type="text" class="tech_area_input2" placeholder="이해도(숫자)" name="top2"id="top2">
+						<input type="text" class="tech_area_input3" placeholder="이해도(숫자)" name="top3"id="top3">
 					</div>
 						
 						<div class = "pcontent">

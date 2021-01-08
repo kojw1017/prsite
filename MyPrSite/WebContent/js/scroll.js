@@ -36,10 +36,11 @@ typewriter.typeString('#'+one)
             var ele1 = document.getElementById('progressing1');
             var ele2= document.getElementById('progressing2');
             
-			var one = document.getElementById("progressing").getAttribute("any");
-			var two = document.getElementById("progressing1").getAttribute("any");
-			var three = document.getElementById("progressing2").getAttribute("any");
+			var one = document.getElementById("progressing").getAttribute("value");
+			var two = document.getElementById("progressing1").getAttribute("value");
+			var three = document.getElementById("progressing2").getAttribute("value");
 
+			
 
             var width = 3;
             
@@ -48,7 +49,7 @@ typewriter.typeString('#'+one)
             var id2 =setInterval(frame2, 35);
             
             function frame(){
-                if(width>=one){
+                if(width>=Number(one)){
                     clearInterval(id);
                 }else{
                     width ++;
@@ -57,7 +58,7 @@ typewriter.typeString('#'+one)
                 }
             }
             function frame1(){
-                if(width>=two){
+                if(width>=Number(two)){
                     clearInterval(id1);
                 }else{
                     width ++;
@@ -66,7 +67,7 @@ typewriter.typeString('#'+one)
                 }
             }
             function frame2(){
-               if(width>=three){
+               if(width>=Number(three)){
                     clearInterval(id2);
                 }else{
                     width ++;
@@ -77,7 +78,7 @@ typewriter.typeString('#'+one)
         }
 
 function play(con){
-		var player = document.getElementById('player');
+		var player = document.getElementById("m_video_file");
 		var con = con;
 		player.currentTime = 0; 
 		if(con==0){

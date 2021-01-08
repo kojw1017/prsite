@@ -27,7 +27,7 @@ $(document).ready(function(){
 				$("#profile_name").text(jdata.jlist[0].name);
 				$('#area_select').val(jdata.jlist[0].area_select).prop("selected",true);
 				$("#introduce").text(jdata.jlist[0].introduce); 
-				
+	
 				/////////////////// 전문분야 선택 부분 데이터 불러오는 부분 ////////////////////////////
 				var sel= jdata.jlist[0].job_select_input_content
  			    var arrs = sel.split(",");
@@ -122,6 +122,20 @@ $(document).ready(function(){
 	    	$('#career_year').val(jdata.jlist[0].career_year).prop("selected",true);
 	    	$('#career_month').val(jdata.jlist[0].career_month).prop("selected",true);
 	    	$("#certificate_career_file_name").append(jdata.jlist[0].career_file);
+	    	
+	    	
+	    	$("#top1").val(jdata.jlist[0].top1);
+	    	$("#top2").val(jdata.jlist[0].top2);
+	    	$("#top3").val(jdata.jlist[0].top3);
+	    	$("#top1_file_name").append(jdata.jlist[0].top1_file);
+	    	$("#top2_file_name").append(jdata.jlist[0].top2_file);
+	    	$("#top3_file_name").append(jdata.jlist[0].top3_file);
+	    	
+	    	
+	    	$("#video_name").val(jdata.jlist[0].video_name);
+	    	$("#video_content").val(jdata.jlist[0].video_content);
+	    	$("#video_file_name").append(jdata.jlist[0].video_file);
+	    	$("#video_img_file_name").append(jdata.jlist[0].video_img_file);
     		
     		}
 		});//ajax
@@ -470,6 +484,7 @@ $(document).ready(function(){
 	    	if($(this).val().length == 0){
 	        } else {
 	          var fileName = $(this).val().split('/').pop().split('\\').pop();
+	          $("#file_name").text("");
 	          $("#file_name").append(fileName+" ");
 	        //  $(this).parent('div').find('input:text').val(fileName);
 	        }
@@ -479,6 +494,7 @@ $(document).ready(function(){
 	    	if($(this).val().length == 0){
 	        } else {
 	          var fileName = $(this).val().split('/').pop().split('\\').pop();
+	          $("#certificate_file_name").text("");
 	          $("#certificate_file_name").append(fileName+" ");
 	        //  $(this).parent('div').find('input:text').val(fileName);
 	        }
@@ -488,34 +504,38 @@ $(document).ready(function(){
 	    	if($(this).val().length == 0){
 	        } else {
 	          var fileName = $(this).val().split('/').pop().split('\\').pop();
+	          $("#certificate_career_file_name").text("");
 	          $("#certificate_career_file_name").append(fileName+" ");
 	        //  $(this).parent('div').find('input:text').val(fileName);
 	        }
 	    	
 	    });
-	    $("#tech1_file").change(function(){
+	    $("#top1_file").change(function(){
 	    	if($(this).val().length == 0){
 	        } else {
 	          var fileName = $(this).val().split('/').pop().split('\\').pop();
-	          $("#tech1_file_name").append(fileName+" ");
+	          $("#top1_file_name").text("");
+	          $("#top1_file_name").append(fileName+" ");
 	        //  $(this).parent('div').find('input:text').val(fileName);
 	        }
 	    	
 	    });
-	    $("#tech2_file").change(function(){
+	    $("#top2_file").change(function(){
 	    	if($(this).val().length == 0){
 	    	} else {
 	    		var fileName = $(this).val().split('/').pop().split('\\').pop();
-	    		$("#tech2_file_name").append(fileName+" ");
+	    		$("#top2_file_name").text("");
+	    		$("#top2_file_name").append(fileName+" ");
 	    		//  $(this).parent('div').find('input:text').val(fileName);
 	    	}
 	    	
 	    });
-	    $("#tech3_file").change(function(){
+	    $("#top3_file").change(function(){
 	    	if($(this).val().length == 0){
 	    	} else {
 	    		var fileName = $(this).val().split('/').pop().split('\\').pop();
-	    		$("#tech3_file_name").append(fileName+" ");
+	    		$("#top3_file_name").text("");
+	    		$("#top3_file_name").append(fileName+" ");
 	    		//  $(this).parent('div').find('input:text').val(fileName);
 	    	}
 	    	
@@ -524,6 +544,7 @@ $(document).ready(function(){
 	    	if($(this).val().length == 0){
 	    	} else {
 	    		var fileName = $(this).val().split('/').pop().split('\\').pop();
+	    		$("#video_file_name").text("");
 	    		$("#video_file_name").append(fileName+" ");
 	    		//  $(this).parent('div').find('input:text').val(fileName);
 	    	}
@@ -533,6 +554,7 @@ $(document).ready(function(){
 	    	if($(this).val().length == 0){
 	    	} else {
 	    		var fileName = $(this).val().split('/').pop().split('\\').pop();
+	    		$("#video_img_file_name").text("");
 	    		$("#video_img_file_name").append(fileName+" ");
 	    		//  $(this).parent('div').find('input:text').val(fileName);
 	    	}
