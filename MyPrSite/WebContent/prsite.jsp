@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="com.myprsite.dao.*, com.myprsite.vo.*"%>
 <%	
-		String user_id2 = (String)session.getAttribute("id");
+		//String user_id2 = (String)session.getAttribute("id");
+		String ids = request.getParameter("id");
 		ProfileDAO dao = new ProfileDAO();  
-		ProfileVO vo = dao.getContent(user_id2);
+		//ProfileVO vo = dao.getContent(user_id2);
+		
+		ProfileVO vo = dao.getContent(ids);
 %>
 <!DOCTYPE html>
 <html>
@@ -32,12 +35,14 @@
     });
 
 $(document).ready(function(){	
+
 	$.ajax({
-		url:"MyPage/profileAjaxProc.jsp",
+		url:"MyPage/profileAjaxProc.jsp" ,
 		success:function(result){
 			//JSON 형식으로 parsing
 			var jdata = JSON.parse(result);
 			//2-1. DHTML을 이용하여 테이블 생성 및 출력
+				console.log(jdata.jlist[0].id);
 			$("#m_name").text(jdata.jlist[0].name);
 			$("#m_info_intro").text(jdata.jlist[0].introduce);
 			$("#m_info_main").text(jdata.jlist[0].name);
