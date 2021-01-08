@@ -163,9 +163,8 @@ $(function(){
       <section class="section2">
         <div class="pr_list">
           <div class="design_pr">
-            <span>디자인 카테고리에서 인기있어요!</span>
-            <button type="button">></button>
-            <button type="button"><</button>
+            <span>대표 포토폴리오!!</span>
+         
             <div class="design_img">
             
               <a href ="" id="main_p1"><div class="design_one" id="design_one" data-photo="https://media.vlpt.us/post-images/leejh3224/346b08f0-e5d7-11e9-a7c9-f7e46d949a35/css"
