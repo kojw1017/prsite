@@ -41,6 +41,7 @@ $(function(){
 				} 
 			 	if(jdata.jlist[0].s_face_file_2!=null){
 					$('.design_img #design_two').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_2) +")";
+					$('#main_p2').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_2);
 					$('.software_img #design_two').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_2) +")";
 					$('.video_img #design_two').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_2) +")";
 					$('.marketing_img #design_two').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_2) +")";
@@ -48,6 +49,7 @@ $(function(){
 			 	} 
 			 	if(jdata.jlist[0].s_face_file_3!=null){
 					$('.design_img #design_three').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_3) +")";
+					$('#main_p3').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_3);
 					$('.software_img #design_three').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_3) +")";
 					$('.video_img #design_three').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_3) +")";
 					$('.marketing_img #design_three').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_3) +")";
@@ -55,6 +57,7 @@ $(function(){
 			 	} 
 			 	if(jdata.jlist[0].s_face_file_4!=null){
 					$('.design_img #design_four').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_4) +")";
+					$('#main_p4').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_4);
 					$('.software_img #design_four').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_4) +")";
 					$('.video_img #design_four').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_4) +")";
 					$('.marketing_img #design_four').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_4) +")";
@@ -62,6 +65,7 @@ $(function(){
 			 	} 
 			 	if(jdata.jlist[0].s_face_file_5!=null){
 					$('.design_img #design_five').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_5) +")";
+					$('#main_p5').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_5);
 					$('.software_img #design_five').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_5) +")";
 					$('.video_img #design_five').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_5) +")";
 					$('.marketing_img #design_five').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_5) +")";
@@ -136,7 +140,7 @@ $(function(){
               									data-info="<span>일러스트 전문가</span></br><span>일러스트 교육과정 이수</span>"></div></a> 
             </div>  
           </div>
-          <div class="software_pr">
+          <%-- <div class="software_pr">
             <span>IT·프로그래밍 카테고리에서 인기있어요!</span>
             <button type="button">></button>
             <button type="button"><</button>
@@ -156,8 +160,8 @@ $(function(){
 	              <a href =""><div class="design_five" id="design_five" data-photo="https://cdn.inflearn.com/wp-content/uploads/ai-icon"
 	              										data-info="<span>일러스트 전문가</span></br><span>일러스트 교육과정 이수</span>"></div></a>
           	</div>
-          </div>
-          <div class="video_pr">
+          </div> --%>
+          <%-- <div class="video_pr">
             <span>영상·사진·음향 카테고리에서 인기있어요!</span>
             <button type="button">></button>
             <button type="button"><</button>
@@ -177,8 +181,8 @@ $(function(){
 	              <a href =""><div class="design_five" id="design_five" data-photo="https://cdn.inflearn.com/wp-content/uploads/ai-icon"
 	              										data-info="<span>일러스트 전문가</span></br><span>일러스트 교육과정 이수</span>"></div></a>
             </div>
-          </div>
-          <div class="computer_pr">
+          </div> --%>
+          <%-- <div class="computer_pr">
             <span>마케팅 카테고리에서 인기있어요!</span>
             <button type="button">></button>
             <button type="button"><</button>
@@ -198,8 +202,8 @@ $(function(){
 	              <a href =""><div class="design_five" id="design_five" data-photo="https://cdn.inflearn.com/wp-content/uploads/ai-icon"
 	              										data-info="<span>일러스트 전문가</span></br><span>일러스트 교육과정 이수</span>"></div></a>
             </div>
-          </div>
-          <div class="commu_pr">
+          </div> --%>
+          <%-- <div class="commu_pr">
             <span>번역·통역 카테고리에서 인기있어요!</span>
             <button type="button">></button>
             <button type="button"><</button>
@@ -219,7 +223,7 @@ $(function(){
 	              <a href =""><div class="design_five" id="design_five" data-photo="https://cdn.inflearn.com/wp-content/uploads/ai-icon"
 	              										data-info="<span>일러스트 전문가</span></br><span>일러스트 교육과정 이수</span>"></div></a>
             </div>
-          </div>
+          </div> --%>
         </div>
       </section>
       
