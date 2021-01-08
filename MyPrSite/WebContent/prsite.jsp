@@ -7,6 +7,7 @@
 		//ProfileVO vo = dao.getContent(user_id2);
 		
 		ProfileVO vo = dao.getContent(ids);
+		System.out.print(ids);
 %>
 <!DOCTYPE html>
 <html>
