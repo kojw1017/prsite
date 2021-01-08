@@ -32,6 +32,8 @@ $(function(){
 			 	
 
 					$('.design_img #design_one').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_1) +")";
+					$('#main_p1').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_1);
+					
 					$('.software_img #design_one').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_1) +")";
 					$('.video_img #design_one').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_1) +")";
 					$('.marketing_img #design_one').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_1) +")";
@@ -118,19 +120,19 @@ $(function(){
             <button type="button"><</button>
             <div class="design_img">
             
-              <a href =""><div class="design_one" id="design_one" data-photo="https://media.vlpt.us/post-images/leejh3224/346b08f0-e5d7-11e9-a7c9-f7e46d949a35/css"
+              <a href ="" id="main_p1"><div class="design_one" id="design_one" data-photo="https://media.vlpt.us/post-images/leejh3224/346b08f0-e5d7-11e9-a7c9-f7e46d949a35/css"
               									data-info="<span>CSS 전문가</span></br><span>CSS 교육과정 이수</span>"></div></a>
               									
-              <a href =""><div class="design_two" id="design_two" data-photo="https://arsfutura-production.s3.amazonaws.com/jobs/icons/000/000/009/original/91de50e59c"
+              <a href ="" id="main_p2"><div class="design_two" id="design_two" data-photo="https://arsfutura-production.s3.amazonaws.com/jobs/icons/000/000/009/original/91de50e59c"
               									data-info="<span>JS 전문가</span></br><span>JS 교육과정 이수</span>"></div></a>
               									
-              <a href =""><div class="design_three" id="design_three" data-photo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg"
+              <a href ="" id="main_p3"><div class="design_three" id="design_three" data-photo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg"
               									data-info="<span>HTML 전문가</span></br><span>HTML 교육과정 이수</span>"></div></a>
               									
-              <a href =""><div class="design_four" id="design_four" data-photo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg"
+              <a href ="" id="main_p4"><div class="design_four" id="design_four" data-photo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg"
               									data-info="<span>포토샵 전문가</span></br><span>포토샵 교육과정 이수</span>"></div></a>
               									
-              <a href =""><div class="design_five" id="design_five" data-photo="https://cdn.inflearn.com/wp-content/uploads/ai-icon"
+              <a href ="" id="main_p5"><div class="design_five" id="design_five" data-photo="https://cdn.inflearn.com/wp-content/uploads/ai-icon"
               									data-info="<span>일러스트 전문가</span></br><span>일러스트 교육과정 이수</span>"></div></a> 
             </div>  
           </div>
