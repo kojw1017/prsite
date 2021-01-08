@@ -40,7 +40,7 @@
 	  		<% } %>
 	  		<% for(CatVO vo : clist){ %>
 	  		<li>
-	  			<a href="#"><img src="http://localhost:9000/MyPrSite/upload/<%= vo.getImg() %>" class="pr_img"></a>
+	  			<a href="http://localhost:9000/MyPrSite/prsite.jsp?id=<%= vo.getId() %>"><img src="http://localhost:9000/MyPrSite/upload/<%= vo.getImg() %>" class="pr_img"></a>
 	  			<a href="#"><div class="con_name"><%= vo.getId() %></div></a>
 	  			<a href="#"><div class="con_title">마케터 입니다:)</div></a>
 	  			<!-- <div><img src="http://localhost:9000/MyPrSite/images/star.png" class="star" >4.9</div> -->
