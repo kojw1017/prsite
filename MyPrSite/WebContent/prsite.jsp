@@ -7,6 +7,7 @@
 		//ProfileVO vo = dao.getContent(user_id2);
 		
 		ProfileVO vo = dao.getContent(ids);
+		System.out.print(ids);
 %>
 <!DOCTYPE html>
 <html>
@@ -37,7 +38,7 @@
 $(document).ready(function(){	
 
 	$.ajax({
-		url:"MyPage/profileAjaxProc.jsp" ,
+		url:"MyPage/profileAjaxProc2.jsp?ids=<%=ids%>" ,
 		success:function(result){
 			//JSON 형식으로 parsing
 			var jdata = JSON.parse(result);
