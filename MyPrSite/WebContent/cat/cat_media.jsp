@@ -4,7 +4,6 @@
 	CatDAO dao = new CatDAO();
 	ArrayList<CatVO> clist = dao.getCat1("영상·사진·음향");
 	
-	System.out.println(clist.size());
 %>   
 <!DOCTYPE html>
 <html>

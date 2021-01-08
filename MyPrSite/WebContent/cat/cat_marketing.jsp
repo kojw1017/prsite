@@ -4,7 +4,6 @@
 	CatDAO dao = new CatDAO();
 	ArrayList<CatVO> clist = dao.getCat1("마케팅");
 	
-	System.out.println(clist.size());
 %>    
 <!DOCTYPE html>
 <html>

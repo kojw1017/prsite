@@ -4,7 +4,6 @@
 	CatDAO dao = new CatDAO();
 	ArrayList<CatVO> clist = dao.getCat1("IT·프로그래밍");
 	
-	System.out.println(clist.size());
 %>   
 <!DOCTYPE html>
 <html>
