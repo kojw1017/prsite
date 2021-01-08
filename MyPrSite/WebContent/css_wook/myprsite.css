@@ -451,9 +451,9 @@
 		.section4>div.pf_area4>div.university_certificate>input#univercity_file,
 		.section5>div.pf_area5>div.certificate_area_input>input#certificate_file,
 		.section6>div.pf_area6>div.certificate_area_input>input#career_file,
-		.section7>div.pf_area7>div.tech3_area_input>div>input#tech1_file,
-		.section7>div.pf_area7>div.tech3_area_input>div>input#tech2_file,
-		.section7>div.pf_area7>div.tech3_area_input>div>input#tech3_file,
+		.section7>div.pf_area7>div.tech3_area_input>div>input#top1_file,
+		.section7>div.pf_area7>div.tech3_area_input>div>input#top2_file,
+		.section7>div.pf_area7>div.tech3_area_input>div>input#top3_file,
 		.section7>div.pf_area7>div.tech3_area_input>div>input#video_file,
 		.section7>div.pf_area7>div.tech3_area_input>div>input#video_img_file{
 		 margin-left:-250px; padding:20px 0; opacity:0;

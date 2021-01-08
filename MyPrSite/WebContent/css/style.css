@@ -144,15 +144,21 @@ html, body {
 	height: 100px;
 }
 
-.skill_list li {
-	display: inline-block;
-	justify-content: space-between;
-	padding: 20px 100px 0 0;
+.skill_list{
+	position: absolute;
+    top: 0;
+    right: 5%;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
 }
 
-.skill_list li img {
-	width: 100px;
-	height: 100px;
+.skill_list img {    
+	position: absolute;
+    top: 100px;
+    left: 40px;
+    width: 1000px;
+    height: 300px;
 }
 
 #frame div.right {
@@ -223,7 +229,7 @@ html, body {
 	position: absolute;
 	top: 15%;
 	left: 42%;
-	width: 70%;
+	width: 600px;
 	height: 20%;
 }
 
