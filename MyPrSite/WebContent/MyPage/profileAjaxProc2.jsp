@@ -2,15 +2,16 @@
     pageEncoding="UTF-8"
      import = "com.myprsite.dao.*,com.myprsite.vo.*,java.util.*,com.google.gson.*"%>
 <%
-String user_id = (String)session.getAttribute("id");
+//String user_id = (String)session.getAttribute("id");
 
+String ids = request.getParameter("ids");
 // System.out.println("xpxpxpxp테트스ㅡ");
 ProfileDAO dao = new ProfileDAO();
 UserDAO dao2 = new UserDAO();
 
-ProfileVO vo = dao.getProfileContent(user_id);	
-JoinVO vo2 = dao2.getUserList(user_id);	
-ProfileVO vo3 = dao.getProfileContent2(user_id);
+ProfileVO vo = dao.getProfileContent(ids);	
+JoinVO vo2 = dao2.getUserList(ids);	
+ProfileVO vo3 = dao.getProfileContent2(ids);
 
 //System.out.println(vo);
 //list객체의 데이터를 JSON 객체로 변환작업 필요  ---> JSON 라이브러리 설치(gson)
