@@ -49,7 +49,7 @@ div.search span{
   font-weight:bold;
   /* color:#626262; */ 
   color:white;
-	}
+   }
 
 div.search a{
   text-decoration:none;
@@ -104,13 +104,13 @@ div.search a{
   background-repeat: no-repeat; */
 }
 body ul{
-	border-radius:20px;
+   border-radius:20px;
 }
 
 #ui-id-1 li{ 
-	width: 650px;
-	border:1px solid white;
-	border-radius:20px;
+   width: 650px;
+   border:1px solid white;
+   border-radius:20px;
 }
 
 .section1 div.main_btn_page{
@@ -145,36 +145,36 @@ body ul{
   transform:translateY(-20px);  
 }
 .section1 div.main_btn_text{
-	/* border-radius:350px; */
-	width:1000px;
-	text-align:center;
-	margin:auto;
-	padding-top:0px;
+   /* border-radius:350px; */
+   width:1000px;
+   text-align:center;
+   margin:auto;
+   padding-top:0px;
 }
 
 .section1 div.main_btn_text>a{
-	text-decoration:none;
+   text-decoration:none;
 }
 
 .section1 div.main_btn_text>a>span {
- 	 padding:0 5%;
- 	 width:60px;
- 	 margin-left:0px;
- 	 margin-right:4px;
- 	 font-size:14px;
- 	 font-weight:600;
- 	 color:#333;
+     padding:0 5%;
+     width:60px;
+     margin-left:0px;
+     margin-right:4px;
+     font-size:14px;
+     font-weight:600;
+     color:#333;
 }
 
 .section1 div.main_btn_icon>a:nth-child(2) img,
 .section1 div.main_btn_icon>a:nth-child(3) img,
 .section1 div.main_btn_icon>a:nth-child(4) img{
-	margin-left:15px;
+   margin-left:15px;
 }
 
 .section1 div.main_btn_icon>a:first-child img,
 .section1 div.main_btn_icon>a:nth-child(5) img{
-	margin-left:-10px;
+   margin-left:-10px;
 }
 
 .section1 div.main_btn_icon>a:nth-child(1)>img:hover{
@@ -208,7 +208,7 @@ body ul{
   margin:auto;
   width:1100px;
   padding-top:50px;
-  height:1250px;
+  height:200px;
 }
 
 
@@ -252,24 +252,24 @@ body ul{
   margin:20px 1%;
 }
 
-.ui-tooltip.ui-widget{	
+.ui-tooltip.ui-widget{   
   width:155px;
   height:200px;
 }
 
 
 .ui-tooltip.ui-widget.ui-corner-all.ui-widget-content{
-	text-align:center;
+   text-align:center;
 }
 
 .ui-tooltip.ui-widget.ui-corner-all.ui-widget-content img{
-	width:100px;
-	height:100px;
+   width:100px;
+   height:100px;
 }
 
 .ui-tooltip.ui-widget.ui-corner-all.ui-widget-content span{
-	display:block;
-	font-size:15px;
+   display:block;
+   font-size:15px;
 }
 
 .section2 div.design_one{
@@ -307,7 +307,6 @@ body ul{
   transition:0.1s;
   transform:translateY(-20px);
 }
-
 
 
 

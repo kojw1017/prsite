@@ -42,7 +42,7 @@ typewriter.typeString('#'+one)
 
 			
 
-            var width = 3;
+            var width = 1;
             
             var id =setInterval(frame, 35);
             var id1 =setInterval(frame1, 35);
