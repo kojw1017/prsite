@@ -89,6 +89,8 @@
 		/* border:1px solid red; */ 
 	}
 	
+	div.no {font-size:25px; padding-top:200px; color:#333; width:700px;}
+	
 	aside {
 		height:500px;
 		width:180px;
