@@ -3,8 +3,6 @@
 <%
 	CatDAO dao = new CatDAO();
 	ArrayList<CatVO> clist = dao.getCat1("번역·통역");
-	
-	System.out.println(clist.size());
 %>   
 <!DOCTYPE html>
 <html>
