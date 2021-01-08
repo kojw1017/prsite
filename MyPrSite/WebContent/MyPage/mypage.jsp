@@ -89,6 +89,7 @@ $(document).ready(function(){
 						<div class="info">
 							<ul>
 								<li>
+								
 							        <span class="thum" id="myhome_profile_photo"></span>
 							   	</li>
 								<li>
@@ -111,7 +112,7 @@ $(document).ready(function(){
 					<div>
 						<ul>
 							<li>
-								<span class="pr_1"><br><br><br>포토폴리오</span>
+								<a href="http://localhost:9000/MyPrSite/prsite2.jsp"><span class="pr_1"><br><br><br>포토폴리오</span></a>
 							</li>
 							<li>
 							
@@ -129,16 +130,16 @@ $(document).ready(function(){
 		<section class="section2">
 			<div class="mypage_bar">
 				<ul>
-					<li id="mypage_bar_introduce"><div>소개</div></li>
-					<li id="mypage_bar_portfolio"><div>포토폴리오</div></li>
-					<li id="mypage_bar_evaluation"><div>받은평가</div></li>
+					<!-- <li id="mypage_bar_introduce"><div>소개</div></li> -->
+					<!-- <li id="mypage_bar_portfolio"><div>포토폴리오</div></li> -->
+					<!-- <li id="mypage_bar_evaluation"><div>받은평가</div></li> -->
 				</ul>
 			</div>
 			<div class="mypage_content_introduce" id="mypage_content_introduce">
 				<div class="bar">소개</div>
 				<div><p id ="mypage_introduce" class="mypage_introduce">자기소개가 존재하지 않습니다.</p></div>
 			</div>
-			<div class="mypage_content_portfolio" id="mypage_content_portfolio">
+<!-- 			<div class="mypage_content_portfolio" id="mypage_content_portfolio">
 				<div class="bar">포토폴리오</div>
 				<div class="p_select">
 					<select name="portfolio_select" class="p_select_bar">
@@ -151,9 +152,9 @@ $(document).ready(function(){
 						<option value="번역·통역">번역·통역</option>
 					</select>
 				</div>
-			</div>
-			<div class="mypage_content_portfolio_content">
-				<!-- <span class="bar">포토폴리오가 없습니다.</span> -->
+			</div> -->
+<!-- 			<div class="mypage_content_portfolio_content">
+				<span class="bar">포토폴리오가 없습니다.</span>
 				<ul>
 					<li>
 						<img src="http://localhost:9000/MyPrSite/images/no_mark.png">
@@ -163,11 +164,11 @@ $(document).ready(function(){
 					</li>
 				</ul>
 				
-			</div>
-			<div class="mypage_content_evaluation" id="mypage_content_evaluation">
+			</div> -->
+			<!-- <div class="mypage_content_evaluation" id="mypage_content_evaluation">
 				<div class="bar">받은평가</div>
 			</div>
-			<div class="star">0.0</div>
+			<div class="star">0.0</div> -->
 		
 		</section>
 		
