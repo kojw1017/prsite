@@ -36,7 +36,7 @@
     });
 
 $(document).ready(function(){	
-
+	
 	$.ajax({
 		url:"MyPage/profileAjaxProc2.jsp?ids=<%=ids%>" ,
 		success:function(result){

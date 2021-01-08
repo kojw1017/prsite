@@ -20,20 +20,20 @@ $(function(){
             var jdata = JSON.parse(result);
             //2-1. DHTML을 이용하여 테이블 생성 및 출력
             
- 			
+          
             
              
-			            
+                     
              if(jdata.jlist[0].s_face_file_1!=null){
-            	 
-            	 $('.design_one').tooltip({
-  			       items:'[data-photo]',
-  			        content:function(){
-  			            var photo = $(this).data('photo');
-  			            var info = $(this).data('info');
-  			            return '<img src="'+photo+'.png"/>' +info;
-  			        }
-  			    });
+                
+                $('.design_one').tooltip({
+                  items:'[data-photo]',
+                   content:function(){
+                       var photo = $(this).data('photo');
+                       var info = $(this).data('info');
+                       return '<img src="'+photo+'.png"/>' +info;
+                   }
+               });
 
                $('.design_img #design_one').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_1) +")";
                $('#main_p1').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_1);
@@ -44,16 +44,16 @@ $(function(){
                $('.translation_img #design_one').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_1) +")";
             } 
              if(jdata.jlist[0].s_face_file_2!=null){
-            	 
-            	 $('.design_two').tooltip({
-    			       items:'[data-photo]',
-    			        content:function(){
-    			            var photo = $(this).data('photo');
-    			            var info = $(this).data('info');
-    			            return '<img src="'+photo+'.png"/>' +info;
-    			        }
-    			    });
-            	 
+                
+                $('.design_two').tooltip({
+                    items:'[data-photo]',
+                     content:function(){
+                         var photo = $(this).data('photo');
+                         var info = $(this).data('info');
+                         return '<img src="'+photo+'.png"/>' +info;
+                     }
+                 });
+                
                $('.design_img #design_two').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_2) +")";
                $('#main_p2').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_2);
                $('.software_img #design_two').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_2) +")";
@@ -62,16 +62,16 @@ $(function(){
                $('.translation_img #design_two').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_2) +")";
              } 
              if(jdata.jlist[0].s_face_file_3!=null){
-            	 
-            	 $('.design_three').tooltip({
-  			       items:'[data-photo]',
-  			        content:function(){
-  			            var photo = $(this).data('photo');
-  			            var info = $(this).data('info');
-  			            return '<img src="'+photo+'.png"/>' +info;
-  			        }
-  			    });
-            	 
+                
+                $('.design_three').tooltip({
+                  items:'[data-photo]',
+                   content:function(){
+                       var photo = $(this).data('photo');
+                       var info = $(this).data('info');
+                       return '<img src="'+photo+'.png"/>' +info;
+                   }
+               });
+                
                $('.design_img #design_three').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_3) +")";
                $('#main_p3').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_3);
                $('.software_img #design_three').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_3) +")";
@@ -80,16 +80,16 @@ $(function(){
                $('.translation_img #design_three').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_3) +")";
              } 
              if(jdata.jlist[0].s_face_file_4!=null){
-            	 
-            	 $('.design_four').tooltip({
-    			       items:'[data-photo]',
-    			        content:function(){
-    			            var photo = $(this).data('photo');
-    			            var info = $(this).data('info');
-    			            return '<img src="'+photo+'.png"/>' +info;
-    			        }
-    			    });
-              	 
+                
+                $('.design_four').tooltip({
+                    items:'[data-photo]',
+                     content:function(){
+                         var photo = $(this).data('photo');
+                         var info = $(this).data('info');
+                         return '<img src="'+photo+'.png"/>' +info;
+                     }
+                 });
+                  
                $('.design_img #design_four').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_4) +")";
                $('#main_p4').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_4);
                $('.software_img #design_four').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_4) +")";
@@ -98,16 +98,16 @@ $(function(){
                $('.translation_img #design_four').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_4) +")";
              } 
              if(jdata.jlist[0].s_face_file_5!=null){
-            	 
-            	 $('.design_five').tooltip({
-    			       items:'[data-photo]',
-    			        content:function(){
-    			            var photo = $(this).data('photo');
-    			            var info = $(this).data('info');
-    			            return '<img src="'+photo+'.png"/>' +info;
-    			        }
-    			    });
-              	 
+                
+                $('.design_five').tooltip({
+                    items:'[data-photo]',
+                     content:function(){
+                         var photo = $(this).data('photo');
+                         var info = $(this).data('info');
+                         return '<img src="'+photo+'.png"/>' +info;
+                     }
+                 });
+                  
                $('.design_img #design_five').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_5) +")";
                $('#main_p5').attr("href","http://localhost:9000/MyPrSite/prsite.jsp?id="+jdata.jlist[0].id_5);
                $('.software_img #design_five').css("background-image","url(http://localhost:9000/MyPrSite/upload/"+ jdata.jlist[0].s_face_file_5) +")";

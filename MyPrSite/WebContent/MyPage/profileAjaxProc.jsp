@@ -3,6 +3,7 @@
      import = "com.myprsite.dao.*,com.myprsite.vo.*,java.util.*,com.google.gson.*"%>
 <%
 String user_id = (String)session.getAttribute("id");
+
 // System.out.println("xpxpxpxp테트스ㅡ");
 ProfileDAO dao = new ProfileDAO();
 UserDAO dao2 = new UserDAO();
